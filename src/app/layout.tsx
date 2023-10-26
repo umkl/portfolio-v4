@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import localfont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
 const clash = localfont({
 	src: [
@@ -12,6 +13,15 @@ const clash = localfont({
 		},
 	],
 	variable: "--font-clash",
+});
+
+const druk = localfont({
+	src: [
+		{
+			path: "../../public/fonts/Druk-Wide-Bold.ttf",
+		},
+	],
+	variable: "--font-druk",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +35,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${clash.variable}`}>
+		<html
+			lang="en"
+			className={`${clash.variable} ${sora.variable} ${druk.variable}`}
+		>
 			<body className={inter.className}>{children}</body>
 		</html>
 	);

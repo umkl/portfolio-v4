@@ -15,6 +15,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				druk: ["var(--font-druk)"],
+				sora: ["var(--font-sora)"],
 				clash: ["var(--font-clash)"],
 			},
 		},
