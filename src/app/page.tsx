@@ -1,9 +1,15 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function Home() {
 	return (
 		<>
-			<main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+			<main className="flex min-h-screen flex-col items-center justify-between p-24 relative">
+				<div className="absolute h-20  w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
+				<div className="absolute w-20  h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
+				<div className="absolute w-20  h-full top-0 right-0 bg-gradient-to-l from-[#333333] to-transparent"></div>
 				<div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm ">
 					<Image
 						src="/logo.svg"
@@ -14,6 +20,7 @@ export default function Home() {
 						priority
 					/>
 				</div>
+
 				<div
 					className=" relative flex flex-col w-full max-w-5xl before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial  before:to-transparent before:blur-2xl before:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent
 				before:dark:to-[#95B8D1]-700 before:dark:opacity-10
@@ -63,59 +70,27 @@ export default function Home() {
 						desc="Finde mehr über meine Tätigkeiten heraus"
 					/>
 				</div>
+				<div className="absolute h-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
 			</main>
-			<div className="h-screen">
-				<h1 className="font-clash text-w text-5xl text-center">
-					{" "}
-					now I would like to show you what work i do
-				</h1>
+			<div className="h-[3000px] bg-[#333333]">
+				<TextScrollItem pa="Lets take a look at my projects" revealSize={400} />
+				<TextScrollItem
+					pa="I have been working on them for the past 2 years"
+					revealSize={1200}
+				/>
+				<TextScrollItem pa="Hope you enjoy" revealSize={2400} />
 			</div>
+
 			<div
 				id="section-1"
-				className=" h-screen bg-red-200 relative flex items-center flex-col"
+				className=" h-[4000px] bg-red-200 relative flex items-center flex-col"
 			>
-				<h1 className="w-full text-5xl text-black bg-red-400 font-druk text-center static inline-block">
+				<div className="absolute h-[160px]  w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
+				<h1 className="w-full text-5xl text-black  font-druk text-center static inline-block mt-[200px]">
 					My Work
 				</h1>
-				<div className="w-full bg-red-200 flex max-w-6xl">
-					<div>
-						<h1>Heading</h1>
-						<h2>what about</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
-							sapiente!
-						</p>
-					</div>
-					<Image
-						src="/coding.jpg"
-						alt="coding"
-						className=""
-						objectFit=""
-						width={700}
-						height={600}
-						priority
-					/>
-				</div>
-				<div className="w-full bg-red-200 flex max-w-6xl">
-					<div>
-						<h1>Heading</h1>
-						<h2>what about</h2>
-						<p>
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
-							sapiente!
-						</p>
-					</div>
-					<Image
-						src="/coding.jpg"
-						alt="coding"
-						className=""
-						objectFit=""
-						width={700}
-						height={600}
-						priority
-					/>
-				</div>
 			</div>
+
 			<div className="h-screen bg-red-200">
 				<h1>Experiences</h1>
 				<div className="flex left-1/2 -translate-x-1/2 max-w-5xl bg-red-500 relative">
@@ -148,5 +123,43 @@ const CardComponent = ({ name, desc }: { name: string; desc: string }) => {
 				{desc}
 			</p>
 		</a>
+	);
+};
+
+const TextScrollItem = ({
+	pa,
+	revealSize,
+}: {
+	pa: string;
+	revealSize: number;
+}) => {
+	const ref = useRef<HTMLDivElement | null>(null);
+
+	useEffect(() => {
+		const revealOnScroll = () => {
+			const revealHeight = revealSize;
+			if (
+				window.scrollY >= revealHeight &&
+				window.scrollY <= revealHeight + 400
+			) {
+				if (ref.current) ref.current.style.opacity = "1";
+			} else {
+				if (ref.current) ref.current.style.opacity = "0";
+			}
+		};
+
+		window.addEventListener("scroll", revealOnScroll);
+		return () => {
+			window.removeEventListener("scroll", revealOnScroll);
+		};
+	}, []);
+
+	return (
+		<div
+			className="opacity-0 transition-opacity duration-500 sticky top-1/2 left-1/2 text-center -translate-y-1/2 text-[7em] font-clash text-[#C2CAD1]"
+			ref={ref}
+		>
+			{pa}
+		</div>
 	);
 };
