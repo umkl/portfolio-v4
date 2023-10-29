@@ -5,7 +5,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 export default function Home() {
 	return (
-		<>
+		<div className="snap-mandatory">
 			<main className="flex min-h-screen flex-col items-center justify-between p-24 relative">
 				<div className="absolute h-20  w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
 				<div className="absolute w-20  h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
@@ -82,13 +82,18 @@ export default function Home() {
 			</div>
 
 			<div
-				id="section-1"
+				id="section-1 snap-center"
 				className=" h-[4000px] bg-red-200 relative flex items-center flex-col"
 			>
 				<div className="absolute h-[160px]  w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
 				<h1 className="w-full text-5xl text-black  font-druk text-center static inline-block mt-[200px]">
 					My Work
 				</h1>
+				<Parallax pages={1}>
+					<ParallaxLayer offset={0} speed={2.5}>
+						hello
+					</ParallaxLayer>
+				</Parallax>
 			</div>
 
 			<div className="h-screen bg-red-200">
@@ -101,7 +106,7 @@ export default function Home() {
 			<div className="h-screen bg-slate-300">
 				<h1>Projects</h1>
 			</div>
-		</>
+		</div>
 	);
 }
 
