@@ -23,20 +23,20 @@ export default function Home() {
 
 				<div
 					className=" relative flex flex-col w-full max-w-5xl before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial  before:to-transparent before:blur-2xl before:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent
-				before:dark:to-[#95B8D1]-700 before:dark:opacity-10
-				after:from-[#95B8D1] after:dark:via-[#95B8D1] after:dark:opacity-40
-				before:lg:h-[360px] after:absolute after:-z-20 after:h-[180px] after:w-[240px]
-				after:translate-x-1/3 after:bg-gradient-conic 
-				after:via-[#95B8D1]-200 after:blur-2xl after:content-[''] z-[-1]"
+			before:dark:to-[#95B8D1]-700 before:dark:opacity-10
+			after:from-[#95B8D1] after:dark:via-[#95B8D1] after:dark:opacity-40
+			before:lg:h-[360px] after:absolute after:-z-20 after:h-[180px] after:w-[240px]
+			after:translate-x-1/3 after:bg-gradient-conic 
+			after:via-[#95B8D1]-200 after:blur-2xl after:content-[''] z-[-1]"
 				>
 					{/* <Image	
-					className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-					src="/next.svg"
-					alt="Next.js Logo"
-					width={180}
-					height={37}
-					priority
-				/> */}
+				className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+				src="/next.svg"
+				alt="Next.js Logo"
+				width={180}
+				height={37}
+				priority
+			/> */}
 					<h1 className="text-left font-sora text-2xl text-[#95B8D1]">
 						Hallo, mein Name ist
 					</h1>
@@ -89,11 +89,6 @@ export default function Home() {
 				<h1 className="w-full text-5xl text-black  font-druk text-center static inline-block mt-[200px]">
 					My Work
 				</h1>
-				<Parallax pages={1}>
-					<ParallaxLayer offset={0} speed={2.5}>
-						hello
-					</ParallaxLayer>
-				</Parallax>
 			</div>
 
 			<div className="h-screen bg-red-200">
