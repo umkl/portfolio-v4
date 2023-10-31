@@ -37,15 +37,9 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${clash.variable} ${sora.variable} ${druk.variable}`}
+			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}`}
 		>
-			{/* <body className={`${inter.className}`}>{children}</body> */}
-
-			<body className="h-screen w-full bg-blue-200 overflow-auto snap-y snap-mandatory">
-				<div className="h-[1200px] bg-red-200 w-full snap-center"></div>
-				<div className="h-[800px] bg-red-300 w-full snap-center"></div>
-				<div className="h-[900px] bg-red-400 w-full snap-center"></div>
-			</body>
+			<body className="overflow-auto snap-y snap-mandatory">{children}</body>
 		</html>
 	);
 }

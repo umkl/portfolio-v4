@@ -1,3 +1,4 @@
+"use client";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const ParaTest = () => {
