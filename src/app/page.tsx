@@ -114,8 +114,9 @@ export default function Home() {
 			<div className="h-[800px] bg-red-300 w-full snap-center"></div>
 			<div className="h-[900px] bg-red-400 w-full snap-center"></div> */}
 			</div>
-			<div className="h-screen bg-red-200 w-full snap-center">jfaklsd</div>
-			<div className="h-screen bg-red-200 w-full snap-center">jfaklsd</div>
+			<div className="h-screen bg-red-200 w-full snap-center">
+				in the following section i want to
+			</div>
 		</>
 	);
 }
