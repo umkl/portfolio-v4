@@ -40,14 +40,7 @@ html {
 	}
 }
 
-#section-1 {
-	background-color: #404040;
-	background-image: url("../../public/pattern.svg");
-	background-size: 1800px 1200px;
-	background-repeat: repeat;
-	background-attachment: fixed;
-	/* animation: moveIt 30s linear infinite; */
-}
+
 
 @keyframes moveIt {
 	from {

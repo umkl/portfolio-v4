@@ -138,6 +138,9 @@ export default function Home() {
 					</div>
 				</div>
 			</ParallaxLayer>
+			<ParallaxLayer offset={4}>
+				<section id="section-1" className="h-screen w-screen"></section>
+			</ParallaxLayer>
 			<ParallaxLayer offset={3}>
 				<div>
 					<Image
