@@ -80,3 +80,11 @@ html {
   height: 100%;
   overflow: hidden;
 }
+
+/* 
+#landing{
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-image: url("../../public/raster.svg");
+	background-size: 150px 150px;
+} */
