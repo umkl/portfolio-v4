@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import WorkSection from "@um-p4/components/workSection";
 import Landing from "@um-p4/components/landing";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ExperienceSection from "@um-p4/components/experienceSection";
 import ProjectsSection from "@um-p4/components/projectsSection";
 import ContactSection from "@um-p4/components/contact";

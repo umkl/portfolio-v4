@@ -7,6 +7,7 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const inter = Inter({ subsets: ["latin"] });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
@@ -48,8 +49,8 @@ export default function RootLayout({
 			lang="en"
 			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}`}
 		>
-			<body ref={app} className="overflow-auto snap-y snap-proximity">
-				<div id="smooth-content">{children}</div>
+			<body>
+				<div>{children}</div>
 			</body>
 		</html>
 	);

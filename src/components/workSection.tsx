@@ -1,10 +1,35 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+
+const useParallax = (speed = 1) => {
+	const ref = useRef<any>();
+
+	const handleScroll = () => {
+		if (ref.current) {
+			const scrollY = window.scrollY;
+			const translateY = -scrollY * speed;
+			ref.current.style.transition = "transform 0.3s ease-out"; // Adjust the transition duration and easing function
+			ref.current.style.transform = `translateY(${translateY}px)`;
+		}
+	};
+
+	React.useEffect(() => {
+		// Attach the event listener when the component mounts
+		window.addEventListener("scroll", handleScroll);
+
+		// Detach the event listener when the component unmounts
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [speed]);
+
+	return ref;
+};
 
 const WorkSection = () => {
 	const [isMobile, setIsMobile] = useState<boolean>();
-
+	// const textRef = useParallax(0.4);
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth <= 768);
@@ -86,18 +111,21 @@ const WorkSection = () => {
 							</div>
 						</ParallaxLayer> */}
 					<div className="w-full bg-[#333333]  snap-center">
-						<div className="relative left-1/2  max-w-[900px] -translate-x-1/2 bg-red-200">
+						<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
 							<div className="flex">
-								<div className="max-w-[400px] text-right ">
-									<h1 className="font-clash text-3xl text-right">
-										#1 Sketching
-									</h1>
-									<p className="font-inter text-md text-right text-[#C2CAD1]">
-										the first stage of creating things is always thinking. In
-										this area I like to capture my thoughts using a notepad in
-										an oldschool fashion. After having done that I continue on
-										with the next stage:{" "}
-									</p>
+								<div className="max-w-[500px] text-right bg-green-200 flex flex-col">
+									<div className="flex-1"></div>
+									<div ref={textRef}>
+										<h1 className="font-clash text-3xl text-right">
+											#1 Sketching
+										</h1>
+										<p className="font-inter text-md text-right text-[#C2CAD1]">
+											the first stage of creating things is always thinking. In
+											this area I like to capture my thoughts using a notepad in
+											an oldschool fashion. After having done that I continue on
+											with the next stage:{" "}
+										</p>
+									</div>
 								</div>
 								<div className="w-full p-[50px]">
 									<Image
