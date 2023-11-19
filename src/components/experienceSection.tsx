@@ -1,79 +1,55 @@
-import { ParallaxLayer } from "@react-spring/parallax";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-
 const ExperienceSection = () => {
-	const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-	const handleResize = () => {
-		setIsMobile(window.innerWidth <= 768);
-	};
-
-	useEffect(() => {
-		window.addEventListener("resize", handleResize);
-
-		// Cleanup the event listener on component unmount
-		return () => {
-			window.removeEventListener("resize", handleResize);
-		};
-	}, []); // Empty dependency array to run the effect only once on mount
-
 	return (
-		<>
-			{isMobile ? (
-				<>
-					<div>Welcom!</div>
-				</>
-			) : (
-				<>
-					<ParallaxLayer offset={1} className="z-10" speed={0}>
-						<div className="h-[400px] z-10 w-full flex flex-col justify-center items-center">
-							<p className="text-2xl font-bold text-red-200">Disclaimer</p>
-							<p className="text-2xl ">
-								The following section will represent what kind of work i do
-							</p>
+		<div className="h-fit w-full bg-slate-300">
+			<div className="py-8 relative">
+				<h1 className="text-4xl text-center">experiences</h1>
+				<h2 className="text-2xl text-center">
+					places were I got to experience things related to work
+				</h2>
+			</div>
+			<div className="flex justify-center relative left-1/2 -translate-x-1/2 w-full  h-fit bg-red-500">
+				{/* <div className="flex absolute">
+					<div className="w-[10px] h-fit bg-red-500"></div>
+					<div className="flex flex-col">
+						<div className=" bg-red-300 w-[20px] h-[20px] sticky top-0">
+							now
 						</div>
-					</ParallaxLayer>
-					<>
-						<ParallaxLayer offset={1.2} speed={1.8} className="z-20">
-							<div className="h-screen z-20  w-1/2  snap-start  flex justify-end items-center  ">
-								<div className="w-2/3 left-1/2 flex font-druk ">
-									<div className="max-w-[400px] text-right ">
-										<h1 className="font-clash text-3xl text-right">
-											#1 Sketching
-										</h1>
-										<p className="font-inter text-md text-right text-[#C2CAD1]">
-											the first stage of creating things is always thinking. In
-											this area I like to capture my thoughts using a notepad in
-											an oldschool fashion. After having done that I continue on
-											with the next stage:{" "}
-										</p>
-									</div>
-								</div>
-							</div>
-						</ParallaxLayer>
-						<ParallaxLayer offset={1.5} speed={1.4} className="z-20">
-							<div className="left-1/2 z-20  relative h-screen w-1/2">
-								<div className="max-w-[400px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-							</div>
-						</ParallaxLayer>
-					</>
-				</>
-			)}
-		</>
+						<div className=" bg-red-300 w-[20px] h-[200px]">now</div>
+						<div className=" bg-red-300 w-[20px] h-[20px] sticky top-0">
+							2023
+						</div>
+					</div>
+				</div> */}
+				{/* <div className="w-[80px]"></div> */}
+				<div className="w-full h-fit bg-green-500/20 relative">
+					<div className="h-fit w-full flex">
+						<div className="flex-1 ">
+							<div className="h-[70px]"></div>
+							<div className="h-[200px] bg-orange-400 w-full"></div>
+							<div className="h-[200px] bg-orange-500 w-full"></div>
+							<div className="h-[200px] bg-orange-600 w-full"></div>
+						</div>
+						<div className="w-32 "></div>
+						<div className="flex-1 bg-red-200">
+							<div className="h-[200px] bg-orange-400 w-full"></div>
+							<div className="h-[200px] bg-orange-500 w-full"></div>
+						</div>
+					</div>
+				</div>
+				{/* <div className="top-40 w-full h-fit relative bg-purple-200">
+					<div className="h-[500px] w-full flex">
+						<div className="flex-1 bg-red-200/40"></div>
+						<div className="w-32 "></div>
+						<div className="flex-1 "></div>
+					</div>
+					<div className="h-[500px] w-full flex">
+						<div className="flex-1 bg-red-200"></div>
+						<div className="w-32 "></div>
+						<div className="flex-1 "></div>
+					</div>
+				</div> */}
+			</div>
+		</div>
 	);
 };
 
