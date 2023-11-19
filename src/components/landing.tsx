@@ -32,7 +32,7 @@ const Landing = () => {
 						<h1 className="text-left font-sora font-bold text-[1.23em] text-[#95B8D1]">
 							Hallo, mein Name ist
 						</h1>
-						<h2 className="font-clash text-[2.7em] lg:text-8xl leading-10 font-medium text-[#C2CAD1] dark:drop-shadow-[0_0_0.3rem_#ffffff70]">
+						<h2 className="font-clash text-[2.7em] lg:text-8xl leading-10 font-medium text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70]">
 							Michael Ungar.
 						</h2>
 						<h3 className="font-inter font-bold text-[1.2em] lg:text-4xl text-[#81899B]">

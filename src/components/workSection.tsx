@@ -110,119 +110,21 @@ const WorkSection = () => {
 								</div>
 							</div>
 						</ParallaxLayer> */}
+
 					<div className="w-full bg-[#333333]  snap-center">
+						<div>
+							<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+								My Craft
+							</h2>
+							<h3 className="font-druk text-[2.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
+								here I want to show you how I go about doing my work
+							</h3>
+						</div>
 						<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-							<div className="flex">
-								<div className="max-w-[500px] text-right bg-green-200 flex flex-col">
-									<div className="flex-1"></div>
-									<div ref={textRef}>
-										<h1 className="font-clash text-3xl text-right">
-											#1 Sketching
-										</h1>
-										<p className="font-inter text-md text-right text-[#C2CAD1]">
-											the first stage of creating things is always thinking. In
-											this area I like to capture my thoughts using a notepad in
-											an oldschool fashion. After having done that I continue on
-											with the next stage:{" "}
-										</p>
-									</div>
-								</div>
-								<div className="w-full p-[50px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-							</div>
-							<div className="flex">
-								<div className="w-full p-[50px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-								<div className="max-w-[400px] text-right ">
-									<h1 className="font-clash text-3xl text-right">
-										#1 Sketching
-									</h1>
-									<p className="font-inter text-md text-right text-[#C2CAD1]">
-										the first stage of creating things is always thinking. In
-										this area I like to capture my thoughts using a notepad in
-										an oldschool fashion. After having done that I continue on
-										with the next stage:{" "}
-									</p>
-								</div>
-							</div>
-							<div className="flex">
-								<div className="w-full p-[50px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-								<div className="max-w-[400px] text-right ">
-									<h1 className="font-clash text-3xl text-right">
-										#1 Sketching
-									</h1>
-									<p className="font-inter text-md text-right text-[#C2CAD1]">
-										the first stage of creating things is always thinking. In
-										this area I like to capture my thoughts using a notepad in
-										an oldschool fashion. After having done that I continue on
-										with the next stage:{" "}
-									</p>
-								</div>
-							</div>
-							<div className="flex">
-								<div className="w-full p-[50px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-								<div className="max-w-[400px] text-right ">
-									<h1 className="font-clash text-3xl text-right">
-										#1 Sketching
-									</h1>
-									<p className="font-inter text-md text-right text-[#C2CAD1]">
-										the first stage of creating things is always thinking. In
-										this area I like to capture my thoughts using a notepad in
-										an oldschool fashion. After having done that I continue on
-										with the next stage:{" "}
-									</p>
-								</div>
-							</div>
+							<WorkCard heading="#1 Sketching" />
+							<WorkCard heading="#2 Desgining" flipped />
+							<WorkCard heading="#3 Development" />
+							<WorkCard heading="#4 Continuous Improvements" flipped />
 						</div>
 					</div>
 				</>
@@ -232,3 +134,56 @@ const WorkSection = () => {
 };
 
 export default WorkSection;
+
+const WorkCard = ({
+	flipped = false,
+	heading,
+	content,
+}: {
+	flipped?: boolean;
+	heading: string;
+	content?: JSX.Element;
+}) => {
+	return (
+		<div className={`flex ${flipped ? "flex-row-reverse" : ""}`}>
+			<div className="max-w-[800px] text-right flex flex-col">
+				<div className="flex-1"></div>
+				<div className="">
+					<h1
+						className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] ${
+							flipped ? "text-left" : "text-right"
+						}`}
+					>
+						{heading}
+					</h1>
+					<p
+						className={`font-inter text-md  text-[#C2CAD1] ${
+							flipped ? "text-left" : "text-right"
+						}`}
+					>
+						before I start a project I always like to spill out all of my
+						thoughts on a piece of paper so I can fuel my creativity and don’t
+						have to think too much about the business logic during the
+						implementation phase
+					</p>
+				</div>
+
+				<div className="flex-1"></div>
+			</div>
+			<div className="w-full p-[50px] ">
+				<Image
+					src="/coding.png"
+					alt="Vercel Logo"
+					className="drop-shadow-[0_0_0.3rem_#ffffff20] drop-shadow-2xl"
+					style={{
+						width: "100%",
+						height: "auto",
+					}}
+					width={500}
+					height={300}
+					priority
+				/>
+			</div>
+		</div>
+	);
+};
