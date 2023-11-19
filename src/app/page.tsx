@@ -1,9 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+// import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import WorkSection from "@um-p4/components/workSection";
+import Landing from "@um-p4/components/landing";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import ExperienceSection from "@um-p4/components/experienceSection";
-import Landing from "@um-p4/components/landing";
+import ProjectsSection from "@um-p4/components/projectsSection";
+import ContactSection from "@um-p4/components/contact";
 
 export default function Home() {
 	// const [onBottom, setOnBottom] = useState(false);
@@ -40,24 +44,13 @@ export default function Home() {
 	// }, []);
 
 	return (
-		<Parallax pages={5}>
-			<ParallaxLayer offset={0} className="z-50">
-				<Landing />
-			</ParallaxLayer>
-			<ParallaxLayer offset={1} className="z-10">
-				<div className="h-screen z-10 w-full z- flex justify-center items-center fixed bg-[#333333]"></div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={2} className="z-10">
-				<div className="h-screen z-10 w-full z- flex justify-center items-center fixed bg-[#333333]"></div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={3} className="z-10">
-				<div className="h-screen z-10 w-full z- flex justify-center items-center fixed bg-[#333333]"></div>
-			</ParallaxLayer>
-			<ParallaxLayer offset={4} className="z-10">
-				<div className="h-screen z-10 w-full z- flex justify-center items-center fixed bg-[#333333]"></div>
-			</ParallaxLayer>
+		<>
+			<Landing />
+			<WorkSection />
 			<ExperienceSection />
-		</Parallax>
+			<ProjectsSection />
+			<ContactSection />
+		</>
 	);
 }
 
