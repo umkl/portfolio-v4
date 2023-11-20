@@ -34,7 +34,7 @@
 
 html {
 	color: rgb(var(--foreground-rgb));
-	height: 100%;
+	
 	width: 100%;
 	/* background: linear-gradient(
 			to bottom,
@@ -86,8 +86,8 @@ html {
 body,
 html {
   margin: 0;
-  /* height: 100%; */
-  overflow: auto;
+  
+  /* overflow: auto; */
 }
 
 /* 
@@ -101,3 +101,32 @@ html {
 .no-scrollbar::-webkit-scrollbar { 
 	display: none; 
 }
+
+.art-bg{
+	background-color: #333333;
+	background-repeat: repeat;
+	/* background-attachment: fixed; */
+	background-image: url("../../public/pattern.svg");
+	
+}
+
+.sticky {
+
+	position: sticky;
+	top: 0;
+  }
+  
+  .wrapper{
+  
+	  background-color: red;
+	  width: 100%;
+	  display: flex;
+	  height: fit-content;
+	  flex-direction: column;
+  }
+  
+.daitem{
+	  height: 800px;
+	  background-color: yellow;
+	  width: 200px;
+  }
