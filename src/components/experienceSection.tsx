@@ -10,279 +10,56 @@ const ExperienceSection = () => {
 	}, []);
 
 	return (
-		<>
-			<h2>Sticky Element: Scroll Down to See the Effect</h2>
-			<p>Scroll down this page to see how sticky positioning works.</p>
-			<div className="wrapper">
-				asjdflskj
-				<div className="sticky">
-					I will stick to the screen when you reach my scroll position
-				</div>
-				<div className="daitem"></div>
+		<div className="h-fit w-full art-bg relative -z-20">
+			<div className="py-8 relative">
+				<h1 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+					experiences
+				</h1>
+				<h2 className="font-druk text-[2.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
+					places were I got to experience things related to work
+				</h2>
 			</div>
-
-			<p>Some example text..</p>
-			<h2>Scroll back up again to "remove" the sticky position.</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-				imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
-				scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
-				congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
-				aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio.
-				Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc
-				sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero
-				sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget
-				tellus gravida venenatis. Integer fringilla congue eros non fermentum.
-				Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis
-				diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-				vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-				ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-				augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-				in odio. Praesent convallis urna a lacus interdum ut hendrerit risus
-				congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
-				In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae
-				dui eget tellus gravida venenatis. Integer fringilla congue eros non
-				fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus.
-				Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur
-				adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi
-				lorem egestas odio, vitae scelerisque enim ligula venenatis dolor.
-				Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce
-				luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed
-				ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut
-				hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum
-				dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare
-				turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla
-				congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras
-				ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet,
-				consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum
-				interdum, nisi lorem egestas odio, vitae scelerisque enim ligula
-				venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor
-				vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante
-				ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis
-				urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum
-				nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
-				venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus
-				gravida venenatis. Integer fringilla congue eros non fermentum. Sed
-				dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam
-				velit.
-			</p>
-		</>
-		// <div className="h-fit w-full art-bg">
-		// 	<div className="py-8 relative">
-		// 		<h1 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-		// 			experiences
-		// 		</h1>
-		// 		<h2 className="font-druk text-[2.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
-		// 			places were I got to experience things related to work
-		// 		</h2>
-		// 	</div>
-
-		// 	<div className="flex justify-center relative left-1/2 -translate-x-1/2 w-full  h-fit">
-		// 		<div className="w-full h-fit">
-
-		// 			<div className="w-full h-fit flex">
-		// 				<div className="flex-1 ">
-		// 					<div className="h-[200px]"></div>
-		// 					<ExperienceCard />
-		// 					<ExperienceCard />
-		// 					<ExperienceCard />
-		// 				</div>
-		// 				<div className="w-32 "></div>
-		// 				<div className="flex-1">
-		// 					<ExperienceCard />
-		// 					<ExperienceCard />
-		// 				</div>
-		// 			</div>
-		// 		</div>
-		// 	</div>
-		// </div>
+			<div className="relative">
+				<div className="w-[200px] top-0 h-full  left-1/2 -translate-x-1/2 absolute -z-10 flex">
+					<div className="h-full w-[20px] shrink-0  flex justify-center">
+						<div className="w-[2px] h-full bg-slate-100 drop-shadow-[0_0_0.3rem_#ffffff70]"></div>
+					</div>
+					<div className="flex flex-col h-full flex-1">
+						<div className="wrapper w-full h-[800px]  flex flex-col ">
+							<div className="sticky top-0 font-druk text-3xl drop-shadow-[0_0_0.3rem_#ffffff70] w-[500px] rotate-90 origin-bottom-left ">
+								now
+							</div>
+							<div className="h-[500px]  w-[40px] sticky top-0"></div>
+							<div className=" flex-1"></div>
+						</div>
+						<div className="h-[100px]  w-full"> </div>
+						<div className="wrapper  w-full flex-1 flex flex-col">
+							<div className="sticky top-0 font-druk text-3xl drop-shadow-[0_0_0.3rem_#ffffff70] rotate-90 origin-bottom-left ">
+								2023
+							</div>
+							<div className=" flex-1"></div>
+						</div>
+					</div>
+				</div>
+				<div className="flex justify-center relative left-1/2 -translate-x-1/2 w-full max-w-[900px] h-fit">
+					<div className="w-full h-fit">
+						<div className="w-full h-fit flex">
+							<div className="flex-1 ">
+								<div className="h-[200px]"></div>
+								<ExperienceCard />
+								<ExperienceCard />
+								<ExperienceCard />
+							</div>
+							<div className="w-32 "></div>
+							<div className="flex-1">
+								<ExperienceCard />
+								<ExperienceCard />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 };
 
