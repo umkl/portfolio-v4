@@ -110,23 +110,10 @@ html {
 	
 }
 
-.sticky {
 
-	position: sticky;
-	top: 0;
-  }
-  
-  .wrapper{
-  
-	  background-color: red;
-	  width: 100%;
-	  display: flex;
-	  height: fit-content;
-	  flex-direction: column;
-  }
-  
-.daitem{
-	  height: 800px;
-	  background-color: yellow;
-	  width: 200px;
-  }
+
+.contact-image{
+	background-image: url("../../public/setup1.jpg");
+	background-size: cover;
+	background-position-x: center;
+}
