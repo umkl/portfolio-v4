@@ -4,7 +4,7 @@ import Image from "next/image";
 const Landing = () => {
 	return (
 		<section
-			className="h-fit-content w-full z-50  overflow-auto snap-end "
+			className="h-fit-content w-full z-50  overflow-hidden snap-center "
 			id="landing"
 		>
 			<div>
