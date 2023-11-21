@@ -49,9 +49,7 @@ export default function RootLayout({
 			lang="en"
 			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}`}
 		>
-			<body>
-				<div>{children}</div>
-			</body>
+			<body className="snap-proximity snap-y ">{children}</body>
 		</html>
 	);
 }

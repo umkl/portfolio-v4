@@ -45,8 +45,8 @@ html {
 	background-color: #333333;
 	background-repeat: repeat;
 	background-attachment: fixed;
-	background-image: url("../../public/raster.svg");
 	background-size: 150px 150px;
+	background-image: url("../../public/raster.svg");
 }
 
 @media screen and (max-width: 800px) {
@@ -86,8 +86,8 @@ html {
 body,
 html {
   margin: 0;
-  
-  /* overflow: auto; */
+  height: 100vh;
+  overflow: auto;
 }
 
 /* 
@@ -116,4 +116,15 @@ html {
 	background-image: url("../../public/setup1.jpg");
 	background-size: cover;
 	background-position-x: center;
+}
+
+.focus-cross-bg:hover{
+	background-image: url("../../public/cross-bg.svg");
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: repeat;
+	
+	background-size: 400px 400px;
+	stroke-width: 30px;
+	cursor:pointer
 }
