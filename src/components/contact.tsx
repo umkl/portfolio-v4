@@ -28,7 +28,7 @@ const ContactSection = () => {
 							<input
 								type="button"
 								value="Nachricht absenden"
-								className=" bg-[#4A4A4A] hover:cursor-pointer focus:border-turquoise-500 h-[60px] ring-2 ring-[#4a4a4aad] hover:ring-[#d9c2a7c3] hover:ring-4 border-none  font-druk  mt-2 flex-1 rounded-md text-xs"
+								className=" bg-[#4A4A4A] hover:cursor-pointer focus:border-turquoise-500 h-[60px] ring-2 ring-[#4a4a4a] hover:ring-[#d9c2a7c3] hover:ring-4 border-2 font-druk  mt-2 flex-1 rounded-md text-lg border-[#4e4e4e] text-white hover:text-[#d9c2a7c3]"
 							/>
 						</div>
 					</form>
