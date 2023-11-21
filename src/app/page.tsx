@@ -1,13 +1,30 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import {
+	createContext,
+	useEffect,
+	useRef,
+	useState,
+	RefObject,
+	Ref,
+} from "react";
 import WorkSection from "@um-p4/components/workSection";
 import Landing from "@um-p4/components/landing";
 import ExperienceSection from "@um-p4/components/experienceSection";
 import ProjectsSection from "@um-p4/components/projectsSection";
 import ContactSection from "@um-p4/components/contact";
 
+export const NavContext = createContext<{
+	work?: RefObject<HTMLElement>;
+	experience?: RefObject<HTMLElement>;
+	projects?: RefObject<HTMLElement>;
+	contact?: RefObject<HTMLElement>;
+}>({});
 export default function Home() {
+	const workSection = useRef<HTMLElement>(null);
+	const experienceSection = useRef<HTMLElement>(null);
+	const projectsSection = useRef<HTMLElement>(null);
+	const contactSection = useRef<HTMLElement>(null);
 	// const [onBottom, setOnBottom] = useState(false);
 	// const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 	// const handleScroll = () => {
@@ -33,7 +50,6 @@ export default function Home() {
 	// 		console.log("registered");
 	// 		scrollContainerRef.current.addEventListener("scroll", handleScroll);
 	// 	}
-
 	// 	return () => {
 	// 		if (scrollContainerRef.current) {
 	// 			scrollContainerRef.current.removeEventListener("scroll", handleScroll);
@@ -42,13 +58,20 @@ export default function Home() {
 	// }, []);
 
 	return (
-		<>
+		<NavContext.Provider
+			value={{
+				work: workSection,
+				experience: experienceSection,
+				projects: projectsSection,
+				contact: contactSection,
+			}}
+		>
 			<Landing />
 			<WorkSection />
 			<ExperienceSection />
 			<ProjectsSection />
 			<ContactSection />
-		</>
+		</NavContext.Provider>
 	);
 }
 

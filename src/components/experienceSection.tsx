@@ -1,8 +1,10 @@
 "use client";
+import { NavContext } from "@um-p4/app/page";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 const ExperienceSection = () => {
+	const navCxt = useContext(NavContext);
 	useEffect(() => {
 		window.addEventListener("scroll", () => {
 			console.log("scroll");
@@ -10,7 +12,11 @@ const ExperienceSection = () => {
 	}, []);
 
 	return (
-		<div className="h-fit w-full art-bg relative -z-20">
+		<section
+			ref={navCxt.experience}
+			id="experience"
+			className="h-fit w-full art-bg relative -z-20"
+		>
 			<div className="py-8 relative">
 				<h1 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
 					experiences
@@ -59,7 +65,7 @@ const ExperienceSection = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

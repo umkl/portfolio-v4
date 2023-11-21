@@ -1,6 +1,13 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+	useState,
+	useEffect,
+	useRef,
+	RefObject,
+	useContext,
+} from "react";
 import Image from "next/image";
+import { NavContext } from "@um-p4/app/page";
 
 const useParallax = (speed = 1) => {
 	const ref = useRef<any>();
@@ -29,7 +36,8 @@ const useParallax = (speed = 1) => {
 
 const WorkSection = () => {
 	const [isMobile, setIsMobile] = useState<boolean>();
-	// const textRef = useParallax(0.4);
+	const navCxt = useContext(NavContext);
+
 	useEffect(() => {
 		const handleResize = () => {
 			setIsMobile(window.innerWidth <= 768);
@@ -44,7 +52,7 @@ const WorkSection = () => {
 	}, []); // Empty dependency array to run the effect only once on mount
 
 	return (
-		<>
+		<section id="work" ref={navCxt.work}>
 			{isMobile ? (
 				<>
 					<div className="left-1/2 z-20  relative h-screen w-1/2">
@@ -116,7 +124,7 @@ const WorkSection = () => {
 							<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
 								My Craft
 							</h2>
-							<h3 className="font-druk text-[2.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
+							<h3 className="font-druk text-[1.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
 								here I want to show you how I go about doing my work
 							</h3>
 						</div>
@@ -129,7 +137,7 @@ const WorkSection = () => {
 					</div>
 				</>
 			)}
-		</>
+		</section>
 	);
 };
 

@@ -1,15 +1,24 @@
+import Link from "next/link";
+
 const CardComponent = ({
 	name,
 	desc,
 	dest,
+	tap,
 }: {
 	name: string;
 	desc: string;
 	dest: string;
+	tap?: () => void;
 }) => {
 	return (
 		<a
-			href="ggl.com"
+			// onClick={() => {
+			// 	window.scrollTo({
+			// 		behavior: "smooth",
+			// 	});
+			// }}
+			onClick={() => tap!()}
 			className="group rounded-lg border-2 transition-all hover:bg-[#95b8d13e] hover:backdrop-blur-[2px]  border-transparent py-4 px-6   hover:border-[#95B8D1]  "
 			target="_blank"
 			rel="noopener noreferrer"

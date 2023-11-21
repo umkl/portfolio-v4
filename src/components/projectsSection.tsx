@@ -1,6 +1,7 @@
+import { NavContext } from "@um-p4/app/page";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 interface ProjectType {
 	name: string;
@@ -45,6 +46,7 @@ const slideVariants = {
 
 const ProjectsSection = () => {
 	const [currentIndex, setCurrentIndex] = useState(0);
+	const navCxt = useContext(NavContext);
 
 	const handleNext = () => {
 		setDirection("right");
@@ -71,7 +73,11 @@ const ProjectsSection = () => {
 	const [direction, setDirection] = useState("left");
 
 	return (
-		<div className="h-screen bg-[#333333] w-full overflow-hidden snap-center">
+		<section
+			ref={navCxt.projects}
+			id="projects"
+			className="h-screen bg-[#333333] w-full overflow-hidden snap-center"
+		>
 			<AnimatePresence>
 				<motion.div
 					className="h-screen w-full snap-center"
@@ -92,7 +98,7 @@ const ProjectsSection = () => {
 					/>
 				</motion.div>
 			</AnimatePresence>
-		</div>
+		</section>
 	);
 };
 

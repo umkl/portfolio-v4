@@ -1,10 +1,14 @@
+import { RefObject, useContext } from "react";
 import CardComponent from "./card";
 import Image from "next/image";
+import { NavContext } from "@um-p4/app/page";
 
 const Landing = () => {
+	const navCxt = useContext(NavContext);
+
 	return (
 		<section
-			className="h-fit-content w-full z-50  overflow-hidden snap-start "
+			className="h-fit-content w-full z-50  overflow-hidden "
 			id="landing"
 		>
 			<div>
@@ -46,22 +50,34 @@ const Landing = () => {
 					</div>
 					<div className="mb-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left lg:gap-4  w-full">
 						<CardComponent
-							dest="/"
+							tap={() => {
+								navCxt.work!.current?.scrollIntoView();
+							}}
+							dest="work"
 							name="Work"
 							desc="Find out what kind of work I do and how I go about creating new projects."
 						/>
 						<CardComponent
-							dest="/experience"
+							tap={() => {
+								navCxt.experience!.current?.scrollIntoView();
+							}}
+							dest="experience"
 							name="XPs"
 							desc="Explore what kind of experiences I was already able to make."
 						/>
 						<CardComponent
-							dest="/projects"
+							tap={() => {
+								navCxt.projects!.current?.scrollIntoView();
+							}}
+							dest="projects"
 							name="Projects"
 							desc="Discover some of my projects where I was able to do things myself."
 						/>
 						<CardComponent
-							dest="/contact"
+							tap={() => {
+								navCxt.contact!.current?.scrollIntoView();
+							}}
+							dest="contact"
 							name="Contact"
 							desc="Get in touch with me :)"
 						/>

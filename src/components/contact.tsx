@@ -1,15 +1,23 @@
+import { NavContext } from "@um-p4/app/page";
 import Image from "next/image";
+import { useContext } from "react";
 
 const ContactSection = () => {
+	const navCxt = useContext(NavContext);
+
 	return (
-		<div className="w-full min-h-screen flex sm:flex-row h-fit flex-col snap-start relative art-bg">
+		<section
+			ref={navCxt.contact}
+			id="contact"
+			className="w-full min-h-screen flex sm:flex-row h-fit flex-col snap-start relative art-bg"
+		>
 			<div className="sm:w-[600px] w-full  h-[1000px] shrink-0 flex justify-center items-center">
 				<div className="w-full h-fit mx-14">
 					<h1 className="text-2xl font-druk text-[#D9C2A7] inset-8">
 						contact me
 					</h1>
-					<h1 className="text-3xl font-druk">lets get in touch</h1>
-					<h2 className="text-lg font-inter font-bold text-[#B2B2B2]">
+					<h1 className="text-5xl font-druk">lets get in touch</h1>
+					<h2 className="text-lg font-inter font-bold text-[#B2B2B2] mb-8">
 						what are you waiting for?
 					</h2>
 					<form>
@@ -70,7 +78,7 @@ const ContactSection = () => {
 					<h2 className="font-mono">by ungarmichael</h2>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 
