@@ -105,9 +105,9 @@ html {
 
 .art-bg{
 	background-color: #333333;
-	background-repeat: repeat;
+	/* background-repeat: repeat; */
 	/* background-attachment: fixed; */
-	background-image: url("../../public/pattern.svg");
+	/* background-image: url("../../public/pattern.svg"); */
 	
 }
 
