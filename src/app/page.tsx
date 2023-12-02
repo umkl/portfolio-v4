@@ -25,37 +25,6 @@ export default function Home() {
 	const experienceSection = useRef<HTMLElement>(null);
 	const projectsSection = useRef<HTMLElement>(null);
 	const contactSection = useRef<HTMLElement>(null);
-	// const [onBottom, setOnBottom] = useState(false);
-	// const scrollContainerRef = useRef<HTMLDivElement | null>(null);
-	// const handleScroll = () => {
-	// 	if (scrollContainerRef.current) {
-	// 		const scrollPosition = scrollContainerRef.current.scrollTop;
-	// 		const height = scrollContainerRef.current.offsetHeight;
-	// 	}
-	// };
-	// const handleScrollX = () => {
-	// 	console.log("Horizontal Scroll Position:", window.scrollY);
-	// 	console.log(scrollContainerRef.current?.offsetHeight ?? "bye");
-	// 	console.log(window.innerHeight);
-	// };
-
-	// useEffect(() => {
-	// 	window.addEventListener("scroll", handleScrollX);
-	// 	return () => {
-	// 		window.removeEventListener("scroll", handleScrollX);
-	// 	};
-	// }, []);
-	// useEffect(() => {
-	// 	if (scrollContainerRef.current) {
-	// 		console.log("registered");
-	// 		scrollContainerRef.current.addEventListener("scroll", handleScroll);
-	// 	}
-	// 	return () => {
-	// 		if (scrollContainerRef.current) {
-	// 			scrollContainerRef.current.removeEventListener("scroll", handleScroll);
-	// 		}
-	// 	};
-	// }, []);
 
 	return (
 		<NavContext.Provider

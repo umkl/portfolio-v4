@@ -15,7 +15,7 @@ const ExperienceSection = () => {
 		<section
 			ref={navCxt.experience}
 			id="experience"
-			className="h-fit w-full art-bg relative -z-20"
+			className="h-fit w-full art-bg relative overflow-hidden -z-20"
 		>
 			<div className="py-8 relative">
 				<h1 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
