@@ -1,7 +1,7 @@
 import { RefObject, useContext } from "react";
 import CardComponent from "./card";
 import Image from "next/image";
-import { NavContext } from "@um-p4/app/page";
+import { NavContext } from "@um-p4/app/navcontext";
 
 const Landing = () => {
 	const navCxt = useContext(NavContext);

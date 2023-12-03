@@ -13,13 +13,8 @@ import Landing from "@um-p4/components/landing";
 import ExperienceSection from "@um-p4/components/experienceSection";
 import ProjectsSection from "@um-p4/components/projectsSection";
 import ContactSection from "@um-p4/components/contact";
+import { NavContext } from "./navcontext";
 
-export const NavContext = createContext<{
-	work?: RefObject<HTMLElement>;
-	experience?: RefObject<HTMLElement>;
-	projects?: RefObject<HTMLElement>;
-	contact?: RefObject<HTMLElement>;
-}>({});
 export default function Home() {
 	const workSection = useRef<HTMLElement>(null);
 	const experienceSection = useRef<HTMLElement>(null);
