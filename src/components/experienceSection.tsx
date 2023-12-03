@@ -24,7 +24,7 @@ const ExperienceSection = () => {
 		<section
 			ref={navCxt.experience}
 			id="experience"
-			className="h-fit w-full art-bg relative overflow-hidden -z-20"
+			className="h-fit w-full art-bg relative -z-20"
 		>
 			<div className="py-8 relative">
 				<WorkSectionHeader
