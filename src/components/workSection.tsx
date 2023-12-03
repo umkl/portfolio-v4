@@ -9,6 +9,19 @@ import React, {
 import Image from "next/image";
 import { NavContext } from "@um-p4/app/page";
 
+const cardContent = [
+	{
+		title: "#1 Sketching",
+		content:
+			"Great things always start with thoughts and capturing those is done best with pen and paper. That is why I always create use the traditional way of putting down ideas - which is on sheets of paper.",
+	},
+	{
+		title: "#2 Design",
+		content:
+			"Interfaces might not be that be important in theory but when it comes into reallife, the day to day life a good UI/UX design can make the fine difference if an application gets used or not. Hence why I like to produce a good mockup before doing any of the actual work ... so hopefully nothing has to be done twice :)",
+	},
+];
+
 const useParallax = (speed = 1) => {
 	const ref = useRef<any>();
 
@@ -53,29 +66,22 @@ const WorkSection = () => {
 		<section id="work" ref={navCxt.work} className="overflow-hidden">
 			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
 				<div className="mb-8">
-					<h2 className="font-druk text-[4em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-						My Craft
-					</h2>
-					<h3 className="font-druk text-[2em] leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
-						here I want to show you how I go about doing my work
-					</h3>
+					<WorkSectionHeader
+						title="My Craft"
+						subtext="here I want to show you how I go about doing my work"
+					/>
 				</div>
 				<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-					{isMobile ? (
-						<>
-							<WorkCardMobile heading="#1 Sketching" />
-							<WorkCardMobile heading="#2 Desgining" />
-							<WorkCardMobile heading="#3 Development" />
-							<WorkCardMobile heading="#4 Continuous Improvements" />
-						</>
-					) : (
-						<>
-							<WorkCard heading="#1 Sketching" />
-							<WorkCard heading="#2 Desgining" />
-							<WorkCard heading="#3 Development" />
-							<WorkCard heading="#4 Continuous Improvements" />
-						</>
-					)}
+					{isMobile
+						? cardContent.map((x) => (
+								<WorkCardMobile
+									heading={x.title}
+									content={x.content}
+								></WorkCardMobile>
+						  ))
+						: cardContent.map((x) => (
+								<WorkCard heading={x.title} content={x.content}></WorkCard>
+						  ))}
 				</div>
 			</div>
 		</section>
@@ -84,6 +90,25 @@ const WorkSection = () => {
 
 export default WorkSection;
 
+export const WorkSectionHeader = ({
+	title,
+	subtext,
+}: {
+	title: string;
+	subtext: string;
+}) => {
+	return (
+		<>
+			<h2 className="font-druk text-[4em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+				{title}
+			</h2>
+			<h3 className="font-druk text-[1.8em] leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
+				{subtext}
+			</h3>
+		</>
+	);
+};
+
 const WorkCard = ({
 	flipped = false,
 	heading,
@@ -91,7 +116,7 @@ const WorkCard = ({
 }: {
 	flipped?: boolean;
 	heading: string;
-	content?: JSX.Element;
+	content?: JSX.Element | string;
 }) => {
 	return (
 		<div className={`flex ${flipped ? "flex-row-reverse " : "flex-row"}`}>
@@ -142,7 +167,7 @@ const WorkCardMobile = ({
 	content,
 }: {
 	heading: string;
-	content?: JSX.Element;
+	content?: JSX.Element | string;
 }) => {
 	return (
 		<div className={`flex flex-col-reverse px-8 py-8 gap-6`}>
@@ -155,10 +180,7 @@ const WorkCardMobile = ({
 						{heading}
 					</h1>
 					<p className={`font-inter text-md  text-[#C2CAD1] text-left`}>
-						before I start a project I always like to spill out all of my
-						thoughts on a piece of paper so I can fuel my creativity and don’t
-						have to think too much about the business logic during the
-						implementation phase
+						{content}
 					</p>
 				</div>
 
