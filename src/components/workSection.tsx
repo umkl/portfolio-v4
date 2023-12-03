@@ -51,41 +51,33 @@ const WorkSection = () => {
 
 	return (
 		<section id="work" ref={navCxt.work} className="overflow-hidden">
-			{isMobile ? (
-				<div className="w-full overflow-hidden bg-[#333333]  snap-center">
-					<div className="mb-8">
-						<h2 className="font-druk text-[5em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-							My Craft
-						</h2>
-						<h3 className="font-druk text-[1em] leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
-							here I want to show you how I go about doing my work
-						</h3>
-					</div>
-					<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-						<WorkCardMobile heading="#1 Sketching" />
-						<WorkCardMobile heading="#2 Desgining" />
-						<WorkCardMobile heading="#3 Development" />
-						<WorkCardMobile heading="#4 Continuous Improvements" />
-					</div>
+			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
+				<div className="mb-8">
+					<h2 className="font-druk text-[4em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+						My Craft
+					</h2>
+					<h3 className="font-druk text-[2em] leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
+						here I want to show you how I go about doing my work
+					</h3>
 				</div>
-			) : (
-				<div className="w-full bg-[#333333]  snap-center">
-					<div>
-						<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-							My Craft
-						</h2>
-						<h3 className="font-druk text-[1.3em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
-							here I want to show you how I go about doing my work
-						</h3>
-					</div>
-					<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-						<WorkCard heading="#1 Sketching" />
-						<WorkCard heading="#2 Desgining" flipped />
-						<WorkCard heading="#3 Development" />
-						<WorkCard heading="#4 Continuous Improvements" flipped />
-					</div>
+				<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
+					{isMobile ? (
+						<>
+							<WorkCardMobile heading="#1 Sketching" />
+							<WorkCardMobile heading="#2 Desgining" />
+							<WorkCardMobile heading="#3 Development" />
+							<WorkCardMobile heading="#4 Continuous Improvements" />
+						</>
+					) : (
+						<>
+							<WorkCard heading="#1 Sketching" />
+							<WorkCard heading="#2 Desgining" />
+							<WorkCard heading="#3 Development" />
+							<WorkCard heading="#4 Continuous Improvements" />
+						</>
+					)}
 				</div>
-			)}
+			</div>
 		</section>
 	);
 };
