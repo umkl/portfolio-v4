@@ -10,6 +10,21 @@ const xpsForTheExperienceSection = [
 		startDate: "c231012",
 		endDate: "c231212",
 	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
 ];
 
 const ExperienceSection = () => {
@@ -56,24 +71,10 @@ const ExperienceSection = () => {
 				</div>
 				<div className="flex justify-center relative left-1/2 -translate-x-1/2 w-full max-w-[900px] h-fit">
 					<div className="w-full h-fit">
-						<div className="w-full h-fit flex">
-							{/* {
-								xpsForTheExperienceSection.map(
-									x=>
-									ExperienceCard
-								)
-							} */}
-							<div className="flex-1 ">
-								<div className="h-[200px]"></div>
+						<div className="w-full h-fit flex flex-col">
+							{xpsForTheExperienceSection.map((x) => (
 								<ExperienceCard />
-								<ExperienceCard />
-								<ExperienceCard />
-							</div>
-							<div className="w-32 "></div>
-							<div className="flex-1">
-								<ExperienceCard />
-								<ExperienceCard />
-							</div>
+							))}
 						</div>
 					</div>
 				</div>
