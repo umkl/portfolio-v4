@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.CONTABO_USERNAME }}
           password: ${{ secrets.CONTABO_PWD }}
           local: "./myimageLatest.tar"
-          remote_dir: "~"
+          remote: "~"
          
             
 
