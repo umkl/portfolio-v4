@@ -31,7 +31,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@v0.8.0
         with: 
           local: ./myimageLatest.tar
-          remote: ${{ variables.CONTABO_IP }}
+          remote: ${{ env.CONTABO_IP }}
           username: root
           password: ${{ secrets.CONTABO_PWD }}
          
