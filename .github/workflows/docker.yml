@@ -36,8 +36,8 @@ jobs:
           host: 31.220.89.68
           username: root
           password: ${{ secrets.CONTABO_PWD }}
-          local: "./myimageLatest.tar"
-          remote: "~"
+          local: myimageLatest.tar
+          remote: /root
          
             
 
