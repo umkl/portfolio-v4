@@ -29,7 +29,7 @@ jobs:
           ls
       - name: ip
         run: |
-          echo ${{ env.CONTABO_IP }}
+          echo ${{ vars.CONTABO_IP }}
       - name: Copy files to remote server
         uses: garygrossgarten/github-action-scp@v0.8.0
         with:
@@ -38,6 +38,13 @@ jobs:
           password: ${{ secrets.CONTABO_PWD }}
           local: ./myimageLatest.tar
           remote: /root/myimageLatest.tar
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.0
+        with:
+          ssh-private-key: ${{ secrets.CONTABO_SSH_PRIVATE }}
+      - name: Run command on remote server
+        run: |
+          ssh root@31.220.89.68 'ls'
          
             
 
