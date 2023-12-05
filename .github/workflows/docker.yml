@@ -27,6 +27,13 @@ jobs:
       - name: Showing Off 
         run: |
           ls
+      - name: copy
+        uses: garygrossgarten/github-action-scp@v0.8.0
+        with: 
+          local: ./myimageLatest.tar
+          remote: ${{ variables.CONTABO_IP }}
+          username: root
+          password: ${{ secrets.CONTABO_PWD }}
          
             
 
