@@ -20,7 +20,13 @@ jobs:
           tags: myimage:latest
       - name: Inspect
         run: |
-          docker image inspect myimage:latest    
+          docker image inspect myimage:latest  
+      - name: Export 
+        run: |
+          docker save -o myimageLatest.tar myimage:latest
+      - name: Showing Off 
+        run: |
+          ls
          
             
 
