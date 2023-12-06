@@ -38,5 +38,5 @@ jobs:
           ssh-private-key: ${{ secrets.CONTABO_SSH_PRIVATE }}
       - name: Execute Bash script on server
         run: |
-          ssh user@your-server 'bash -s' <  /root/portfolio-v4/expv4.sh       
+          ssh ${{ secrets.CONTABO_USERNAME }}@${{ secrets.CONTABO_IP }} 'bash -s' <  /root/portfolio-v4/expv4.sh       
 
