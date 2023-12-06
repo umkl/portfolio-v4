@@ -32,13 +32,11 @@ jobs:
           password: ${{ secrets.CONTABO_PWD }}
           local: ./portfolioV4Latest.tar
           remote: /root/portfolio-v4/portfolioV4Latest.tar
-      - name: executing the bash script to start the docker container
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          host: ${{ secrets.CONTABO_IP }}
-          username: ${{ secrets.CONTABO_USERNAME }}
-          password: ${{ secrets.CONTABO_PWD }}
-          port: 22
-          script: bash /root/portfolio-v4/expv4.sh
-            
+          ssh-private-key: ${{ secrets.CONTABO_SSH_PRIVATE }}
+      - name: Execute Bash script on server
+        run: |
+          ssh user@your-server 'bash -s' <  /root/portfolio-v4/expv4.sh       
 
