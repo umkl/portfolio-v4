@@ -34,7 +34,7 @@ const Landing = () => {
 					</div>
 					<div className=" relative flex flex-col w-full max-w-5xl mt-3 lg:mt-0 mb-7 ">
 						<h1 className="text-left font-sora font-bold text-[1.23em] text-[#95B8D1]">
-							Hallo, mein Name ist
+							Hi, my Name is
 						</h1>
 						<h2 className="font-clash text-[2.7em] lg:text-8xl leading-10 font-medium text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70]">
 							Michael Ungar.
@@ -43,7 +43,7 @@ const Landing = () => {
 							Developer and Designer from Austria.{" "}
 						</h3>
 						<h4 className="font-sora text-[1em] text-[#686C76] mt-0 font-normal lg:mt-4">
-							I’m a frontend dev and creator currently working as a freelancer{" "}
+							I’m a frontend dev and creator currently active as a freelancer{" "}
 							<br></br>
 							focused on creating flawless code and magnificent designs.
 						</h4>
