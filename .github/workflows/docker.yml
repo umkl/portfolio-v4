@@ -12,33 +12,33 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
-      - name: Build
+      - name: build docker image from Dockerfile
         uses: docker/build-push-action@v5
         with:
           context: .
           load: true
-          tags: myimage:latest
-      - name: Inspect
+          tags: portfolio-v4:latest
+      - name: inspect
         run: |
           docker image inspect myimage:latest  
-      - name: Export 
+      - name: export the created image
         run: |
-          docker save -o myimageLatest.tar myimage:latest
-      - name: Copy files to remote server
+          docker save -o portfolioV4Latest.tar portfolio-v4:latest
+      - name: copy files over to contabo server
         uses: garygrossgarten/github-action-scp@v0.8.0
         with:
           host: ${{ secrets.CONTABO_IP }}
           username: ${{ secrets.CONTABO_USERNAME }}
           password: ${{ secrets.CONTABO_PWD }}
-          local: ./myimageLatest.tar
-          remote: /root/portfolio-v4/myimageLatest.tar
-      - name: executing remote ssh commands using password
+          local: ./portfolioV4Latest.tar
+          remote: /root/portfolio-v4/portfolioV4Latest.tar
+      - name: executing the bash script to start the docker container
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.CONTABO_IP }}
           username: ${{ secrets.CONTABO_USERNAME }}
           password: ${{ secrets.CONTABO_PWD }}
           port: 22
-          script: whoami
+          script: bash /root/portfolio-v4/expv4.sh
             
 
