@@ -1,7 +1,31 @@
 "use client";
-import { NavContext } from "@um-p4/app/page";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
+import { WorkSectionHeader } from "./workSection";
+import { NavContext } from "@um-p4/app/navcontext";
+
+const xpsForTheExperienceSection = [
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+	{
+		name: "Achterbahnfahrt",
+		startDate: "c231012",
+		endDate: "c231212",
+	},
+];
 
 const ExperienceSection = () => {
 	const navCxt = useContext(NavContext);
@@ -18,12 +42,10 @@ const ExperienceSection = () => {
 			className="h-fit w-full art-bg relative -z-20"
 		>
 			<div className="py-8 relative">
-				<h1 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-					experiences
-				</h1>
-				<h2 className="font-druk text-[2.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
-					places were I got to experience things related to work
-				</h2>
+				<WorkSectionHeader
+					title="Experiences"
+					subtext="Places where I got to experience things related to work"
+				/>
 			</div>
 			<div className="relative">
 				<div className="w-[200px] top-0 h-full  left-1/2 -translate-x-1/2 absolute -z-10 flex">
@@ -49,18 +71,10 @@ const ExperienceSection = () => {
 				</div>
 				<div className="flex justify-center relative left-1/2 -translate-x-1/2 w-full max-w-[900px] h-fit">
 					<div className="w-full h-fit">
-						<div className="w-full h-fit flex">
-							<div className="flex-1 ">
-								<div className="h-[200px]"></div>
+						<div className="w-full h-fit flex flex-col">
+							{xpsForTheExperienceSection.map((x) => (
 								<ExperienceCard />
-								<ExperienceCard />
-								<ExperienceCard />
-							</div>
-							<div className="w-32 "></div>
-							<div className="flex-1">
-								<ExperienceCard />
-								<ExperienceCard />
-							</div>
+							))}
 						</div>
 					</div>
 				</div>

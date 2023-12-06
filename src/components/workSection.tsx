@@ -7,7 +7,20 @@ import React, {
 	useContext,
 } from "react";
 import Image from "next/image";
-import { NavContext } from "@um-p4/app/page";
+import { NavContext } from "@um-p4/app/navcontext";
+
+const cardContent = [
+	{
+		title: "#1 Sketching",
+		content:
+			"Great things always start with thoughts and capturing those is done best with pen and paper. That is why I always create use the traditional way of putting down ideas - which is on sheets of paper.",
+	},
+	{
+		title: "#2 Design",
+		content:
+			"Interfaces might not be that be important in theory but when it comes into reallife, the day to day life a good UI/UX design can make the fine difference if an application gets used or not. Hence why I like to produce a good mockup before doing any of the actual work ... so hopefully nothing has to be done twice :)",
+	},
+];
 
 const useParallax = (speed = 1) => {
 	const ref = useRef<any>();
@@ -44,102 +57,57 @@ const WorkSection = () => {
 		};
 
 		window.addEventListener("resize", handleResize);
-
-		// Cleanup the event listener on component unmount
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	}, []); // Empty dependency array to run the effect only once on mount
+	}, []);
 
 	return (
-		<section id="work" ref={navCxt.work}>
-			{isMobile ? (
-				<div className="w-full bg-[#333333]  snap-center">
-					<div>
-						<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-							My Craft
-						</h2>
-						<h3 className="font-druk text-[1.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
-							here I want to show you how I go about doing my work
-						</h3>
-					</div>
-					<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-						<WorkCard heading="#1 Sketching" />
-						<WorkCard heading="#2 Desgining" flipped />
-						<WorkCard heading="#3 Development" />
-						<WorkCard heading="#4 Continuous Improvements" flipped />
-					</div>
+		<section id="work" ref={navCxt.work} className="overflow-hidden">
+			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
+				<div className="mb-8">
+					<WorkSectionHeader
+						title="My Craft"
+						subtext="here I want to show you how I go about doing my work"
+					/>
 				</div>
-			) : (
-				<>
-					{/* <ParallaxLayer offset={1} className="z-10" speed={0}>
-						<div className="h-[400px] z-10 w-full flex flex-col justify-center items-center">
-							<p className="text-2xl font-bold text-red-200">Disclaimer</p>
-							<p className="text-2xl ">
-								The following section will represent what kind of work i do
-							</p>
-						</div>
-					</ParallaxLayer>
-					<>
-						<ParallaxLayer offset={1.2} speed={1.8} className="z-20">
-							<div className="h-screen z-20  w-1/2  snap-start  flex justify-end items-center  ">
-								<div className="w-2/3 left-1/2 flex font-druk ">
-									<div className="max-w-[400px] text-right ">
-										<h1 className="font-clash text-3xl text-right">
-											#1 Sketching
-										</h1>
-										<p className="font-inter text-md text-right text-[#C2CAD1]">
-											the first stage of creating things is always thinking. In
-											this area I like to capture my thoughts using a notepad in
-											an oldschool fashion. After having done that I continue on
-											with the next stage:{" "}
-										</p>
-									</div>
-								</div>
-							</div>
-						</ParallaxLayer>
-						<ParallaxLayer offset={1.5} speed={1.4} className="z-20">
-							<div className="left-1/2 z-20  relative h-screen w-1/2">
-								<div className="max-w-[400px]">
-									<Image
-										src="/coding.png"
-										alt="Vercel Logo"
-										className=""
-										style={{
-											width: "100%",
-											height: "auto",
-										}}
-										width={500}
-										height={300}
-										priority
-									/>
-								</div>
-							</div>
-						</ParallaxLayer> */}
-
-					<div className="w-full bg-[#333333]  snap-center">
-						<div>
-							<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
-								My Craft
-							</h2>
-							<h3 className="font-druk text-[1.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
-								here I want to show you how I go about doing my work
-							</h3>
-						</div>
-						<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
-							<WorkCard heading="#1 Sketching" />
-							<WorkCard heading="#2 Desgining" flipped />
-							<WorkCard heading="#3 Development" />
-							<WorkCard heading="#4 Continuous Improvements" flipped />
-						</div>
-					</div>
-				</>
-			)}
+				<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
+					{isMobile
+						? cardContent.map((x) => (
+								<WorkCardMobile
+									heading={x.title}
+									content={x.content}
+								></WorkCardMobile>
+						  ))
+						: cardContent.map((x) => (
+								<WorkCard heading={x.title} content={x.content}></WorkCard>
+						  ))}
+				</div>
+			</div>
 		</section>
 	);
 };
 
 export default WorkSection;
+
+export const WorkSectionHeader = ({
+	title,
+	subtext,
+}: {
+	title: string;
+	subtext: string;
+}) => {
+	return (
+		<>
+			<h2 className="font-druk text-[4em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+				{title}
+			</h2>
+			<h3 className="font-druk text-[1.8em] leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
+				{subtext}
+			</h3>
+		</>
+	);
+};
 
 const WorkCard = ({
 	flipped = false,
@@ -148,10 +116,10 @@ const WorkCard = ({
 }: {
 	flipped?: boolean;
 	heading: string;
-	content?: JSX.Element;
+	content?: JSX.Element | string;
 }) => {
 	return (
-		<div className={`flex ${flipped ? "flex-row-reverse" : ""}`}>
+		<div className={`flex ${flipped ? "flex-row-reverse " : "flex-row"}`}>
 			<div className="max-w-[800px] text-right flex flex-col">
 				<div className="flex-1"></div>
 				<div className="">
@@ -177,6 +145,48 @@ const WorkCard = ({
 				<div className="flex-1"></div>
 			</div>
 			<div className="w-full p-[50px] ">
+				<Image
+					src="/coding.png"
+					alt="Vercel Logo"
+					className="drop-shadow-[0_0_0.3rem_#ffffff20] drop-shadow-2xl"
+					style={{
+						width: "100%",
+						height: "auto",
+					}}
+					width={500}
+					height={300}
+					priority
+				/>
+			</div>
+		</div>
+	);
+};
+
+const WorkCardMobile = ({
+	heading,
+	content,
+}: {
+	heading: string;
+	content?: JSX.Element | string;
+}) => {
+	return (
+		<div className={`flex flex-col-reverse px-8 py-8 gap-6`}>
+			<div className="max-w-[800px]  text-right flex flex-col ">
+				<div className="flex-1"></div>
+				<div className="">
+					<h1
+						className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] text-left`}
+					>
+						{heading}
+					</h1>
+					<p className={`font-inter text-md  text-[#C2CAD1] text-left`}>
+						{content}
+					</p>
+				</div>
+
+				<div className="flex-1"></div>
+			</div>
+			<div className="w-full ">
 				<Image
 					src="/coding.png"
 					alt="Vercel Logo"
