@@ -44,7 +44,7 @@ jobs:
           ssh-private-key: ${{ secrets.CONTABO_SSH_PRIVATE }}
       - name: Run command on remote server
         run: |
-          ssh root@31.220.89.68 'ls'
+          ssh root@31.220.89.68 'pwd'
          
             
 
