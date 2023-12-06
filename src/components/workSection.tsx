@@ -20,7 +20,7 @@ const cardContent = [
 		title: "#2 Design",
 		content:
 			"Interfaces might not be that be important in theory but when it comes into reallife, the day to day life a good UI/UX design can make the fine difference if an application gets used or not. Hence why I like to produce a good mockup before doing any of the actual work ... so hopefully nothing has to be done twice :)",
-		imageName: "work-experience-1_sketching.png",
+		imageName: "work-experience-2_design.png",
 	},
 ];
 
@@ -43,9 +43,9 @@ const WorkSection = () => {
 		<section id="work" ref={navCxt.work} className="overflow-hidden">
 			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
 				<div className="mb-8">
-					<WorkSectionHeader title="My Craft" subtext="" />
+					<WorkSectionHeader title="My Craftsmanship" subtext="" />
 				</div>
-				<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
+				<div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
 					{isMobile
 						? cardContent.map((x) => (
 								<WorkCardMobile
@@ -103,11 +103,11 @@ const WorkCard = ({
 }) => {
 	return (
 		<div
-			className={`flex max-w-4xl relative w-full${
+			className={`flex relative py-32 w-full ${
 				flipped ? "flex-row-reverse " : "flex-row"
-			} mt-10 `}
+			}  `}
 		>
-			<div className="text-right flex flex-col justify-center shrink-0 mr-8 w-1/2 ">
+			<div className="text-right flex flex-col justify-center shrink-0 mr-8 w-2/5 ">
 				<h1
 					className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] ${
 						flipped ? "text-left" : "text-right"
@@ -120,10 +120,7 @@ const WorkCard = ({
 						flipped ? "text-left" : "text-right"
 					}`}
 				>
-					before I start a project I always like to spill out all of my thoughts
-					on a piece of paper so I can fuel my creativity and don’t have to
-					think too much about the business logic during the implementation
-					phase
+					{content}
 				</p>
 			</div>
 			<div className="w-1/2 shrink-0 relative">
