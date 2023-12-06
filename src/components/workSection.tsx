@@ -102,7 +102,7 @@ export const WorkSectionHeader = ({
 			<h2 className="font-druk w-full px-8 text-[6vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 mt-10">
 				{title}
 			</h2>
-			<h3 className="font-inter text-[1.2em] px-8 leading-7 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
+			<h3 className="font-inter text-[1em] px-8 leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
 				{subtext}
 			</h3>
 		</>
