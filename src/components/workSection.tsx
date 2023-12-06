@@ -75,12 +75,17 @@ const WorkSection = () => {
 					{isMobile
 						? cardContent.map((x) => (
 								<WorkCardMobile
+									key={x.title}
 									heading={x.title}
 									content={x.content}
 								></WorkCardMobile>
 						  ))
 						: cardContent.map((x) => (
-								<WorkCard heading={x.title} content={x.content}></WorkCard>
+								<WorkCard
+									key={x.title}
+									heading={x.title}
+									content={x.content}
+								></WorkCard>
 						  ))}
 				</div>
 			</div>

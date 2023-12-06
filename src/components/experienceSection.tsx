@@ -48,11 +48,11 @@ const ExperienceSection = () => {
 				/>
 			</div>
 			<div className="relative">
-				<div className="w-[200px] top-0 h-full  left-1/2 -translate-x-1/2 absolute -z-10 flex">
+				<div className="w-[200px] top-0 h-full  left-4  absolute -z-10 flex">
 					<div className="h-full w-[20px] shrink-0  flex justify-center">
 						<div className="w-[2px] h-full bg-slate-100 drop-shadow-[0_0_0.3rem_#ffffff70]"></div>
 					</div>
-					<div className="flex flex-col h-full flex-1">
+					<div className="flex flex-col h-full flex-1 ">
 						<div className="wrapper w-full h-[800px]  flex flex-col ">
 							<div className="sticky top-0 font-druk text-3xl drop-shadow-[0_0_0.3rem_#ffffff70] w-[500px] rotate-90 origin-bottom-left ">
 								now
@@ -73,7 +73,7 @@ const ExperienceSection = () => {
 					<div className="w-full h-fit">
 						<div className="w-full h-fit flex flex-col">
 							{xpsForTheExperienceSection.map((x) => (
-								<ExperienceCard />
+								<ExperienceCard key={x.name}/>
 							))}
 						</div>
 					</div>
