@@ -54,24 +54,22 @@ const WorkSection = () => {
 	return (
 		<section id="work" ref={navCxt.work}>
 			{isMobile ? (
-				<>
-					<div className="left-1/2 z-20  relative h-screen w-1/2">
-						<div className="max-w-[400px]">
-							<Image
-								src="/coding.png"
-								alt="Vercel Logo"
-								className=""
-								style={{
-									width: "100%",
-									height: "auto",
-								}}
-								width={500}
-								height={300}
-								priority
-							/>
-						</div>
+				<div className="w-full bg-[#333333]  snap-center">
+					<div>
+						<h2 className="font-druk text-[2.7em] lg:text-8xl leading-10 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+							My Craft
+						</h2>
+						<h3 className="font-druk text-[1.7em] lg:text-2xl leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2">
+							here I want to show you how I go about doing my work
+						</h3>
 					</div>
-				</>
+					<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
+						<WorkCard heading="#1 Sketching" />
+						<WorkCard heading="#2 Desgining" flipped />
+						<WorkCard heading="#3 Development" />
+						<WorkCard heading="#4 Continuous Improvements" flipped />
+					</div>
+				</div>
 			) : (
 				<>
 					{/* <ParallaxLayer offset={1} className="z-10" speed={0}>
