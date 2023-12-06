@@ -24,25 +24,19 @@ jobs:
       - name: Export 
         run: |
           docker save -o myimageLatest.tar myimage:latest
-      - name: Showing Off 
-        run: |
-          ls
-      - name: ip
-        run: |
-          echo ${{ vars.CONTABO_IP }}
       - name: Copy files to remote server
         uses: garygrossgarten/github-action-scp@v0.8.0
         with:
-          host: 31.220.89.68
-          username: root
+          host: ${{ secrets.CONTABO_IP }}
+          username: ${{ secrets.CONTABO_USERNAME }}
           password: ${{ secrets.CONTABO_PWD }}
           local: ./myimageLatest.tar
-          remote: /root/myimageLatest.tar
+          remote: /root/portfolio-v4/myimageLatest.tar
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: 31.220.89.68
-          username: root
+          host: ${{ secrets.CONTABO_IP }}
+          username: ${{ secrets.CONTABO_USERNAME }}
           password: ${{ secrets.CONTABO_PWD }}
           port: 22
           script: whoami
