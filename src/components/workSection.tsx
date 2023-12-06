@@ -14,38 +14,15 @@ const cardContent = [
 		title: "#1 Sketching",
 		content:
 			"Great things always start with thoughts and capturing those is done best with pen and paper. That is why I always create use the traditional way of putting down ideas - which is on sheets of paper.",
+		imageName: "work-experience-1_sketching.png",
 	},
 	{
 		title: "#2 Design",
 		content:
 			"Interfaces might not be that be important in theory but when it comes into reallife, the day to day life a good UI/UX design can make the fine difference if an application gets used or not. Hence why I like to produce a good mockup before doing any of the actual work ... so hopefully nothing has to be done twice :)",
+		imageName: "work-experience-1_sketching.png",
 	},
 ];
-
-const useParallax = (speed = 1) => {
-	const ref = useRef<any>();
-
-	const handleScroll = () => {
-		if (ref.current) {
-			const scrollY = window.scrollY;
-			const translateY = -scrollY * speed;
-			ref.current.style.transition = "transform 0.3s ease-out"; // Adjust the transition duration and easing function
-			ref.current.style.transform = `translateY(${translateY}px)`;
-		}
-	};
-
-	React.useEffect(() => {
-		// Attach the event listener when the component mounts
-		window.addEventListener("scroll", handleScroll);
-
-		// Detach the event listener when the component unmounts
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, [speed]);
-
-	return ref;
-};
 
 const WorkSection = () => {
 	const [isMobile, setIsMobile] = useState<boolean>();
@@ -66,10 +43,7 @@ const WorkSection = () => {
 		<section id="work" ref={navCxt.work} className="overflow-hidden">
 			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
 				<div className="mb-8">
-					<WorkSectionHeader
-						title="My Craft"
-						subtext="here I want to show you how I go about doing my work"
-					/>
+					<WorkSectionHeader title="My Craft" subtext="" />
 				</div>
 				<div className="relative left-1/2  max-w-[900px] -translate-x-1/2">
 					{isMobile
@@ -77,6 +51,7 @@ const WorkSection = () => {
 								<WorkCardMobile
 									key={x.title}
 									heading={x.title}
+									imageName={x.imageName}
 									content={x.content}
 								></WorkCardMobile>
 						  ))
@@ -84,6 +59,7 @@ const WorkSection = () => {
 								<WorkCard
 									key={x.title}
 									heading={x.title}
+									imageName={x.imageName}
 									content={x.content}
 								></WorkCard>
 						  ))}
@@ -117,49 +93,50 @@ export const WorkSectionHeader = ({
 const WorkCard = ({
 	flipped = false,
 	heading,
+	imageName,
 	content,
 }: {
 	flipped?: boolean;
 	heading: string;
+	imageName: string;
 	content?: JSX.Element | string;
 }) => {
 	return (
-		<div className={`flex ${flipped ? "flex-row-reverse " : "flex-row"}`}>
-			<div className="max-w-[800px] text-right flex flex-col">
-				<div className="flex-1"></div>
-				<div className="">
-					<h1
-						className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] ${
-							flipped ? "text-left" : "text-right"
-						}`}
-					>
-						{heading}
-					</h1>
-					<p
-						className={`font-inter text-md  text-[#C2CAD1] ${
-							flipped ? "text-left" : "text-right"
-						}`}
-					>
-						before I start a project I always like to spill out all of my
-						thoughts on a piece of paper so I can fuel my creativity and don’t
-						have to think too much about the business logic during the
-						implementation phase
-					</p>
-				</div>
-
-				<div className="flex-1"></div>
+		<div
+			className={`flex max-w-4xl relative w-full${
+				flipped ? "flex-row-reverse " : "flex-row"
+			} mt-10 `}
+		>
+			<div className="text-right flex flex-col justify-center shrink-0 mr-8 w-1/2 ">
+				<h1
+					className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] ${
+						flipped ? "text-left" : "text-right"
+					}`}
+				>
+					{heading}
+				</h1>
+				<p
+					className={`font-inter text-2xl font-bold mt-4 text-[#C2CAD1] ${
+						flipped ? "text-left" : "text-right"
+					}`}
+				>
+					before I start a project I always like to spill out all of my thoughts
+					on a piece of paper so I can fuel my creativity and don’t have to
+					think too much about the business logic during the implementation
+					phase
+				</p>
 			</div>
-			<div className="w-full p-[50px] ">
+			<div className="w-1/2 shrink-0 relative">
 				<Image
-					src="/coding.png"
-					alt="Vercel Logo"
-					className="drop-shadow-[0_0_0.3rem_#ffffff20] drop-shadow-2xl"
+					src={`/${imageName}`}
+					alt=""
+					className="drop-shadow-[0_0_0.3rem_#ffffff20]"
 					style={{
 						width: "100%",
 						height: "auto",
 					}}
 					width={500}
-					height={300}
+					height={500}
 					priority
 				/>
 			</div>
@@ -169,9 +146,11 @@ const WorkCard = ({
 
 const WorkCardMobile = ({
 	heading,
+	imageName,
 	content,
 }: {
 	heading: string;
+	imageName: string;
 	content?: JSX.Element | string;
 }) => {
 	return (
