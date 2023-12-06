@@ -19,8 +19,20 @@ const cardContent = [
 	{
 		title: "#2 Design",
 		content:
-			"Interfaces might not be that be important in theory but when it comes into reallife, the day to day life a good UI/UX design can make the fine difference if an application gets used or not. Hence why I like to produce a good mockup before doing any of the actual work ... so hopefully nothing has to be done twice :)",
+			"While interfaces may not seem critical in theory, their significance becomes apparent in real-life, day-to-day usage. A well-crafted UI/UX design can be the determining factor in whether an application finds widespread use. This is why I prioritize creating a robust mockup before diving into the actual development work—ensuring a seamless process and minimizing the need for rework :) ",
 		imageName: "work-experience-2_design.png",
+	},
+	{
+		title: "#3 Coding",
+		content:
+			"Stepping into the coding phase is like putting our plans into action. Coding is where the magic happens, turning a design on paper into a real, working thing. Every bit of code matters, ensuring everything runs smoothly and does what it's supposed to. I pay close attention to the details to create an app that's not just functional but also trustworthy. ",
+		imageName: "work-experience-3_coding.png",
+	},
+	{
+		title: "#4 DevOps",
+		content:
+			"Entering the realm of DevOps, it's where the behind-the-scenes magic happens to keep everything running smoothly. DevOps streamlines the deployment and maintenance process so changes can be pushed out as fast as possible. Over the time I realised the perfection of this step is essential for keeping up the motivation towards keeping on working on a project.",
+		imageName: "work-experience-4_devops.png",
 	},
 ];
 
@@ -43,7 +55,10 @@ const WorkSection = () => {
 		<section id="work" ref={navCxt.work} className="overflow-hidden">
 			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
 				<div className="mb-8">
-					<WorkSectionHeader title="My Craftsmanship" subtext="" />
+					<WorkSectionHeader
+						title="My Craftsmanship"
+						subtext="The steps most of my projects consist of."
+					/>
 				</div>
 				<div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
 					{isMobile
@@ -55,8 +70,9 @@ const WorkSection = () => {
 									content={x.content}
 								></WorkCardMobile>
 						  ))
-						: cardContent.map((x) => (
+						: cardContent.map((x, i) => (
 								<WorkCard
+									flipped={i % 2 == 0}
 									key={x.title}
 									heading={x.title}
 									imageName={x.imageName}
@@ -80,10 +96,13 @@ export const WorkSectionHeader = ({
 }) => {
 	return (
 		<>
-			<h2 className="font-druk text-[4em] leading-12 font-medium text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-2">
+			{/* <h1 className="text-left font-sora font-bold text-[1.23em] text-[#c2cad193] px-8 mt-10">
+				this section is about
+			</h1> */}
+			<h2 className="font-druk w-full px-8 text-[6vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 mt-10">
 				{title}
 			</h2>
-			<h3 className="font-druk text-[1.8em] leading-10 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-center  sm:max-w-[600px] left-1/2 relative -translate-x-1/2 mt-2 max-w-[80%]">
+			<h3 className="font-inter text-[1.2em] px-8 leading-7 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
 				{subtext}
 			</h3>
 		</>
@@ -123,7 +142,7 @@ const WorkCard = ({
 					{content}
 				</p>
 			</div>
-			<div className="w-1/2 shrink-0 relative">
+			<div className="w-1/2 mr-8 shrink-0 relative">
 				<Image
 					src={`/${imageName}`}
 					alt=""
@@ -152,15 +171,15 @@ const WorkCardMobile = ({
 }) => {
 	return (
 		<div className={`flex flex-col-reverse px-8 py-8 gap-6`}>
-			<div className="max-w-[800px]  text-right flex flex-col ">
+			<div className="max-w-[800px]  text-left flex flex-col ">
 				<div className="flex-1"></div>
 				<div className="">
 					<h1
-						className={`font-clash text-6xl  drop-shadow-[0_0_0.3rem_#ffffff70] text-left`}
+						className={`font-clash text-5xl  drop-shadow-[0_0_0.3rem_#ffffff70]`}
 					>
 						{heading}
 					</h1>
-					<p className={`font-inter text-md  text-[#C2CAD1] text-left`}>
+					<p className={`font-inter text-xl font-bold mt-4 text-[#C2CAD1]`}>
 						{content}
 					</p>
 				</div>
@@ -169,7 +188,7 @@ const WorkCardMobile = ({
 			</div>
 			<div className="w-full ">
 				<Image
-					src="/coding.png"
+					src={`/${imageName}`}
 					alt="Vercel Logo"
 					className="drop-shadow-[0_0_0.3rem_#ffffff20] drop-shadow-2xl"
 					style={{
