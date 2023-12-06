@@ -20,7 +20,7 @@ jobs:
           tags: portfolio-v4:latest
       - name: inspect
         run: |
-          docker image inspect myimage:latest  
+          docker image inspect portfolio-v4:latest 
       - name: export the created image
         run: |
           docker save -o portfolioV4Latest.tar portfolio-v4:latest
