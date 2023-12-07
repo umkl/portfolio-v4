@@ -3,19 +3,24 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useContext, useState } from "react";
 
-interface ProjectType {
-	name: string;
-}
-
-const projects: ProjectType[] = [
+const projects = [
 	{
-		name: "preojct 1",
+		name: "deets",
+		text: "Diploma-thesis for school",
+		id: 1,
+		year: 2022,
 	},
 	{
-		name: "preojct 2",
+		name: "portfolio",
+		text: "Diploma-thesis for school",
+		id: 2,
+		year: 2021,
 	},
 	{
-		name: "preojct 3",
+		name: "octagon",
+		text: "Mock website",
+		id: 3,
+		year: 2020,
 	},
 ];
 
@@ -95,6 +100,10 @@ const ProjectsSection = () => {
 							handlePrevious();
 						}}
 						title={projects[currentIndex].name}
+						text={projects[currentIndex].text ?? ""}
+						id={projects[currentIndex].id}
+						year={projects[currentIndex].year}
+						key={projects[currentIndex].id}
 					/>
 				</motion.div>
 			</AnimatePresence>
@@ -106,28 +115,32 @@ const ProjectCard = ({
 	nextBtn,
 	prevBtn,
 	title,
+	text,
+	year,
+	id,
 }: {
 	nextBtn: () => void;
 	prevBtn: () => void;
 	title: string;
+	text: string;
+	year: number;
+	id: number;
 }) => {
 	return (
-		<div className="snap-center w-screen shrink-0 h-full relative inline-block bg-[#333333] p-9">
+		<div className="snap-center w-screen shrink-0 h-full relative overflow-hidden inline-block bg-[#333333] p-9">
 			<div className="relative h-full w-full border-4 border-gray-50">
 				<div className="relative inline-block text-[6em] leading-[0.8em] m-4 top-0 left-0 font-druk">
-					#1
+					#{id}
 				</div>
-				<div className="text-[9em] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block text-center font-druk font-outline-2 text-transparent">
+				<div className="text-[4em] md:text-[9em] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block text-center font-druk font-outline-2 text-transparent">
 					{title}
 				</div>
 				<div className="absolute inline-block text-[2em] max-w-full  bottom-0 left-0 font-inter font-bold">
-					a project i did with a couple of school homies
+					{text}
 				</div>
-				<div className="absolute  inline-block text-[6em] leading-[0.8em] p-8 bottom-0 right-0 font-druk border-t-4 border-l-4 border-white focus-cross-bg">
-					more
-				</div>
+
 				<div className="absolute  inline-block text-[6em] leading-[0.8em] m-4 top-0 right-0 font-druk">
-					2023
+					{year}
 				</div>
 				<div
 					className="absolute  inline-block text-[6em] top-1/2 -translate-y-1/2 left-0 font-druk border-y-4 border-r-4 border-white p-5 focus-cross-bg"
