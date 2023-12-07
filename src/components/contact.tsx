@@ -66,6 +66,11 @@ const ContactSection = () => {
 							Floating standard
 						</label>
 					</div>
+					<input
+						type="button"
+						value="send it"
+						className="appearance-none border-2 rounded-full w-14 font-clash px-8 py-2 box-content mb-4"
+					/>
 				</form>
 				<div className="mb-4">
 					<h3 className="font-clash text-[1.5rem] font-bold">
