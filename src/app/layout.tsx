@@ -15,7 +15,7 @@ const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 const clash = localfont({
 	src: [
 		{
-			path: "../../public/fonts/ClashDisplay-Bold.ttf",
+			path: "../../public/fonts/ClashDisplay-Variable.ttf",
 		},
 	],
 	variable: "--font-clash",
