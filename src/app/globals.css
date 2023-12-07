@@ -33,7 +33,7 @@
 }
 
 * {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 }
 
 html {
@@ -51,6 +51,7 @@ html {
 	background-attachment: fixed;
 	background-size: 150px 150px;
 	background-image: url("../../public/raster.svg");
+	font-size: 16pt;
 }
 
 @media screen and (max-width: 800px) {
