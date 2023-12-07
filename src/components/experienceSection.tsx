@@ -45,18 +45,18 @@ const ExperienceSection = () => {
 				<h2 className="font-druk w-full px-8 text-[9vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 ">
 					Experiences
 				</h2>
-				<h3 className="font-inter text-[1em] px-8 leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
+				<h3 className="font-inter text-[1em] px-8 leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]   sm:max-w-[600px] relative text-center mt-2 ">
 					Places where I got to experience things
 				</h3>
 			</div>
 			<div className="relative">
 				<div className="w-[200px] top-0 h-full  left-4  absolute z-10 flex">
 					<div className="h-full w-[5px] shrink-0  flex justify-center">
-						<div className="w-[12px] h-full bg-gray-500 drop-shadow-[0_0_0.3rem_#ffffff70]"></div>
+						<div className="w-[12px] h-full bg-[#6D6D6D] "></div>
 					</div>
 					<div className="flex flex-col h-full flex-1 ">
-						<div className="wrapper w-full h-[800px]  flex flex-col ">
-							<div className="-translate-y-full sticky top-6 font-druk text-3xl drop-shadow-[0_0_0.3rem_#ffffff70] w-[500px] rotate-90 origin-bottom-left ">
+						<div className="wrapper w-full h-[400px]  flex flex-col ">
+							<div className="-translate-y-full sticky text-[#6D6D6D] top-6 font-druk text-3xl  w-[500px] rotate-90 origin-bottom-left ">
 								now
 							</div>
 							<div className="h-[500px]  w-[40px] sticky top-0"></div>
@@ -64,7 +64,7 @@ const ExperienceSection = () => {
 						</div>
 						<div className="h-[100px]  w-full"> </div>
 						<div className="wrapper  w-full flex-1 flex flex-col">
-							<div className="sticky top-0 font-druk text-3xl drop-shadow-[0_0_0.3rem_#ffffff70] rotate-90 origin-bottom-left ">
+							<div className="sticky top-0 font-druk text-3xl text-[#6D6D6D]  rotate-90 origin-bottom-left ">
 								2023
 							</div>
 							<div className=" flex-1"></div>
