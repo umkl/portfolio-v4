@@ -127,44 +127,44 @@ const ProjectCard = ({
 	id: number;
 }) => {
 	return (
-		<div className="snap-center w-screen shrink-0 h-full relative overflow-hidden inline-block bg-[#333333] p-9">
+		<div className="snap-center w-screen shrink-0 h-full relative overflow-hidden inline-block bg-[#333333] p-3">
 			<div className="relative h-full w-full border-4 border-gray-50">
-				<div className="relative inline-block text-[6em] leading-[0.8em] m-4 top-0 left-0 font-druk">
+				<div className="relative inline-block text-[2em] leading-[0.8em] m-4 top-0 left-0 font-druk">
 					#{id}
 				</div>
 				<div className="text-[4em] md:text-[9em] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 block text-center font-druk font-outline-2 text-transparent">
 					{title}
 				</div>
-				<div className="absolute inline-block text-[2em] max-w-full  bottom-0 left-0 font-inter font-bold">
+				<div className="absolute inline-block text-[1.2em] max-w-full  bottom-0 left-0 font-inter font-bold">
 					{text}
 				</div>
 
-				<div className="absolute  inline-block text-[6em] leading-[0.8em] m-4 top-0 right-0 font-druk">
+				<div className="absolute  inline-block text-[2em] leading-[0.8em] m-4 top-0 right-0 font-druk">
 					{year}
 				</div>
 				<div
-					className="absolute  inline-block text-[6em] top-1/2 -translate-y-1/2 left-0 font-druk border-y-4 border-r-4 border-white p-5 focus-cross-bg"
+					className="absolute  inline-block text-[6em] top-2/3 -translate-y-1/2 left-0 font-druk border-y-4 border-r-4 border-white p-5 focus-cross-bg"
 					onClick={() => prevBtn()}
 				>
 					<Image
 						src="/arrow-l.svg"
 						alt="Vercel Logo"
 						className="stroke-white fill-white"
-						width={80}
-						height={80}
+						width={20}
+						height={20}
 						priority
 					/>
 				</div>
 				<div
-					className="absolute  inline-block text-[6em] top-1/2 -translate-y-1/2 right-0 font-druk border-y-4 border-l-4 border-white p-5 focus-cross-bg"
+					className="absolute  inline-block text-[6em] top-2/3 -translate-y-1/2 right-0 font-druk border-y-4 border-l-4 border-white p-5 focus-cross-bg"
 					onClick={() => nextBtn()}
 				>
 					<Image
 						src="/arrow-r.svg"
 						alt="Vercel Logo"
 						className="stroke-white fill-white"
-						width={80}
-						height={80}
+						width={20}
+						height={20}
 						priority
 					/>
 				</div>
