@@ -6,27 +6,33 @@ import { NavContext } from "@um-p4/app/navcontext";
 
 const xpsForTheExperienceSection = [
 	{
-		heading: "Achterbahnfahrt",
+		heading: "Engramm",
 		date: "c231012",
-		text: "asdlkf",
+		text: "This is something I am personally working on right now. In order to handle proper contracts I registered a business for frontend development and design work for local companies.",
 		topics: [],
 	},
 	{
-		heading: "Achterbahnfahr2t",
+		heading: "Btastic",
 		date: "c231012",
-		text: "asdlkf",
+		text: "In the summer of 2022 I got the opportunity to work with a little startup and gained a lot of experience regarding working with code as a profession.",
 		topics: [],
 	},
 	{
-		heading: "Achterbahnfahr2t3",
+		heading: "Paso",
 		date: "c231012",
-		text: "asdlkf",
+		text: "This was one of my most exciting internships... ",
 		topics: [],
 	},
 	{
-		heading: "Achterbahnfahr24t",
+		heading: "VortexData",
 		date: "c231012",
-		text: "asdlkf",
+		text: "Got the opportunity to work for a few school c.",
+		topics: [],
+	},
+	{
+		heading: "HTL Grieskirchen",
+		date: "c1809",
+		text: "This is where my coding journey started in the year of 2018.",
 		topics: [],
 	},
 ];
@@ -82,14 +88,14 @@ const ExperienceSection = () => {
 						</div>
 						<div className="h-[100px]  w-full"> </div>
 						<div className="wrapper  w-full h-[700px] flex flex-col">
-							<div className="sticky top-0 font-druk text-3xl text-[#6D6D6D] bg-red-200 rotate-90 origin-bottom-left ">
+							<div className="sticky top-0 font-druk text-3xl text-[#6D6D6D]  rotate-90 origin-bottom-left ">
 								2023
 							</div>
 							<div className=" flex-1"></div>
 						</div>
 						<div className="h-[100px]  w-full"> </div>
 						<div className="wrapper  w-full flex-1 flex flex-col">
-							<div className="sticky top-0 font-druk text-3xl text-[#6D6D6D] bg-red-200 rotate-90 origin-bottom-left ">
+							<div className="sticky top-0 font-druk text-3xl text-[#6D6D6D]  rotate-90 origin-bottom-left ">
 								2023
 							</div>
 							<div className=" flex-1"></div>
@@ -98,7 +104,7 @@ const ExperienceSection = () => {
 				</div>
 				<div
 					ref={expcardRef}
-					className="flex justify-center relative left-1/2 -translate-x-1/2 w-full h-fit bg-red-200 min-h-[200px] max-w-screen overflow-hidden flex-col "
+					className="flex justify-center relative left-1/2 -translate-x-1/2 w-full h-fit  min-h-[200px] max-w-screen overflow-hidden flex-col "
 				>
 					{xpsForTheExperienceSection.map((x) => (
 						<ExperienceCard
@@ -129,9 +135,9 @@ const ExperienceCard = ({
 	topics: string[];
 }) => {
 	return (
-		<div className="flex flex-row bg-emerald-200">
-			<div id="spacer" className="w-[60px] shrink-0 bg-blue-200"></div>
-			<div className="flex-1 h-[900px] flex flex-col pl-4 pr-4 bg-purple-200  mb-4 relative">
+		<div className="flex flex-row ">
+			<div id="spacer" className="w-[60px] shrink-0"></div>
+			<div className="flex-1 min-h-[800px] flex flex-col pl-4 pr-4 relative">
 				<Image
 					src="/coding.png"
 					alt="XP-IMAGE"
@@ -146,10 +152,15 @@ const ExperienceCard = ({
 				/>
 
 				<h1
-					className={`font-clash mt-8 break-all box-border relative drop-shadow-[0_0_0.3rem_#ffffff70] block`}
+					className={`font-clash mt-4 break-all box-border relative drop-shadow-[0_0_0.3rem_#ffffff70] block text-[3.4em] leading-[1.2em]`}
 				>
-					{heading}asdfasdfasdfasdfasasdfasdfasdfassfsdassassasfassdasfds
+					{heading}
 				</h1>
+				<h2 className="text-[2em] font-clash text-[#D9C2A7]">{date}</h2>
+				<p className="font-inter font-bold text-[1.8em] text-[#C2CAD1]">
+					{text}
+				</p>
+				<div className="h-[40px]"></div>
 			</div>
 		</div>
 	);
