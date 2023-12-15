@@ -20,7 +20,7 @@ const ContactSection = () => {
 					Let's get in contact!
 				</h1>
 				<h2 className="font-clash font-[500] text-2xl ">
-					I am currently quite busy but definetly open to new offers!
+					I am currently quite busy but definitly open to new offers!
 				</h2>
 				<div className="h-[3em]"></div>
 				<form>
