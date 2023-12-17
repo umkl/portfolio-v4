@@ -4,17 +4,19 @@ const CardComponent = ({
 	name,
 	desc,
 	dest,
+	classname,
 	tap,
 }: {
 	name: string;
 	desc: string;
 	dest: string;
+	classname?: string;
 	tap?: () => void;
 }) => {
 	return (
 		<a
 			onClick={() => tap!()}
-			className="group rounded-lg border-2 transition-all hover:bg-[#95b8d13e] hover:backdrop-blur-[2px]  border-transparent py-4 px-6   hover:border-[#95B8D1]  "
+			className={`group rounded-lg border-2 transition-all hover:bg-[#95b8d13e] hover:backdrop-blur-[2px]  border-transparent py-4 px-6   hover:border-[#95B8D1]  ${classname}`}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
