@@ -32,30 +32,24 @@
 	}
 }
 
-* {
-	/* border: 1px solid red; */
-}
 
 html {
 	color: rgb(var(--foreground-rgb));
-	
 	width: 100%;
-	/* background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb)); */
+	font-size: 16pt;
+}
+
+
+.landing-bg{
 	background-color: #333333;
 	background-repeat: repeat;
 	background-attachment: fixed;
 	background-size: 150px 150px;
 	background-image: url("../../public/raster.svg");
-	font-size: 16pt;
 }
 
 @media screen and (max-width: 800px) {
-	html {
+	.landing-bg {
 		background-size: 300px 300px;
 		background-position: 45px;
 	}

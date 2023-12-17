@@ -1,4 +1,4 @@
-import { NavContext } from "@um-p4/app/navcontext";
+import { NavContext } from "@um-p4/navcontext";
 import Image from "next/image";
 import { useContext } from "react";
 

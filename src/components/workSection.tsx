@@ -7,7 +7,7 @@ import React, {
 	useContext,
 } from "react";
 import Image from "next/image";
-import { NavContext } from "@um-p4/app/navcontext";
+import { NavContext } from "@um-p4/navcontext";
 
 const cardContent = [
 	{
