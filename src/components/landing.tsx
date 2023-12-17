@@ -18,63 +18,64 @@ const Landing = () => {
 				delay: 0.7,
 				duration: 1,
 				y: 20,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to("#logo", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				y: 20,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to("#pb", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				y: 20,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to("#cards", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				y: 0,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to(".letter-item", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				top: 0,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to(".card-comp-item", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				top: 0,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to("#center-text-2", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				top: 0,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 			gsap.to("#center-text-3", {
 				opacity: 1,
 				delay: 0.7,
 				duration: 1,
 				top: 0,
-				ease: "power2.inOut",
+				ease: "power1.out",
 			});
 		});
 		return ctxt.clear();
 	}, []);
 
 	return (
-		<section className="min-h-[100vh] w-full overflow-hidden landing-bg">
+		<section className="min-h-[100vh] w-full overflow-hidden relative">
+			<div className="-z-10 landing-bg h-full w-full absolute"></div>
 			<main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24  max-w-screen overflow-hidden ">
 				<div className=" max-w-5xl w-full items-center justify-between font-mono text-sm flex md:mt-20">
 					<Image
@@ -106,20 +107,20 @@ const Landing = () => {
 						Hi, my Name is
 					</h1>
 					<h2 className="font-clash text-[2.7em] lg:text-8xl leading-10 font-[700] text-[#C2CAD1] overflow-hidden drop-shadow-[0_0_0.3rem_#ffffff70] relative">
-						<span className="letter-item relative top-1">M</span>
-						<span className="letter-item relative top-2">i</span>
-						<span className="letter-item relative top-3">c</span>
-						<span className="letter-item relative top-4">h</span>
-						<span className="letter-item relative top-5">a</span>
-						<span className="letter-item relative top-6">e</span>
-						<span className="letter-item relative top-7">l</span>
-						<span className="letter-item relative top-8"> </span>
-						<span className="letter-item relative top-9">U</span>
-						<span className="letter-item relative top-10">n</span>
-						<span className="letter-item relative top-11">g</span>
-						<span className="letter-item relative top-12">a</span>
-						<span className="letter-item relative top-14">r</span>
-						<span className="letter-item relative top-16">.</span>
+						<span className="letter-item relative top-[5px]">M</span>
+						<span className="letter-item relative top-[10px]">i</span>
+						<span className="letter-item relative top-[15px]">c</span>
+						<span className="letter-item relative top-[20px]">h</span>
+						<span className="letter-item relative top-[25px]">a</span>
+						<span className="letter-item relative top-[30px]">e</span>
+						<span className="letter-item relative top-[35px]">l</span>
+						<span className="letter-item relative top-[40px]"> </span>
+						<span className="letter-item relative top-[45px]">U</span>
+						<span className="letter-item relative top-[50px]">n</span>
+						<span className="letter-item relative top-[55px]">g</span>
+						<span className="letter-item relative top-[60px]">a</span>
+						<span className="letter-item relative top-[65px]">r</span>
+						<span className="letter-item relative top-[70px]">.</span>
 					</h2>
 					<h3 className="font-inter font-bold text-[1.2em] lg:text-4xl text-[#81899B] overflow-hidden relative">
 						<span id="center-text-2" className="relative top-[100px]">
