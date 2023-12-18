@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.custom-cursor {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #ff0000;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 9999;
+	mix-blend-mode: difference;
+  }
+
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
@@ -139,23 +152,7 @@ html, body {
 	margin: 0;
   }
   
-  /* Custom cursor styles */
-  body {
   
-	/* Use a pseudo-element for the custom cursor */
-	&::before {
-	  content: '';
-	  position: absolute;
-	  width: 20px;
-	  height: 20px;
-	  border: 2px solid #fff; /* Border color */
-	  background-color: #333; /* Circle color */
-	  border-radius: 50%; /* Make it a circle */
-	  transform: translate(-50%, -50%);
-	  pointer-events: none; /* Ensure the cursor doesn't interfere with other elements */
-	  transition: transform 0.2s ease-out; /* Add a smooth transition effect */
-	}
-  }
   
   /* Change the cursor style on hover */
   a, button {
