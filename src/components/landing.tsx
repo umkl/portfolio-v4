@@ -123,7 +123,7 @@ const Landing = () => {
 						<span className="letter-item relative top-[70px]">.</span>
 					</h2>
 					<h3 className="font-inter font-bold text-[1.2em] lg:text-4xl text-[#81899B] overflow-hidden relative">
-						<span id="center-text-2" className="relative top-[100px]">
+						<span id="center-text-2" className="relative top-[100px] leading-5">
 							Developer and Designer from Austria.{" "}
 						</span>
 					</h3>
@@ -143,24 +143,18 @@ const Landing = () => {
 					<CardComponent
 						tap={() => {
 							// navCxt.work!.current?.scrollIntoView();
+							router.push("/work");
 						}}
 						classname="top-10 card-comp-item relative"
 						dest="work"
 						name="Work"
 						desc="Find out what kind of work I do and how I go about creating new projects."
 					/>
-					<CardComponent
-						tap={() => {
-							// navCxt.experience!.current?.scrollIntoView();
-						}}
-						dest="experience"
-						classname="top-20 card-comp-item relative"
-						name="XPs"
-						desc="Explore what kind of experiences I was already able to make."
-					/>
+
 					<CardComponent
 						tap={() => {
 							// navCxt.projects!.current?.scrollIntoView();
+							router.push("/projects");
 						}}
 						dest="projects"
 						name="Projects"
@@ -169,12 +163,22 @@ const Landing = () => {
 					/>
 					<CardComponent
 						tap={() => {
+							// navCxt.experience!.current?.scrollIntoView();
+							window.location.replace("https://blog.ungarmichael.me");
+						}}
+						dest="blog"
+						classname="top-20 card-comp-item relative"
+						name="Blog"
+						desc="Read some of my thoughts on Coding and UI/UX-Design."
+					/>
+					<CardComponent
+						tap={() => {
 							router.push("/contact");
 						}}
 						dest="contact"
 						name="Contact"
 						classname="top-20 card-comp-item relative"
-						desc="Get in touch with me :)"
+						desc="Regardless if you want to start a project or just feel like talking, let us connect."
 					/>
 				</div>
 				<div className="absolute h-8 md:h-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>

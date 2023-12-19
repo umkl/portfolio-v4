@@ -5,9 +5,11 @@ import { useRouter } from 'next/router';
 import { text, curve, translate } from './anim';
 
 const routes = {
-    "/": "Welcome :)",
-    "/about": "About",
-    "/contact": "Contact"
+    "/": "Welcome",
+    "/blog": "Blog",
+    "/contact": "Contact",
+	"/projects": "Projects",
+	"/work": "Work"
 }
 
 const anim = (variants) => {
