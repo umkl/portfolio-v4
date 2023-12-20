@@ -76,7 +76,7 @@ const Landing = () => {
 	return (
 		<section className="min-h-[100vh] w-full overflow-hidden relative">
 			<div className="-z-10 landing-bg h-full w-full absolute"></div>
-			<main className="flex min-h-screen flex-col items-center justify-between p-6 md:p-24  max-w-screen overflow-hidden ">
+			<main className="flex min-h-screen flex-col items-center justify-between p-6 md:px-24  max-w-screen overflow-hidden ">
 				<div className=" max-w-5xl w-full items-center justify-between font-mono text-sm flex md:mt-20">
 					<Image
 						id="logo"
