@@ -67,7 +67,7 @@ const WorkSection = () => {
 									My Craftmanship
 								</h2>
 							</div> */}
-							<div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
+							{/* <div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
 								{isMobile
 									? cardContent.map((x) => (
 											<WorkCardMobile
@@ -86,11 +86,13 @@ const WorkSection = () => {
 												content={x.content}
 											></WorkCard>
 									  ))}
-							</div>
+							</div> */}
 						</div>
 					</section>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={2.5}></ParallaxLayer>
+				<ParallaxLayer offset={1} speed={2.5}>
+					<div className="h-9 w-9 bg-red-200"></div>
+				</ParallaxLayer>
 			</Parallax>
 		</Curve>
 	);

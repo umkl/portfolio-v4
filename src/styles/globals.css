@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .custom-cursor {
 	position: absolute;
 	width: 20px;
@@ -13,7 +12,7 @@
 	pointer-events: none;
 	z-index: 9999;
 	mix-blend-mode: difference;
-  }
+}
 
 :root {
 	--foreground-rgb: 0, 0, 0;
@@ -146,21 +145,10 @@ html {
 	cursor: pointer;
 }
 
-
-html, body {
+html,
+body {
 	height: 100%;
 	margin: 0;
-  }
-  
-  
-  
-  /* Change the cursor style on hover */
-  a, button {
-	cursor: pointer;
-  
-	&:hover {
-	  &::before {
-		transform: scale(1.5); /* Scale up the cursor on hover */
-	  }
-	}
-  }
+}
+
+
