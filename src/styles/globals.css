@@ -2,25 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.custom-cursor {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #ff0000;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: 9999;
+	mix-blend-mode: difference;
+  }
+
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
 	--background-end-rgb: 255, 255, 255;
 }
 
-
 @layer base {
 	.font-outline-1 {
-	  -webkit-text-stroke: 1px white;
+		-webkit-text-stroke: 1px white;
 	}
 	.font-outline-2 {
-	  -webkit-text-stroke: 2px white;
+		-webkit-text-stroke: 2px white;
 	}
-  .font-outline-3 {
-	  -webkit-text-stroke: 2px white;
+	.font-outline-3 {
+		-webkit-text-stroke: 2px white;
 	}
 	.font-outline-4 {
-	  -webkit-text-stroke: 4px white;
+		-webkit-text-stroke: 4px white;
 	}
 }
 
@@ -32,35 +44,39 @@
 	}
 }
 
-* {
-	border: 1px solid red;
-}
-
 html {
 	color: rgb(var(--foreground-rgb));
-	
 	width: 100%;
-	/* background: linear-gradient(
-			to bottom,
-			transparent,
-			rgb(var(--background-end-rgb))
-		)
-		rgb(var(--background-start-rgb)); */
+	font-size: 16pt;
+	background-color: #333333;
+}
+
+.landing-bg {
 	background-color: #333333;
 	background-repeat: repeat;
 	background-attachment: fixed;
 	background-size: 150px 150px;
 	background-image: url("../../public/raster.svg");
+	opacity: 0; /* Set initial opacity to 0 */
+	animation: fadeIn 3s ease-in-out 0.7s forwards; /* Animation properties */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
 @media screen and (max-width: 800px) {
-	html {
+	.landing-bg {
 		background-size: 300px 300px;
 		background-position: 45px;
 	}
 }
-
-
 
 @keyframes moveIt {
 	from {
@@ -81,18 +97,17 @@ html {
 		/* Hide scrollbar for IE, Edge and Firefox */
 		.no-scrollbar {
 			-ms-overflow-style: none; /* IE and Edge */
-			scrollbar-width: none; /* Firefox */ 
+			scrollbar-width: none; /* Firefox */
 		}
 	}
 }
 
-
 body,
 html {
-  margin: 0;
-  height: 100vh;
-  overflow: auto;
-  scroll-behavior: smooth;
+	margin: 0;
+	height: 100vh;
+	overflow: auto;
+	scroll-behavior: smooth;
 }
 
 /* 
@@ -103,33 +118,49 @@ html {
 	background-size: 150px 150px;
 } */
 
-.no-scrollbar::-webkit-scrollbar { 
-	display: none; 
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
 }
 
-.art-bg{
+.art-bg {
 	background-color: #333333;
 	/* background-repeat: repeat; */
 	/* background-attachment: fixed; */
 	background-image: url("../../public/pattern.png");
-	
 }
 
-
-
-.contact-image{
+.contact-image {
 	background-image: url("../../public/setup1.jpg");
 	background-size: cover;
 	background-position-x: center;
 }
 
-.focus-cross-bg:hover{
+.focus-cross-bg:hover {
 	background-image: url("../../public/cross-bg.svg");
 	background-size: cover;
 	background-position-x: center;
 	background-repeat: repeat;
-	
+
 	background-size: 400px 400px;
 	stroke-width: 30px;
-	cursor:pointer
+	cursor: pointer;
 }
+
+
+html, body {
+	height: 100%;
+	margin: 0;
+  }
+  
+  
+  
+  /* Change the cursor style on hover */
+  a, button {
+	cursor: pointer;
+  
+	&:hover {
+	  &::before {
+		transform: scale(1.5); /* Scale up the cursor on hover */
+	  }
+	}
+  }

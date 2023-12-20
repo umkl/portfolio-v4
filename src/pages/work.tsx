@@ -7,7 +7,9 @@ import React, {
 	useContext,
 } from "react";
 import Image from "next/image";
-import { NavContext } from "@um-p4/app/navcontext";
+import { NavContext } from "@um-p4/navcontext";
+import Curve from "@um-p4/components/Curve";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 const cardContent = [
 	{
@@ -52,36 +54,45 @@ const WorkSection = () => {
 	}, []);
 
 	return (
-		<section id="work" ref={navCxt.work} className="overflow-hidden">
-			<div className="w-full overflow-hidden bg-[#333333]  snap-center">
-				<div className="mb-8">
-					<WorkSectionHeader
-						title="My Craftsmanship"
-						subtext="The steps most of my projects consist of."
-					/>
-				</div>
-				<div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
-					{isMobile
-						? cardContent.map((x) => (
-								<WorkCardMobile
-									key={x.title}
-									heading={x.title}
-									imageName={x.imageName}
-									content={x.content}
-								></WorkCardMobile>
-						  ))
-						: cardContent.map((x, i) => (
-								<WorkCard
-									flipped={i % 2 == 0}
-									key={x.title}
-									heading={x.title}
-									imageName={x.imageName}
-									content={x.content}
-								></WorkCard>
-						  ))}
-				</div>
-			</div>
-		</section>
+		<Curve>
+			<Parallax pages={4} style={{ top: "0", left: "0" }}>
+				<ParallaxLayer offset={0} speed={2.5}>
+					<section id="work" ref={navCxt.work} className="overflow-hidden">
+						<div className="w-full overflow-hidden bg-[#333333]">
+							{/* <div className="mb-8">
+						<WorkSectionHeader title="My Craftsmanship" />
+					</div> */}
+							{/* <div className="h-screen w-full flex justify-center items-center">
+								<h2 className="font-druk w-full px-8 text-[6vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 mt-10">
+									My Craftmanship
+								</h2>
+							</div> */}
+							<div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
+								{isMobile
+									? cardContent.map((x) => (
+											<WorkCardMobile
+												key={x.title}
+												heading={x.title}
+												imageName={x.imageName}
+												content={x.content}
+											></WorkCardMobile>
+									  ))
+									: cardContent.map((x, i) => (
+											<WorkCard
+												flipped={i % 2 == 0}
+												key={x.title}
+												heading={x.title}
+												imageName={x.imageName}
+												content={x.content}
+											></WorkCard>
+									  ))}
+							</div>
+						</div>
+					</section>
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={2.5}></ParallaxLayer>
+			</Parallax>
+		</Curve>
 	);
 };
 
@@ -92,7 +103,7 @@ export const WorkSectionHeader = ({
 	subtext,
 }: {
 	title: string;
-	subtext: string;
+	subtext?: string;
 }) => {
 	return (
 		<>
@@ -102,9 +113,11 @@ export const WorkSectionHeader = ({
 			<h2 className="font-druk w-full px-8 text-[6vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 mt-10">
 				{title}
 			</h2>
-			<h3 className="font-inter text-[1em] px-8 leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
-				{subtext}
-			</h3>
+			{subtext && (
+				<h3 className="font-inter text-[1em] px-8 leading-6 font-medium text-[#c2cad193] drop-shadow-[0_0_0.3rem_#ffffff70]  text-left  sm:max-w-[600px] relative text-center mt-2 ">
+					{subtext}
+				</h3>
+			)}
 		</>
 	);
 };
