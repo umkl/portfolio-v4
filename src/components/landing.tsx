@@ -53,7 +53,7 @@ const Landing = () => {
 				delay: 0.7,
 				duration: 1,
 				top: 0,
-				ease: "power1.out",
+				ease: "power1.easeIn",
 			});
 			gsap.to("#center-text-2", {
 				opacity: 1,
@@ -138,14 +138,14 @@ const Landing = () => {
 				<div
 					id="cards"
 					style={{ opacity: 0, transform: "translate(0px, 20px)" }}
-					className="mb-4 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left lg:gap-4  w-full"
+					className="mb-14 grid text-center lg:max-w-5xl lg:w-full lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full"
 				>
 					<CardComponent
 						tap={() => {
 							// navCxt.work!.current?.scrollIntoView();
 							router.push("/work");
 						}}
-						classname="top-10 card-comp-item relative"
+						classname="top-[1em] card-comp-item relative"
 						dest="work"
 						name="Work"
 						desc="Find out what kind of work I do and how I go about creating new projects."
@@ -158,7 +158,7 @@ const Landing = () => {
 						}}
 						dest="projects"
 						name="Projects"
-						classname="top-30 card-comp-item relative"
+						classname="top-[1.9em] card-comp-item relative"
 						desc="Discover some of my projects where I was able to do things myself."
 					/>
 					<CardComponent
@@ -167,7 +167,7 @@ const Landing = () => {
 							window.location.replace("https://blog.ungarmichael.me");
 						}}
 						dest="blog"
-						classname="top-20 card-comp-item relative"
+						classname="top-[2.4em] card-comp-item relative"
 						name="Blog"
 						desc="Read some of my thoughts on Coding and UI/UX-Design."
 					/>
@@ -177,7 +177,7 @@ const Landing = () => {
 						}}
 						dest="contact"
 						name="Contact"
-						classname="top-20 card-comp-item relative"
+						classname="top-[3.4em] card-comp-item relative"
 						desc="Regardless if you want to start a project or just feel like talking, let us connect."
 					/>
 				</div>
