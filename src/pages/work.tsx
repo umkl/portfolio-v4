@@ -55,19 +55,18 @@ const WorkSection = () => {
 
 	return (
 		<Curve>
-			<Parallax pages={4} style={{ top: "0", left: "0" }}>
-				<ParallaxLayer offset={0} speed={2.5}>
-					<section id="work" ref={navCxt.work} className="overflow-hidden">
-						<div className="w-full overflow-hidden bg-[#333333]">
-							{/* <div className="mb-8">
+			<section id="work" ref={navCxt.work} className="overflow-hidden">
+				<h1></h1>
+				<div className="w-full h-screen overflow-hidden bg-[#333333]">
+					{/* <div className="mb-8">
 						<WorkSectionHeader title="My Craftsmanship" />
 					</div> */}
-							{/* <div className="h-screen w-full flex justify-center items-center">
+					{/* <div className="h-screen w-full flex justify-center items-center">
 								<h2 className="font-druk w-full px-8 text-[6vw] lg:text-[4.2em] leading-12 break-words  text-[#c2cad100] drop-shadow-[0_0_0.3rem_#ffffff70] text-center font-outline-1 mt-10">
 									My Craftmanship
 								</h2>
 							</div> */}
-							{/* <div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
+					{/* <div className="relative left-1/2  max-w-[1400px] -translate-x-1/2">
 								{isMobile
 									? cardContent.map((x) => (
 											<WorkCardMobile
@@ -87,13 +86,8 @@ const WorkSection = () => {
 											></WorkCard>
 									  ))}
 							</div> */}
-						</div>
-					</section>
-				</ParallaxLayer>
-				<ParallaxLayer offset={1} speed={2.5}>
-					<div className="h-9 w-9 bg-red-200"></div>
-				</ParallaxLayer>
-			</Parallax>
+				</div>
+			</section>
 		</Curve>
 	);
 };
