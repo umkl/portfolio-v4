@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";
-import { WorkSectionHeader } from "../pages/services";
 import { NavContext } from "@um-p4/navcontext";
 
 const xpsForTheExperienceSection = [
