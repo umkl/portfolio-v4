@@ -44,7 +44,7 @@ export default function Curve({children}) {
     }, [])
     
     return (
-    <div className='page curve z-50'  >
+    <div className='page curve z-50 '  >
        <div style={{opacity: dimensions.width == null ? 1 : 0}} className='background'/>
        <motion.p className='route font-bold font-clash text-[4rem] uppercase text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70]' {...anim(text)}>
             {routes[router.route]}

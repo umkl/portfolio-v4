@@ -20,8 +20,8 @@ const Work = () => {
 
 	return (
 		<Curve>
-			<section className="font-clash overflow-hidden min-h-screen flex flex-col">
-				<h1 className="text-[6em] leading-8 mt-8 mb-4  uppercase font-bold">
+			<section className="font-clash overflow-x-hidden w-full min-h-screen flex flex-col">
+				<h1 className="text-[6em] leading-[1em] mt-8 mb-4  uppercase font-bold">
 					my services
 				</h1>
 				<div id="marquee-parent" className="flex w-full h-[3em] flex-row mb-10">
@@ -35,7 +35,7 @@ const Work = () => {
 						things i am so good at, that i feel like SHARING &nbsp;
 					</h1>
 				</div>
-				<ul className="uppercase flex flex-col justify-center  flex-1">
+				<ul className="uppercase flex flex-col justify-center  flex-1 overflow-hidden">
 					{["frontend development", "ui/ux design", "branding"].map((x) => {
 						return (
 							<NewFunction key={x} text={x} link="services/frontend-dev" />
