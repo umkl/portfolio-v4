@@ -143,11 +143,11 @@ const Landing = () => {
 					<CardComponent
 						tap={() => {
 							// navCxt.work!.current?.scrollIntoView();
-							router.push("/work");
+							router.push("/services");
 						}}
 						classname="top-[1em] card-comp-item relative"
-						dest="work"
-						name="Work"
+						dest="services"
+						name="Services"
 						desc="Find out what kind of work I do and how I go about creating new projects."
 					/>
 

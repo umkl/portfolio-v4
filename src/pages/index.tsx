@@ -8,7 +8,7 @@ import {
 	RefObject,
 	Ref,
 } from "react";
-import WorkSection from "@um-p4/pages/work";
+import WorkSection from "@um-p4/pages/services";
 import Landing from "@um-p4/components/landing";
 import Curve from "@um-p4/components/Curve";
 import ExperienceSection from "@um-p4/components/experienceSection";
