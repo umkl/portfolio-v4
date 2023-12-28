@@ -83,19 +83,20 @@ const Landing = () => {
 						style={{ opacity: 0 }}
 						src="/logo.svg"
 						alt="um logo"
-						width={80}
-						height={80}
+						className="w-[80px] md:w-[140px]"
+						width={100}
+						height={100}
 						priority
 					/>
 					<Image
 						id="pb"
 						src="/myself.png"
 						alt="Vercel Logo"
+						className="w-[80px] md:w-[140px]"
 						style={{ opacity: 0 }}
-						className=""
 						unoptimized={true}
-						width={80}
-						height={80}
+						width={100}
+						height={100}
 					/>
 				</div>
 				<div
@@ -124,14 +125,14 @@ const Landing = () => {
 					</h2>
 					<h3 className="font-inter font-bold text-[1.2em] lg:text-4xl text-[#81899B] overflow-hidden relative">
 						<span id="center-text-2" className="relative top-[100px] leading-5">
-							Developer and Designer from Austria.{" "}
+							Frontend Web Developer and Web UI/UX Designer from Austria.{" "}
 						</span>
 					</h3>
-					<h4 className="font-sora text-[1em] text-[#686C76] mt-0 font-normal lg:mt-4">
+					<h4 className="font-sora font-medium text-[1.2em] text-[#686C76] mt-0 lg:mt-4">
 						<span id="center-text-3" className="relative top-[100px]">
-							I’m a frontend dev and creator currently active as a freelancer{" "}
-							<br></br>
-							focused on creating flawless code and magnificent designs.
+							I focus on all things web and design related. With my work I aim
+							to deliver impactful experiences so digital spaces become a better
+							place to be around.
 						</span>
 					</h4>
 				</div>
