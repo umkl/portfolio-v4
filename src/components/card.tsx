@@ -27,7 +27,7 @@ const CardComponent = ({
 				</span>
 			</h2>
 			<p
-				className={`m-0 max-w-[30ch] text-left text-[0.9em] opacity-75 font-medium leading-[1.3em] li text-[#81899B] mt-4`}
+				className={`m-0 font-sora max-w-[30ch] text-left text-[0.9em] opacity-75 font-medium leading-[1.3em] li text-[#81899B] mt-4`}
 			>
 				{desc}
 			</p>
