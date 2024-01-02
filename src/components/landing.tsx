@@ -20,18 +20,16 @@ const Landing = () => {
 				y: 20,
 				ease: "power1.out",
 			});
-			gsap.to("#logo", {
-				opacity: 1,
+			gsap.from("#logo", {
 				delay: 0.7,
 				duration: 1,
-				y: 20,
+
 				ease: "power1.out",
 			});
-			gsap.to("#pb", {
-				opacity: 1,
+			gsap.from("#pb", {
 				delay: 0.7,
 				duration: 1,
-				y: 20,
+
 				ease: "power1.out",
 			});
 			gsap.to("#cards", {
@@ -74,13 +72,20 @@ const Landing = () => {
 	}, []);
 
 	return (
-		<section className="min-h-[100vh] w-full overflow-hidden relative">
+		<section className="min-h-[100vh] w-full overflow-hidden relative ">
+			<style jsx>{`
+				@media (max-width: 375px) {
+					section {
+						width: 375px;
+					}
+				}
+			`}</style>
 			<div className="-z-10 landing-bg h-full w-full absolute"></div>
 			<main className="flex min-h-screen flex-col items-center justify-between p-6 md:px-24  max-w-screen overflow-hidden ">
-				<div className=" max-w-5xl w-full items-center justify-between font-mono text-sm flex md:mt-20">
+				<div className="mt-0 max-w-5xl w-full items-center justify-between font-mono text-sm flex md:mt-20">
 					<Image
 						id="logo"
-						style={{ opacity: 0 }}
+						style={{ opacity: 1 }}
 						src="/logo.svg"
 						alt="um logo"
 						className="w-[80px] md:w-[140px]"
@@ -90,10 +95,10 @@ const Landing = () => {
 					/>
 					<Image
 						id="pb"
+						style={{ opacity: 1 }}
 						src="/myself.png"
 						alt="Vercel Logo"
 						className="w-[80px] md:w-[140px]"
-						style={{ opacity: 0 }}
 						unoptimized={true}
 						width={100}
 						height={100}
@@ -104,10 +109,10 @@ const Landing = () => {
 					style={{ opacity: 0 }}
 					className="relative flex flex-col w-full max-w-5xl mt-3 lg:mt-0 mb-7"
 				>
-					<h1 className="text-left font-sora font-bold text-[1.23em] text-[#95B8D1]">
+					<h1 className="text-left relative font-sora font-bold mt-4 sm:mt-0 text-[1rem] text-[#95B8D1]">
 						Hi, my Name is
 					</h1>
-					<h2 className="font-clash text-[2.7em] lg:text-8xl leading-10 font-[700] text-[#C2CAD1] overflow-hidden drop-shadow-[0_0_0.3rem_#ffffff70] relative">
+					<h2 className="font-sora uppercase text-[3rem] lg:text-8xl leading-[3.4rem] font-[700] text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70] relative">
 						<span className="letter-item relative top-[5px]">M</span>
 						<span className="letter-item relative top-[10px]">i</span>
 						<span className="letter-item relative top-[15px]">c</span>

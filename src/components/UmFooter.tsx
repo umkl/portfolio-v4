@@ -24,7 +24,7 @@ const UmFooter = () => {
 						t.play();
 					}}
 					onMouseLeave={(e) => {
-						t.pause();
+						t?.pause();
 						gsap.to("#parent-span", {
 							marginTop: "0px",
 						});
@@ -39,14 +39,18 @@ const UmFooter = () => {
 				</span>
 			</span>
 			<p
+				className="cursor-pointer"
 				onMouseEnter={(e) => {
 					gsap.to(e.target, {
-						rotateY: 360,
+						rotateX: 30,
+						rotateY: 30,
 					});
 				}}
 				onMouseLeave={(e) => {
 					gsap.to(e.target, {
+						rotateX: 0,
 						rotateY: 0,
+						rotateZ: 0,
 					});
 				}}
 			>

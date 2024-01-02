@@ -219,20 +219,35 @@ const Page = () => {
 					<span className="text-[1.4em]">\\\\\\\\\\\\\\\\\</span>
 				</h3>
 				<div className="max-w-[900px] mx-auto">
-					<div className="grid grid-cols-3  p-0 m-0">
-						<div className="h-[300px] w-[300px] bg-white relative">
-							<p className="uppercase text-[#333] font-bold m-4  absolute bottom-0 right-0">
+					<div className="grid grid-cols-3 gap-3 gap-y-1 p-0 m-0">
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
 								ReactJS
 							</p>
 						</div>
-						<div className="h-[300px] w-[300px] bg-white relative">
-							<p className="uppercase text-[#333] font-bold m-4 box-border absolute bottom-0 right-0">
-								ReactJS
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
+								NextJs
 							</p>
 						</div>
-						<div className="h-[300px] w-[300px] bg-white relative">
-							<p className="uppercase text-[#333] font-bold m-4 box-border absolute bottom-0 right-0">
-								ReactJS
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
+								Typescript
+							</p>
+						</div>
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
+								Webflow
+							</p>
+						</div>
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
+								Framer
+							</p>
+						</div>
+						<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
+							<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
+								GSAP
 							</p>
 						</div>
 					</div>
