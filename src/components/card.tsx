@@ -8,7 +8,7 @@ const CardComponent = ({
 	tap,
 }: {
 	name: string;
-	desc: string;
+	desc: string | JSX.Element;
 	dest: string;
 	classname?: string;
 	tap?: () => void;
@@ -16,18 +16,21 @@ const CardComponent = ({
 	return (
 		<a
 			onClick={() => tap!()}
-			className={`group rounded-lg border-2 transition-all hover:bg-[#95b8d13e] hover:backdrop-blur-[2px]  border-transparent py-4 px-6 cursor-pointer hover:border-[#95B8D1]  ${classname}`}
+			className={`group rounded-xl p-4 border-t-2 border-[#5a5a5a] transition-all hover:bg-[#95b8d13e] hover:backdrop-blur-[2px] lg:bg-gradient-to-b lg:from-[#333333]  px-4 pr-6 cursor-pointer hover:border-[#95B8D1] ${classname} md:mt-4`}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<h2 className={` text-3xl text-left  text-[#C2CAD1]`}>
-				<span className="font-clash font-[700]">{name} </span>
-				<span className="inline-block  transition-transform group-hover:translate-x-1 motion-reduce:transform-none font-bold font-inter ">
+			<h2 className={`text-[#C2CAD1]`}>
+				<span className="font-clash  font-[700] text-[1.875rem] md:text-[2rem]  lg:text-[2.3rem] lg:text-center lg:block leading-4 mt-4 lg:uppercase ">
+					{name}{" "}
+				</span>
+				<br className="hidden lg:block" />
+				<span className="inline-block lg:rotate-[-45deg] transition-transform group-hover:translate-x-1 motion-reduce:transform-none font-bold font-inter relative text-3xl lg:text-[3rem] lg:-my-2 text-center w-full text-[#81899B]">
 					-&gt;
 				</span>
 			</h2>
 			<p
-				className={`m-0 font-sora max-w-[30ch] text-left text-[0.9em] opacity-75 font-medium leading-[1.3em] li text-[#81899B] mt-4`}
+				className={`m-0 font-inter max-w-[30ch] text-left  li  mt-4 font-medium text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.3rem] text-[#797c82] `}
 			>
 				{desc}
 			</p>

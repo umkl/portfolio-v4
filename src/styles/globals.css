@@ -105,7 +105,6 @@ body,
 html {
 	margin: 0;
 	height: 100vh;
-	
 	overflow: auto;
 	overflow-x: hidden;
 	scroll-behavior: smooth;

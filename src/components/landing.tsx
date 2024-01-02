@@ -81,14 +81,14 @@ const Landing = () => {
 				}
 			`}</style>
 			<div className="-z-10 landing-bg h-full w-full absolute"></div>
-			<main className="flex min-h-screen flex-col items-center justify-between p-6 md:px-24  max-w-screen overflow-hidden ">
-				<div className="mt-0 max-w-5xl w-full items-center justify-between font-mono text-sm flex md:mt-20">
+			<main className="flex min-h-screen flex-col items-center justify-between p-6  px-0 sm:px-4 md:px-10  max-w-screen overflow-hidden z-30">
+				<div className="mt-0 max-w-5xl z-30 px-4 sm:p-4 md:px-0 w-full items-center justify-between font-mono text-sm flex md:mt-10 ">
 					<Image
 						id="logo"
 						style={{ opacity: 1 }}
 						src="/logo.svg"
 						alt="um logo"
-						className="w-[80px] md:w-[140px]"
+						className="w-[80px] md:w-[100px]"
 						width={100}
 						height={100}
 						priority
@@ -98,7 +98,7 @@ const Landing = () => {
 						style={{ opacity: 1 }}
 						src="/myself.png"
 						alt="Vercel Logo"
-						className="w-[80px] md:w-[140px]"
+						className="w-[80px] md:w-[100px]"
 						unoptimized={true}
 						width={100}
 						height={100}
@@ -107,12 +107,12 @@ const Landing = () => {
 				<div
 					ref={ref}
 					style={{ opacity: 0 }}
-					className="relative flex flex-col w-full max-w-5xl mt-3 lg:mt-0 mb-7"
+					className="relative flex flex-col w-full max-w-5xl pl-4 md:px-0 md:pr-2 mt-4 lg:mt-0 mb-7 z-30"
 				>
-					<h1 className="text-left relative font-sora font-bold mt-4 sm:mt-0 text-[1rem] text-[#95B8D1]">
+					<h1 className="text-left relative font-inter leading-[1.0rem] font-bold sm:mt-0 text-[1.3rem] sm:text-[1.9rem] sm:leading-10  md:text-[1.4rem] lg:text-[1.8rem] text-[#95B8D1]">
 						Hi, my Name is
 					</h1>
-					<h2 className="font-sora uppercase text-[3rem] lg:text-8xl leading-[3.4rem] font-[700] text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70] relative">
+					<h2 className="font-clash text-[2.1rem] sm:text-[3.4rem] lg:text-[5rem] leading-[2.2rem] lg:leading-[4.8rem] sm:leading-[4rem] font-[700] text-[#C2CAD1] relative mt-2">
 						<span className="letter-item relative top-[5px]">M</span>
 						<span className="letter-item relative top-[10px]">i</span>
 						<span className="letter-item relative top-[15px]">c</span>
@@ -128,23 +128,23 @@ const Landing = () => {
 						<span className="letter-item relative top-[65px]">r</span>
 						<span className="letter-item relative top-[70px]">.</span>
 					</h2>
-					<h3 className="font-inter font-bold text-[1.2em] lg:text-4xl text-[#81899B] overflow-hidden relative">
-						<span id="center-text-2" className="relative top-[100px] leading-5">
+					<h3 className="font-inter font-bold mt-0 md:mt-2 text-[1.2rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] text-[#81899B] overflow-hidden relative">
+						<span id="center-text-2" className="relative leading-[1.5rem]">
 							Frontend Web Developer and Web UI/UX Designer from Austria.{" "}
 						</span>
 					</h3>
-					<h4 className="font-sora font-medium text-[1.2em] text-[#686C76] mt-0 lg:mt-4">
+					<h4 className="font-inter font-medium text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-0 lg:mt-2 ">
 						<span id="center-text-3" className="relative top-[100px]">
-							I focus on all things web and design related. With my work I aim
-							to deliver impactful experiences so digital spaces become a better
-							place to be around.
+							I focus on all things <b>web</b> and <b>design</b> related. With
+							my work I aim to deliver <b>impactful experiences</b> so digital
+							spaces become more <b>interesting</b>.
 						</span>
 					</h4>
 				</div>
 				<div
 					id="cards"
 					style={{ opacity: 0, transform: "translate(0px, 20px)" }}
-					className="mb-14 grid text-center lg:max-w-5xl lg:w-full lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full"
+					className=" grid gap-4 text-center lg:max-w-5xl lg:w-full lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full z-30"
 				>
 					<CardComponent
 						tap={() => {
@@ -154,7 +154,11 @@ const Landing = () => {
 						classname="top-[1em] card-comp-item relative"
 						dest="services"
 						name="Services"
-						desc="Find out what kind of work I do and how I go about creating new projects."
+						desc={
+							<>
+								Explore the <b>services</b> I can provide to assist you.
+							</>
+						}
 					/>
 
 					<CardComponent
@@ -165,7 +169,7 @@ const Landing = () => {
 						dest="projects"
 						name="Projects"
 						classname="top-[1.9em] card-comp-item relative"
-						desc="Discover some of my projects where I was able to do things myself."
+						desc="Check out what things I was already able to create."
 					/>
 					<CardComponent
 						tap={() => {
@@ -175,7 +179,7 @@ const Landing = () => {
 						dest="blog"
 						classname="top-[2.4em] card-comp-item relative"
 						name="Blog"
-						desc="Read some of my thoughts on Coding and UI/UX-Design."
+						desc="Read some of my thoughts on Productivity, Coding and UI/UX-Design."
 					/>
 					<CardComponent
 						tap={() => {
@@ -184,13 +188,13 @@ const Landing = () => {
 						dest="contact"
 						name="Contact"
 						classname="top-[3.4em] card-comp-item relative"
-						desc="Regardless if you want to start a project or just feel like talking, let us connect."
+						desc="Let us get in touch for creating awesome projects!"
 					/>
 				</div>
-				<div className="absolute h-8 md:h-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
-				<div className="absolute h-8 md:h-20  w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
-				<div className="absolute w-8 md:w-20  h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
-				<div className="absolute w-8 md:w-20  h-full top-0 right-0 bg-gradient-to-l from-[#333333] to-transparent"></div>
+				<div className="absolute h-8 md:h-20 z-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
+				<div className="absolute h-8 md:h-20 z-20 w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
+				<div className="absolute w-8 md:w-20 z-20 h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
+				<div className="absolute w-8 md:w-20 z-20 h-full top-0 right-0 bg-gradient-to-l from-[#333333] to-transparent"></div>
 			</main>
 		</section>
 	);
