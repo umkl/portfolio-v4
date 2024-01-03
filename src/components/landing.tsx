@@ -80,7 +80,9 @@ const Landing = () => {
 					}
 				}
 			`}</style>
-			<div className="-z-10 landing-bg h-full w-full absolute"></div>
+			<div className="-z-10 landing-bg h-full w-full absolute">
+				<div className="h-full w-full bg-[#333333]/90"></div>
+			</div>
 			<main className="flex min-h-screen flex-col items-center justify-between p-6  px-0 sm:px-4 md:px-10  max-w-screen overflow-hidden z-30">
 				<div className="mt-0 max-w-5xl z-30 px-4 sm:p-4 md:px-0 w-full items-center justify-between font-mono text-sm flex md:mt-10 ">
 					<Image
@@ -93,12 +95,13 @@ const Landing = () => {
 						height={100}
 						priority
 					/>
+
 					<Image
 						id="pb"
 						style={{ opacity: 1 }}
-						src="/myself.png"
+						src="/pb-layered.png"
 						alt="Vercel Logo"
-						className="w-[80px] md:w-[100px]"
+						className="w-[80px] md:w-[100px] z-30"
 						unoptimized={true}
 						width={100}
 						height={100}
@@ -109,7 +112,7 @@ const Landing = () => {
 					style={{ opacity: 0 }}
 					className="relative flex flex-col w-full max-w-5xl pl-4 md:px-0 md:pr-2 mt-4 lg:mt-0 mb-7 z-30"
 				>
-					<h1 className="text-left relative font-inter leading-[1.0rem] font-bold sm:mt-0 text-[1.3rem] sm:text-[1.9rem] sm:leading-10  md:text-[1.4rem] lg:text-[1.8rem] text-[#95B8D1]">
+					<h1 className="text-left  relative font-inter leading-[1.0rem] pb-1 pt-1  sm:mt-0 text-[1.3rem] sm:text-[1.9rem] sm:leading-10  md:text-[1.4rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold ">
 						Hi, my Name is
 					</h1>
 					<h2 className="font-clash text-[2.1rem] sm:text-[3.4rem] lg:text-[5rem] leading-[2.2rem] lg:leading-[4.8rem] sm:leading-[4rem] font-[700] text-[#C2CAD1] relative mt-2">

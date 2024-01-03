@@ -47,15 +47,18 @@ html {
 	color: rgb(var(--foreground-rgb));
 	width: 100%;
 	font-size: 16pt;
-	background-color: #333333;
+	background-color: #3333;
 }
 
 .landing-bg {
-	background-color: #333333;
-	background-repeat: repeat;
-	background-attachment: fixed;
-	background-size: 150px 150px;
-	background-image: url("../../public/raster.svg");
+	background-color: #333;
+	/* background-repeat: repeat; */
+	background-size: cover;
+	/* background-attachment: fixed;
+	background-size: 150px 150px; */
+	background-position: center;
+	background-image: url("../../public/background-image.webp");
+
 	opacity: 0; /* Set initial opacity to 0 */
 	animation: fadeIn 3s ease-in-out 0.7s forwards; /* Animation properties */
 }
@@ -72,8 +75,8 @@ html {
 
 @media screen and (max-width: 800px) {
 	.landing-bg {
-		background-size: 200px 200px;
-		background-position: 45px;
+		/* background-size: 200px 200px; */
+		/* background-position: 45px; */
 	}
 }
 

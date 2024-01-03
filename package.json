@@ -19,6 +19,7 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",
     "react-scroll-parallax": "^3.4.3",
+    "react-smooth-corners": "^1.0.4",
     "sass": "^1.69.5"
   },
   "devDependencies": {
