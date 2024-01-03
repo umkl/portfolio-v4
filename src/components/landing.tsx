@@ -133,7 +133,12 @@ const Landing = () => {
 					</h2>
 					<h3 className="font-inter font-bold mt-0 md:mt-2 text-[1.2rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] text-[#81899B] overflow-hidden relative">
 						<span id="center-text-2" className="relative leading-[1.5rem]">
-							Frontend Web Developer and Web UI/UX Designer from Austria.{" "}
+							<u className="underline-offset-[0.38rem]">
+								Frontend Web Developer
+							</u>{" "}
+							and{" "}
+							<u className="underline-offset-[0.38rem]">Web UI/UX Designer</u>{" "}
+							from <u className="underline-offset-[0.38rem]">Austria.</u>{" "}
 						</span>
 					</h3>
 					<h4 className="font-inter font-medium text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-0 lg:mt-2 ">

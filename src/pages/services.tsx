@@ -124,7 +124,7 @@ const Work = () => {
 
 				<div
 					id="marquee-parent"
-					className="flex w-full h-[0.6em] flex-row mb-6 text-[1rem] mt-2 text-[#C2CAD1] uppercase italic font-bold"
+					className="flex w-full h-[0.6em] flex-row mb-6 text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold"
 				>
 					<h1 className="marquee_part  shrink-0">
 						things i am so good at, that i feel like SHARING &nbsp;
