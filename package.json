@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",
+    "@rive-app/react-canvas": "^4.7.0",
     "@studio-freight/lenis": "^1.0.29",
     "@studio-freight/react-lenis": "^0.0.38",
     "framer-motion": "^10.16.16",
