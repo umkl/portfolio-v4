@@ -147,7 +147,7 @@ const Landing = () => {
 				<div
 					id="cards"
 					style={{ opacity: 0, transform: "translate(0px, 20px)" }}
-					className=" grid gap-4 text-center lg:max-w-5xl lg:w-full lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full z-30"
+					className=" grid gap-4 text-center lg:max-w-5xl lg:w-full relative lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full  z-30"
 				>
 					<CardComponent
 						tap={() => {
