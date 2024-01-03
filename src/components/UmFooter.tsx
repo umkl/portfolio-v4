@@ -4,11 +4,9 @@ const UmFooter = () => {
 	let t: gsap.core.Timeline = null;
 	return (
 		<footer className="font-clash z-50 w-full p-2 box-border bottom-0 flex justify-between font-semibold">
-			<span className=" h-[1.2rem] overflow-hidden flex ">
-				<span className="h-[1.2rem] leading-[1em]">2024</span>
-			</span>
+			<p className=" h-[1.2rem]  ">2024</p>
 			<p
-				className="cursor-pointer"
+				className=" h-[1.2rem] cursor-pointer"
 				onMouseEnter={(e) => {
 					gsap.to(e.target, {
 						rotateX: 30,

@@ -289,7 +289,7 @@ function ListItem({
 		>
 			<div
 				ref={ref}
-				className="truncate slide-in origin-top-left ml-[10px] sm:ml-[4vw] "
+				className="truncate slide-in origin-top-left ml-[30px] sm:ml-[4vw]"
 				onClick={(e) => {
 					// gsap.to(e.target, {
 					// 	// height: "200px",
