@@ -68,35 +68,77 @@ const Page = () => {
 	return (
 		<Curve>
 			<section className="bg-[#222]">
+				<style jsx>{`
+					@media (max-width: 375px) {
+						section {
+							width: 375px;
+						}
+					}
+				`}</style>
 				<div className="flex flex-col min-h-screen font-clash ">
 					<GoBack to="/services" />
-					<div className="relative z-50">
-						<span
-							id="head-i-1"
-							style={{ opacity: 0 }}
-							className="md:text-[6em] text-[2em] text-center sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 font-outline-1 text-transparent -z-10 w-full"
-						>
-							frontend development
-						</span>
-						<span
-							id="head-i-2"
-							style={{ opacity: 0 }}
-							className="md:text-[6em] text-[2em] text-center sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 font-outline-1 text-transparent -z-20 w-full"
-						>
-							frontend development
-						</span>
-						<span
-							id="head-i-3"
-							style={{ opacity: 0 }}
-							className="md:text-[6em] text-[2em] text-center sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 font-outline-1 text-transparent -z-30 w-full"
-						>
-							frontend development
-						</span>
-						<h1 className="md:text-[6em] text-[2em] text-center sm:text-[4em] leading-[1em] ml-4  uppercase font-bold z-20">
-							frontend development
-						</h1>
+
+					<div className="flex flex-row justify-center mb-4 gap-20">
+						<Image
+							id="frontend-logo-left"
+							style={{ opacity: 1 }}
+							src={"/service-icons/icon-frontend-dev.svg"}
+							alt=""
+							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-2 -mr-2 sm:mr-4"
+							width={20}
+							height={20}
+							priority
+						/>
 					</div>
-					<h2 className="font-clash text-[4em] leading-[1em] mt-2 mb-2 whitespace-wrap uppercase font-normal p-2 w-full text-center">
+					<div className="flex flex-row justify-center">
+						<Image
+							id="frontend-logo-left"
+							style={{ opacity: 1 }}
+							src={"/service-icons/icon-frontend-dev.svg"}
+							alt=""
+							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2 -mr-2 sm:mr-0 rotate-[-45deg] shrink-0"
+							width={20}
+							height={20}
+							priority
+						/>
+						<div className="relative z-50 xl:mt-10 xl:mx-20">
+							<span
+								id="head-i-1"
+								style={{ opacity: 0 }}
+								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-10 w-full"
+							>
+								frontend development
+							</span>
+							<span
+								id="head-i-2"
+								style={{ opacity: 0 }}
+								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-20 w-full"
+							>
+								frontend development
+							</span>
+							<span
+								id="head-i-3"
+								style={{ opacity: 0 }}
+								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-30 w-full"
+							>
+								frontend development
+							</span>
+							<h1 className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] ml-4  uppercase font-bold z-20">
+								frontend development
+							</h1>
+						</div>
+						<Image
+							id="frontend-logo-right"
+							style={{ opacity: 1 }}
+							src={"/service-icons/icon-frontend-dev.svg"}
+							alt=""
+							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2  sm:ml-4 ml-0 stroke-white rotate-[45deg] shrink-0"
+							width={20}
+							height={20}
+							priority
+						/>
+					</div>
+					<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
 						FROM{" "}
 						<span className="font-bold flex-row inline-flex">
 							<span>CONCEPT </span>
@@ -104,12 +146,13 @@ const Page = () => {
 								id="a-concept"
 								src="/a-concept.svg"
 								alt="adsf"
-								className="box-border inline"
+								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
 								width={70}
 								height={70}
 							/>
 							{"  "}
 						</span>
+						<br className="md:hidden" />
 						TO{" "}
 						<span className="font-bold flex-row inline-flex">
 							<span>REALITY </span>
@@ -117,19 +160,23 @@ const Page = () => {
 								id="a-sun"
 								src="/a-sun.svg"
 								alt="adsf"
-								className="box-border inline"
+								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
 								width={70}
 								height={70}
 							/>{" "}
 						</span>
 					</h2>
-					<div className="flex flex-row max-w-[1800px] mx-auto mt-10 justify-end items-end">
+					<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
+						Creating everything from <br className="lg:hidden" />
+						<b>static Webpage</b> to <b>scalable Webapps</b>.
+					</span>
+					<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
 						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 							<Image
 								id="arrow-pointing-1"
 								src="/arrow-down-icon.svg"
 								alt="adsf"
-								className="box-border p-4  "
+								className="box-border p-4 w-[60px] "
 								style={{ marginTop: "0%" }}
 								width={80}
 								height={80}
@@ -140,13 +187,13 @@ const Page = () => {
 								id="arrow-pointing-2"
 								src="/arrow-down-icon.svg"
 								alt="adsf"
-								className="box-border p-4"
+								className="box-border p-4 w-[70px]"
 								style={{ marginTop: "0%" }}
 								width={80}
 								height={80}
 							/>
 						</span>
-						<span className="text-[2rem] shrink-0 mb-2">
+						<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
 							Creating everything from{" "}
 							<b>
 								<u>static Webpage</u>
@@ -162,7 +209,7 @@ const Page = () => {
 								id="arrow-pointing-2"
 								src="/arrow-down-icon.svg"
 								alt="adsf"
-								className="box-border p-4 "
+								className="box-border p-4 w-[60px]"
 								style={{ marginTop: "0%" }}
 								width={80}
 								height={80}
@@ -173,7 +220,7 @@ const Page = () => {
 								id="arrow-pointing-1"
 								src="/arrow-down-icon.svg"
 								alt="adsf"
-								className="box-border p-4 "
+								className="box-border p-4 w-[80px]"
 								style={{ marginTop: "0%" }}
 								width={80}
 								height={80}
@@ -195,48 +242,66 @@ const Page = () => {
 							<img
 								src="/project-imgs/ballkarten-project-1866x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/charge-project-3266x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/deets-project-3266x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/filliStudio-project-3266x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/heed-project-3266x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/octagon-project-1866x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/synopsis-project-2100x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 							<img
 								src="/project-imgs/wbyt_web-project-1866x1400.png"
 								alt="afasd"
-								className="h-[500px]"
+								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
 							/>
 						</div>
 					</Marquee>
-					<hr />
-					<section className="max-w-[1500px] bg-red-200 mx-auto">
-						<h1>How it started</h1>
+
+					<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
+						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
+							Web applications
+						</h1>
+						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
+							I started with the development of desktop applications using
+							Python with Kivy and C# with the WPF-Framework and transitioned
+							into the creation of web apps. Starting out with the webpack for
+							bundling, expanding to react and now mostly using nextjs for
+							creating data-intensive web-experiences.
+						</p>
+						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
+							static Websites
+						</h1>
+						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
+							Soon enough I realised using react for everything might be a bit
+							of an overkill hence why I transitioned over to webflow, framer
+							and wordpress for creating applications that only serve the
+							purpose of displaying data.
+						</p>
 					</section>
 					{/* <h3 className="font-clash  font-bold uppercase text-center">
 						<span className="text-[1.4em]">//////////////////</span>
@@ -279,26 +344,23 @@ const Page = () => {
 					</div> */}
 
 					<h3
-						className="font-clash h-[5rem] text-[3rem] font-bold uppercase italic flex items-center gap-5 px-5 bg-white  fixed w-screen bottom-0 left-0 right-0 "
+						className="font-clash h-[2rem] sm:h-[2.6rem] md:h-[3rem] lg:h-[4rem] text-[0.7rem] sm:text-[0.9rem] md:text-[1.3rem] lg:text-[1.7rem] font-bold uppercase italic flex items-center gap-2 bg-white hover:bg-[#333]  fixed w-screen bottom-0 left-0 right-0 group hover:cursor-pointer z-50 px-2"
 						onClick={(e) => {
-							Array.from((e.target as any).children).forEach((child: any) => {
-								child.classList.add("underline");
-							});
 							router.push("/contact");
 						}}
-						onMouseEnter={() => {}}
 					>
-						<span className=" shrink-0  text-[#333]">Want to collaborate?</span>
-						<div className="h-[10px] flex-1 bg-[#333]"></div>
-						<button className="uppercase shrink-0 appearance-none text-[#333] hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-r hover:from-pink-500 hover:to-violet-500 ">
+						<span className=" shrink-0  text-[#333] group-hover:underline group-hover:underline-offset-8 group-hover:pointer group-hover:text-white">
+							Want to collaborate?
+						</span>
+						<div className="h-[2px] flex-1 bg-[#333] group-hover:pointer group-hover:bg-white"></div>
+						<button className=" group-hover:underline group-hover:underline-offset-8 uppercase shrink-0 appearance-none text-[#333] group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-500 group-hover:pointer">
 							contact me
 						</button>
 					</h3>
-					<hr />
 
 					<div className="flex-1 w-full"></div>
 					<UmFooter />
-					<div className="h-[5rem]"></div>
+					<div className="h-[2rem] sm:h-[2.6rem] md:h-[3rem] lg:h-[4rem]"></div>
 				</div>
 			</section>
 		</Curve>
