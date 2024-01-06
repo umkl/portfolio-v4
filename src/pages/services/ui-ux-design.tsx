@@ -82,7 +82,7 @@ const Page = () => {
 						<Image
 							id="frontend-logo-left"
 							style={{ opacity: 1 }}
-							src={"/service-icons/icon-branding.svg"}
+							src={"/service-icons/icon-ui_ux-design.svg"}
 							alt=""
 							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-2 -mr-2 sm:mr-4"
 							width={20}
@@ -94,7 +94,7 @@ const Page = () => {
 						<Image
 							id="frontend-logo-left"
 							style={{ opacity: 1 }}
-							src={"/service-icons/icon-branding.svg"}
+							src={"/service-icons/icon-ui_ux-design.svg"}
 							alt=""
 							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2 -mr-2 sm:mr-0 rotate-[-45deg] shrink-0"
 							width={20}
@@ -107,30 +107,30 @@ const Page = () => {
 								style={{ opacity: 0 }}
 								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-10 w-full"
 							>
-								branding
+								ui/ux-design
 							</span>
 							<span
 								id="head-i-2"
 								style={{ opacity: 0 }}
 								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-20 w-full"
 							>
-								branding
+								ui/ux-design
 							</span>
 							<span
 								id="head-i-3"
 								style={{ opacity: 0 }}
 								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-30 w-full"
 							>
-								branding
+								ui/ux-design
 							</span>
 							<h1 className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] ml-4  uppercase font-bold z-20">
-								branding
+								ui/ux-design
 							</h1>
 						</div>
 						<Image
 							id="frontend-logo-right"
 							style={{ opacity: 1 }}
-							src={"/service-icons/icon-branding.svg"}
+							src={"/service-icons/icon-ui_ux-design.svg"}
 							alt=""
 							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2  sm:ml-4 ml-0 stroke-white rotate-[45deg] shrink-0"
 							width={20}
@@ -139,7 +139,7 @@ const Page = () => {
 						/>
 					</div>
 					<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
-						Giving{" "}
+						MAKING{" "}
 						<span className="font-bold flex-row inline-flex">
 							<span>THOUGHTS </span>
 							<Image
@@ -153,9 +153,9 @@ const Page = () => {
 							{"  "}
 						</span>
 						<br className="md:hidden" />
-						An{" "}
+						MORE{" "}
 						<span className="font-bold flex-row inline-flex">
-							<span>Identity </span>
+							<span>TANGIBLE </span>
 							<Image
 								id="a-sun"
 								src="/a-sun.svg"
@@ -167,8 +167,8 @@ const Page = () => {
 						</span>
 					</h2>
 					<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-						Profiling Concepts from <br className="lg:hidden" />
-						<b>Startup</b> to <b>Established Enterprises</b>.
+						Developing Mockups for <br className="lg:hidden" />
+						<b>Websites</b> and <b>Mobile Apps</b>.
 					</span>
 					<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
 						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
@@ -194,8 +194,8 @@ const Page = () => {
 							/>
 						</span>
 						<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-							Profiling Concepts from <br className="lg:hidden" />
-							<b>Startup</b> to <b>Established Enterprises</b>.
+							Developing Mockups for <br className="lg:hidden" />
+							<b>Websites</b> and <b>Mobile Apps</b>.
 						</span>
 						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 							<Image
@@ -277,36 +277,36 @@ const Page = () => {
 
 					<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
 						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-							Branding
+							UI/UX Design
 						</h1>
 						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							My journey in the world of design has been marked by a profound
-							interest in the synergy between visual identity and emotional
-							connection. Specializing in branding, I recognize the impactful
-							role that design choices play in shaping how individuals perceive
-							and connect with a brand. This passion is driven by the belief
-							that thoughtful branding, blending creativity and strategic
-							design, has the power to leave a lasting impression on audiences.
+							My fascination with the seamless integration of design and code
+							has been a driving force throughout my career. The synergy between
+							visual aesthetics and functional coding has always captivated me,
+							leading me to specialize in UI/UX design. This journey is fueled
+							by a deep appreciation for how thoughtful design choices can
+							enhance user experiences through the harmonious collaboration of
+							creativity and technology.
 						</p>
 						<h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-[1.8rem] sm:leading-[3rem] mb-2 mt-4">
-							Authentic Brand Expression
+							User-Centric Approach
 						</h2>
 						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							At the heart of my branding philosophy is a commitment to
-							authentic brand expression. By understanding the core values and
-							unique identity of a brand, I aim to create visual elements and
-							messaging that resonate with the target audience, fostering a
-							genuine and memorable connection.
+							Placing the user at the center of the design process, I strive to
+							create interfaces that are intuitive and user-friendly.
+							Understanding user behaviors and preferences enables the crafting
+							of designs that not only look appealing but also deliver a
+							seamless and enjoyable interaction.
 						</p>
 						<h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-[1.8rem] sm:leading-[3rem] mb-2 mt-4">
-							Consistency and Cohesion
+							Visual Aesthetics
 						</h2>
 						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							In my approach to branding, I prioritize consistency and cohesion
-							across all touchpoints. Whether in visual aesthetics, messaging,
-							or user experience, I strive to ensure that every interaction
-							reinforces the brand identity, creating a unified and memorable
-							brand experience for the audience.
+							The marriage of form and function is at the core of my design
+							philosophy. Attention to visual details, color schemes, and
+							typography ensures that the interfaces I create not only meet
+							functional requirements but also provide an aesthetically pleasing
+							experience for users.
 						</p>
 					</section>
 					{/* <h3 className="font-clash  font-bold uppercase text-center">

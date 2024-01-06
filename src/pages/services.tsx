@@ -159,11 +159,13 @@ const Work = () => {
 						{
 							name: "backend development",
 							link: "backend",
+							disabled: true,
 							svglink: "/service-icons/icon-backend_dev.svg",
 						},
 						{
 							name: "devops",
 							link: "devops",
+							disabled: true,
 							svglink: "/service-icons/icon-devops.svg",
 						},
 					].map((x, i) => {
@@ -171,6 +173,7 @@ const Work = () => {
 							<ListItem
 								key={i}
 								text={x.name}
+								disabled={x.disabled}
 								link={`services/${x.link}`}
 								svglink={x.svglink}
 								delay={1.1 + i * 0.1}
@@ -256,11 +259,13 @@ function ListItem({
 	link,
 	delay,
 	svglink,
+	disabled,
 }: {
 	text: any;
 	link: string;
 	delay: number;
 	svglink: string;
+	disabled?: boolean;
 }) {
 	const ref = useRef(null);
 	useEffect(() => {
@@ -292,6 +297,9 @@ function ListItem({
 					// 	rotateY: "180deg",
 					// 	duration: 1.8,
 					// });
+					if (disabled) {
+						return;
+					}
 					router.push(link);
 				}}
 				// onMouseEnter={(e) => {
@@ -316,7 +324,9 @@ function ListItem({
 					priority
 				/>
 
-				<p className="text-left mr-4 mb-4">{text}</p>
+				<p className={`text-left mr-4 mb-4 ${disabled && "text-[#737373]"}`}>
+					{text}
+				</p>
 			</div>
 			<hr />
 		</li>

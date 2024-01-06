@@ -160,7 +160,7 @@ const Page = () => {
 								id="a-sun"
 								src="/a-sun.svg"
 								alt="adsf"
-								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
+								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px] animate-spin duration-1000"
 								width={70}
 								height={70}
 							/>{" "}
@@ -287,20 +287,29 @@ const Page = () => {
 							Web applications
 						</h1>
 						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							I started with the development of desktop applications using
-							Python with Kivy and C# with the WPF-Framework and transitioned
-							into the creation of web apps. Starting out with the webpack for
-							bundling, expanding to react and now mostly using nextjs for
-							creating data-intensive web-experiences.
+							I began my journey in desktop application development, utilizing
+							Python with Kivy and C# with the WPF Framework. My expertise has
+							since evolved to encompass web application development, initially
+							employing webpack for bundling, progressing to React, and
+							presently leveraging Next.js to craft sophisticated and
+							data-intensive web experiences.
 						</p>
 						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-							static Websites
+							Static Websites
 						</h1>
 						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							Soon enough I realised using react for everything might be a bit
-							of an overkill hence why I transitioned over to webflow, framer
-							and wordpress for creating applications that only serve the
-							purpose of displaying data.
+							In my journey through web development, I initially employed
+							<span className="font-semibold">&nbsp;React&nbsp;</span>
+							for diverse projects, including{" "}
+							<span className="italic">static websites</span>. Prioritizing
+							speed and efficiency, I consciously transitioned towards a more
+							versatile toolkit, incorporating{" "}
+							<span className="font-semibold">&nbsp;Webflow</span>,{" "}
+							<span className="font-semibold">&nbsp;Framer</span>, and
+							<span className="font-semibold">&nbsp;Wordpress</span>. This
+							strategic shift ensures that I use the right tools for the right
+							tasks, maintaining a pragmatic approach that balances
+							functionality and simplicity in applications.
 						</p>
 					</section>
 					{/* <h3 className="font-clash  font-bold uppercase text-center">
