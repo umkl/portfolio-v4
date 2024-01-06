@@ -80,16 +80,16 @@ const Work = () => {
 
 	return (
 		<Curve>
-			<section className="font-clash overflow-x-hidden w-full min-h-screen flex flex-col relative">
-				<div className="h-full w-full bg-[#333] fixed">
-					{/* <Rive src="/bg-blob-blur.riv" /> */}
-					{/* <Rive
+			<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-[#333]">
+				{/* <div className="h-full w-full  fixed"> */}
+				{/* <Rive src="/bg-blob-blur.riv" /> */}
+				{/* <Rive
 					
 						src="bg-blob-blur.riv"
 						automaticallyHandleEvents
 						style={{ width: "100%", height: "100%" }}
 					/> */}
-				</div>
+				{/* </div> */}
 				<GoBack />
 				<style jsx>{`
 					@media (max-width: 375px) {
@@ -121,25 +121,21 @@ const Work = () => {
 						my services
 					</h1>
 				</div>
-
-				<div
-					id="marquee-parent"
-					className="flex w-full h-[0.6em] flex-row mb-6 text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold"
-				>
+				<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold relative">
 					<h1 className="marquee_part  shrink-0">
-						things i am so good at, that i feel like SHARING &nbsp;
+						Skills I'm comfortable with and open to sharing. &nbsp;
 					</h1>
 					<h1 className="marquee_part   shrink-0">
-						things i am so good at, that i feel like SHARING &nbsp;
+						Skills I'm comfortable with and open to sharing. &nbsp;
 					</h1>
 					<h1 className="marquee_part  shrink-0">
-						things i am so good at, that i feel like SHARING &nbsp;
+						Skills I'm comfortable with and open to sharing. &nbsp;
 					</h1>
 					<h1 className="marquee_part  shrink-0">
-						things i am so good at, that i feel like SHARING &nbsp;
+						Skills I'm comfortable with and open to sharing. &nbsp;
 					</h1>
 					<h1 className="marquee_part  shrink-0">
-						things i am so good at, that i feel like SHARING &nbsp;
+						Skills I'm comfortable with and open to sharing. &nbsp;
 					</h1>
 				</div>
 				<hr />
