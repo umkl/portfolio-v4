@@ -1,17 +1,57 @@
 import Curve from "@um-p4/components/Curve";
+import { sendContactForm } from "@um-p4/lib/api";
 import { NavContext } from "@um-p4/navcontext";
+import { format } from "date-fns-tz";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+
+interface formValues {
+	email: string;
+	topic: string;
+	text: string;
+}
 
 const ContactSection = () => {
 	const navCxt = useContext(NavContext);
+	const [email, setEmail] = useState("");
+	const [topic, setTopic] = useState("");
+	const [text, setText] = useState("");
+	const [processingState, setProcessingState] = useState({
+		loading: false,
+		success: false,
+		error: false,
+	});
+
+	const onSubmit = async (e: any) => {
+		setProcessingState({ loading: true, success: false, error: false });
+		try {
+			e.preventDefault();
+			const tels = e.target.elements;
+			const formValues: formValues = {
+				email,
+				topic,
+				text,
+			};
+			const resi = await sendContactForm(formValues);
+		} catch (error) {
+			console.log(error);
+			setProcessingState({ loading: false, success: false, error: true });
+		}
+		setProcessingState({ loading: false, success: true, error: false });
+		e.target.reset();
+	};
+
+	const localDateTime = new Date();
+	const viennaDateTime = format(localDateTime, "yyyy-MM-dd HH:mm:ssXXX", {
+		timeZone: "Europe/Vienna",
+	});
 
 	return (
 		<Curve>
 			<section
 				ref={navCxt.contact}
 				id="contact"
-				className="w-full min-h-screen snap-start "
+				className="w-full min-h-screen snap-start bg-[#333]"
 			>
 				<div className="p-4">
 					<div className="h-[2rem]"></div>
@@ -32,12 +72,13 @@ const ContactSection = () => {
 								id="fsd"
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 								placeholder=" "
+								onChange={(e) => setEmail(e.target.value)}
 							/>
 							<label
 								htmlFor="fsd"
 								className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 							>
-								Floating standard
+								your email-adress
 							</label>
 						</div>
 						<div className="relative z-0 mb-4">
@@ -46,12 +87,13 @@ const ContactSection = () => {
 								id="fsd"
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 								placeholder=" "
+								onChange={(e) => setTopic(e.target.value)}
 							/>
 							<label
 								htmlFor="fsd"
 								className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 							>
-								Floating standard
+								your topic
 							</label>
 						</div>
 						<div className="relative z-0 mb-4">
@@ -60,19 +102,27 @@ const ContactSection = () => {
 								id="fsd"
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash overflow-hidden"
 								placeholder=" "
+								onChange={(e) => setText(e.target.value)}
 							/>
 							<label
 								htmlFor="fsd"
 								className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 							>
-								Floating standard
+								your text
 							</label>
 						</div>
-						<input
-							type="button"
-							value="send it"
-							className="appearance-none border-2 rounded-full w-14 font-clash px-8 py-2 box-content mb-4"
-						/>
+						<div className="flex gap-4 items-center mb-4">
+							<input
+								type="button"
+								value="send it"
+								className="appearance-none border-2 rounded-full w-14 font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
+							/>
+							{processingState.loading ?? (
+								<p className="font-clash font-extrabold uppercase h-full text-white/50">
+									loading
+								</p>
+							)}
+						</div>
 					</form>
 					<div className="mb-4">
 						<h3 className="font-clash text-[1.5rem] font-bold">
@@ -90,7 +140,7 @@ const ContactSection = () => {
 					</div>
 					<div className="mb-4">
 						<h3 className="font-clash text-[1.5rem] font-bold">Location</h3>
-						<h4 className="font-clash text-[1.5rem]">Ried, 20:00:00</h4>
+						<h4 className="font-clash text-[1.5rem]">Ried, {viennaDateTime}</h4>
 					</div>
 				</div>
 			</section>
