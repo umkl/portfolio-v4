@@ -1,7 +1,7 @@
 import Curve from "@um-p4/components/Curve";
 import { sendContactForm } from "@um-p4/lib/api";
 import { NavContext } from "@um-p4/navcontext";
-import { format } from "date-fns-tz";
+
 import Image from "next/image";
 import { useContext, useState } from "react";
 
@@ -27,24 +27,67 @@ const ContactSection = () => {
 		try {
 			e.preventDefault();
 			const tels = e.target.elements;
-			const formValues: formValues = {
+			const formValues = {
 				email,
 				topic,
 				text,
+				access_key: "40d0da23-5d5e-4137-9c9b-62ed37580a5d",
 			};
-			const resi = await sendContactForm(formValues);
+			// const resi = await sendContactForm(formValues);
+			var json = JSON.stringify(formValues);
+
+			fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: json,
+			})
+				.then(async (response) => {
+					let json = await response.json();
+					if (response.status == 200) {
+						console.log("succ");
+					} else {
+						console.log(response);
+					}
+				})
+				.catch((error) => {
+					console.log(error);
+					setProcessingState({
+						loading: false,
+						success: false,
+						error: true,
+					});
+				})
+				.then(function () {
+					setProcessingState({
+						loading: false,
+						success: true,
+						error: false,
+					});
+					setTimeout(() => {
+						setProcessingState({
+							loading: false,
+							success: false,
+							error: false,
+						});
+						setEmail("");
+						setTopic("");
+						setText("");
+					}, 5000);
+				});
 		} catch (error) {
 			console.log(error);
 			setProcessingState({ loading: false, success: false, error: true });
 		}
-		setProcessingState({ loading: false, success: true, error: false });
-		e.target.reset();
+		// e.target.reset();
 	};
 
-	const localDateTime = new Date();
-	const viennaDateTime = format(localDateTime, "yyyy-MM-dd HH:mm:ssXXX", {
-		timeZone: "Europe/Vienna",
-	});
+	// const localDateTime = new Date();
+	// const viennaDateTime = format(localDateTime, "yyyy-MM-dd HH:mm:ssXXX", {
+	// 	timeZone: "Europe/Vienna",
+	// });
 
 	return (
 		<Curve>
@@ -73,6 +116,7 @@ const ContactSection = () => {
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 								placeholder=" "
 								onChange={(e) => setEmail(e.target.value)}
+								value={email}
 							/>
 							<label
 								htmlFor="fsd"
@@ -88,6 +132,7 @@ const ContactSection = () => {
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 								placeholder=" "
 								onChange={(e) => setTopic(e.target.value)}
+								value={topic}
 							/>
 							<label
 								htmlFor="fsd"
@@ -103,6 +148,7 @@ const ContactSection = () => {
 								className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash overflow-hidden"
 								placeholder=" "
 								onChange={(e) => setText(e.target.value)}
+								value={text}
 							/>
 							<label
 								htmlFor="fsd"
@@ -113,13 +159,24 @@ const ContactSection = () => {
 						</div>
 						<div className="flex gap-4 items-center mb-4">
 							<input
+								onClick={onSubmit}
 								type="button"
 								value="send it"
 								className="appearance-none border-2 rounded-full w-14 font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
 							/>
-							{processingState.loading ?? (
+							{processingState.loading && (
 								<p className="font-clash font-extrabold uppercase h-full text-white/50">
 									loading
+								</p>
+							)}
+							{processingState.success && (
+								<p className="font-clash font-extrabold uppercase h-full text-green-200">
+									success
+								</p>
+							)}
+							{processingState.error && (
+								<p className="font-clash font-extrabold uppercase h-full text-red-200">
+									error, please contact me over the email listed below
 								</p>
 							)}
 						</div>
@@ -139,8 +196,8 @@ const ContactSection = () => {
 						<h4 className="font-clash text-[1.5rem]">YouTube</h4>
 					</div>
 					<div className="mb-4">
-						<h3 className="font-clash text-[1.5rem] font-bold">Location</h3>
-						<h4 className="font-clash text-[1.5rem]">Ried, {viennaDateTime}</h4>
+						<h3 className="font-clash text-[1.5rem] font-semibold">Location</h3>
+						<h4 className="font-clash text-[1.5rem]">Ried, 20:00:0</h4>
 					</div>
 				</div>
 			</section>
