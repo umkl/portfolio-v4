@@ -4,6 +4,7 @@ import { NavContext } from "@um-p4/navcontext";
 
 import Image from "next/image";
 import { useContext, useState } from "react";
+import Clock from "react-live-clock";
 
 interface formValues {
 	email: string;
@@ -191,13 +192,26 @@ const ContactSection = () => {
 						<h3 className="font-clash text-[1.5rem] font-bold">
 							My other digital places
 						</h3>
-						<h4 className="font-clash text-[1.5rem]">Bento</h4>
-						<h4 className="font-clash text-[1.5rem]">GitHub</h4>
-						<h4 className="font-clash text-[1.5rem]">YouTube</h4>
+						<a href="https://bento.me/ungarmichael">
+							<h4 className="font-clash text-[1.5rem]">Bento</h4>
+						</a>
+						<a href="https://github.com/ungarmichael">
+							<h4 className="font-clash text-[1.5rem]">GitHub</h4>
+						</a>
+						<a href="https://youtube.com/@ungarmichael">
+							<h4 className="font-clash text-[1.5rem]">YouTube</h4>
+						</a>
 					</div>
 					<div className="mb-4">
 						<h3 className="font-clash text-[1.5rem] font-semibold">Location</h3>
-						<h4 className="font-clash text-[1.5rem]">Ried, 20:00:0</h4>
+						<h4 className="font-clash text-[1.5rem]">
+							Ried im Innkreis,{" "}
+							<Clock
+								format={"HH:mm:ss"}
+								ticking={true}
+								timezone={"Europe/Vienna"}
+							/>
+						</h4>
 					</div>
 				</div>
 			</section>

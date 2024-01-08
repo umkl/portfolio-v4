@@ -228,9 +228,9 @@ const Page = () => {
 						</span>
 					</div>
 
-					<Marquee speed={200} pauseOnHover>
+					<Marquee speed={600} pauseOnHover>
 						<div
-							className="flex flex-nowrap gap-5 mr-5  mb-4"
+							className="flex flex-nowrap   mb-4"
 							onMouseEnter={() => {
 								console.log("hover");
 								setMarqueeSpeed(199);

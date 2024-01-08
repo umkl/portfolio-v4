@@ -49,7 +49,7 @@
 html {
 	color: rgb(var(--foreground-rgb));
 	width: 100%;
-	font-size: 16pt;
+	font-size: 10pt;
 	background-color: #3333;
 }
 

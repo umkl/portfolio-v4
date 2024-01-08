@@ -81,13 +81,15 @@ const Projects = () => {
 						<p className="font-clash flex-1 pl-2 pb-2 font-semibold">
 							projectname
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold">
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block">
 							category
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold">
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block">
 							initiator
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold">year</p>
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold text-right">
+							year
+						</p>
 					</div>
 					<hr />
 					<TableItem
@@ -117,24 +119,13 @@ const Projects = () => {
 									alt="asdlkfj"
 									className="h-[400px] md:h-[300px]"
 								/>
-								<img
-									src="/projects/deets/image2.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
-								<img
-									src="/projects/deets/image3.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
 							</div>
 						</Marquee>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#react</p>
 							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#lenis-scroll</p>
+							<p>#creative-dev</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -237,32 +228,22 @@ const Projects = () => {
 						year={"2022 - 2023"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							This school project was basically all about bringing a simple tool
+							to the web. It should help landlords increasing their prices
+							adequatly to the VPI-index.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
+							Learn more about the project on{" "}
+							<a href="https://waterbyte.club/projects/charge">
+								<span className="underline font-semibold">
+									waterbyte.club/projects/charge
+								</span>
 							</a>
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/wbyt_web-project-1866x1400.png"
-								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
-							/>
-							<img
-								src="/projects/wbyt-project-screenshot-1.png"
-								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
-							/>
-							<img
-								src="/projects/wbyt-project-screenshot-2.png"
+								src="/project-imgs/charge-project-3266x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
@@ -362,11 +343,8 @@ const Projects = () => {
 						year={"2020"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							This was my second freelancing project also with a primary focus
+							on displaying and organizing data in a modern way.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
@@ -377,7 +355,7 @@ const Projects = () => {
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/project-imgs/divex-project-1866x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
@@ -392,16 +370,18 @@ const Projects = () => {
 					</TableItem>
 					<TableItem
 						projectname={"Ballkarten.at"}
-						category={"frontend, ui/ux, branding"}
+						category={"ui/ux, branding"}
 						initiator={"Wanted"}
-						year={"2022 - 2023"}
+						year={"2021"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							In 2021 a young group of people hit me up if I could do some
+							design and frontend work for them on a business idea they had.
+							They tried to sell a ticket-selling system to schools conducting
+							events and for them I implemented a UI/UX-design and some branding
+							so they could promote their product. Sadly the project is no
+							longer being maintained but I still gained a lot of experience
+							working with branding and modern UI-design.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
@@ -412,7 +392,7 @@ const Projects = () => {
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/project-imgs/ballkarten-project-1866x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
@@ -432,32 +412,31 @@ const Projects = () => {
 						year={"2022 - 2023"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							This project was for a fictional company in vienna where I used
+							reactjs to implement a static website - economocially speaking not
+							a good idea but the purpose was rather to apply my knowledge in
+							react. Looking at it from now on I would definetly use a tool like
+							framer to quickly bring the design alive.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
+							You can check out the project here{" "}
+							<a href="https://octagon.netlify.app">
+								<span className="underline font-semibold">
+									octagon.netlify.app
+								</span>
 							</a>
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/project-imgs/octagon-project-1866x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#sass-scss</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -467,32 +446,22 @@ const Projects = () => {
 						year={"2022 - 2023"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							For this project I mostly did UI/UX Design and Frontend
+							Development using AngularJS and TailwindCSS.
 						</p>
 						<div className="h-[100px]"></div>
-						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
-							</a>
-						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/project-imgs/synopsis-project-2100x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
+							<p>#angularjs</p>
 							<p>#nextjs</p>
-							<p>#grapesjs</p>
 							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#tailwindcss</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -502,22 +471,22 @@ const Projects = () => {
 						year={"2022"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							This project was done in the context of an hackathon event and i
+							mainly focused on the implementation of the frontend and intuitive
+							ui/ux.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
+							You can check out the project here on{" "}
+							<a href="https://waterbyte.club/projects/heed">
+								<span className="underline font-semibold">
+									waterbyte.club/projects/heed
+								</span>
 							</a>
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/project-imgs/heed-project-3266x1400.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
@@ -530,7 +499,7 @@ const Projects = () => {
 							<p>#SSR</p>
 						</div>
 					</TableItem>
-					<TableItem
+					{/* <TableItem
 						projectname={"Krampus-Börse.at"}
 						category={"frontend, ui/ux"}
 						initiator={"Client"}
@@ -550,13 +519,6 @@ const Projects = () => {
 								<span className="underline font-semibold">waterbyte.club</span>
 							</a>
 						</p>
-						<div className="flex flex-nowrap gap-5 mr-5 ">
-							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
-								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
-							/>
-						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#react</p>
 							<p>#nextjs</p>
@@ -564,40 +526,92 @@ const Projects = () => {
 							<p>#typescript</p>
 							<p>#SSR</p>
 						</div>
-					</TableItem>
+					</TableItem> */}
 					<TableItem
 						projectname={"Bargun"}
-						category={"frontend, ui/ux, branding"}
+						category={"frontend, ui/ux, branding, backend"}
 						initiator={"Client"}
-						year={"2022"}
+						year={"2020-2021"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+							My first project that originated from the Fiverr Freelancing
+							platform and it started of with a really controversal topic:
+							"selling arms". After being scared of at first I agreed to
+							collaboration after understanding the purely non-violent
+							intentions the seller had. The client was a engineer for
+							gun-craftmanship and had the demand for an platform where users
+							could sell and buy arms backed up by a verification process.
+							Sadly, the project was never completed due to certain law-issues,
+							still purely out of an perspective for software development it was
+							a major learning for me.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
-							</a>
+							Sadly I cannot share any source code nor published content about
+							this project, still it is worth a mention on my experience board.
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
+								src="/projects/bargun/bargun.png"
+								alt="asdlkfj"
+								className="h-[400px] md:h-[300px]"
+							/>
+							<img
+								src="/projects/bargun/bargun-categories.png"
+								alt="asdlkfj"
+								className="h-[400px] md:h-[300px]"
+							/>
+							<img
+								src="/projects/bargun/bargun-screen1.png"
+								alt="asdlkfj"
+								className="h-[400px] md:h-[300px]"
+							/>
+							<img
+								src="/projects/bargun/bargun-inserat.png"
 								alt="asdlkfj"
 								className="h-[400px] md:h-[300px]"
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#flutter</p>
+							<p>#dart</p>
+							<p>#golang</p>
+						</div>
+					</TableItem>
+					<TableItem
+						projectname={"Neighboroo"}
+						category={"frontend, ui/ux"}
+						initiator={"Own Project"}
+						year={"2019-2020"}
+					>
+						<p className="font-[3rem] mt-4 max-w-[1200px]">
+							My first project that originated from the Fiverr Freelancing
+							platform and it started of with a really controversal topic:
+							"selling arms". After being scared of at first I agreed to
+							collaboration after understanding the purely non-violent
+							intentions the seller had. The client was a engineer for
+							gun-craftmanship and had the demand for an platform where users
+							could sell and buy arms backed up by a verification process.
+							Sadly, the project was never completed due to certain law-issues,
+							still purely out of an perspective for software development it was
+							a major learning for me.
+						</p>
+						<div className="h-[100px]"></div>
+						<p className="mb-4">
+							Sadly I cannot share any source code nor published content about
+							this project, still it is worth a mention on my experience board.
+						</p>
+						<div className="flex flex-nowrap gap-5 mr-5 ">
+							<img
+								src="/projects/neighboroo-overview.png"
+								alt="asdlkfj"
+								className="h-[400px] md:h-[300px]"
+							/>
+						</div>
+						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
+							<p>#flutter</p>
+							<p>#dart</p>
+							<p>#golang</p>
 						</div>
 					</TableItem>
 				</div>
@@ -620,7 +634,7 @@ const TableItem = ({
 	initiator: string;
 	year: string;
 }) => {
-	const [expanded, setExpanded] = useState(false);
+	const [expanded, setExpanded] = useState(true);
 	const ref = useRef(null);
 	useEffect(() => {
 		console.log("expand");
@@ -653,16 +667,16 @@ const TableItem = ({
 					setExpanded(!expanded);
 				}}
 			>
-				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333]">
+				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333] inline text-left">
 					{projectname}
 				</p>
-				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333] uppercase font-semibold">
+				<p className="font-clash flex-1 pl-2  py-4 font-semibold group-hover:text-[#333] uppercase hidden sm:block">
 					{category}
 				</p>
-				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333]">
+				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333] hidden sm:block">
 					{initiator}
 				</p>
-				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333]">
+				<p className="font-clash flex-1 pl-2  py-4 font-medium group-hover:text-[#333] inline text-right">
 					{year}
 				</p>
 			</div>
