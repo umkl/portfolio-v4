@@ -224,7 +224,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 
 	return (
 		<button
-			className="flex font-clash justify-start sm:justify-start items-center mb-0 sm:mb-4 z-40"
+			className="flex w-full font-clash justify-start sm:justify-start items-center mb-0 sm:mb-4 z-40"
 			onClick={() => {
 				gsap.to("#stick", {
 					flex: 1,

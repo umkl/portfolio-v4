@@ -1,3 +1,4 @@
+"use client";
 import Curve from "@um-p4/components/Curve";
 import { sendContactForm } from "@um-p4/lib/api";
 import { NavContext } from "@um-p4/navcontext";
@@ -5,6 +6,7 @@ import { NavContext } from "@um-p4/navcontext";
 import Image from "next/image";
 import { useContext, useState } from "react";
 import Clock from "react-live-clock";
+import { GoBack } from "../services";
 
 interface formValues {
 	email: string;
@@ -82,23 +84,17 @@ const ContactSection = () => {
 			console.log(error);
 			setProcessingState({ loading: false, success: false, error: true });
 		}
-		// e.target.reset();
 	};
-
-	// const localDateTime = new Date();
-	// const viennaDateTime = format(localDateTime, "yyyy-MM-dd HH:mm:ssXXX", {
-	// 	timeZone: "Europe/Vienna",
-	// });
 
 	return (
 		<Curve>
 			<section
 				ref={navCxt.contact}
 				id="contact"
-				className="w-full min-h-screen snap-start bg-[#333]"
+				className="w-full min-h-screen snap-start bg-[#333] text-white"
 			>
+				<GoBack />
 				<div className="p-4">
-					<div className="h-[2rem]"></div>
 					<h1 className="font-clash font-bold text-3xl ">
 						Awesome concept in mind?
 					</h1>

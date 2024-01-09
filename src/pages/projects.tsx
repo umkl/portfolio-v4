@@ -31,7 +31,7 @@ const Projects = () => {
 	return (
 		<Curve>
 			<section
-				className="flex flex-col min-h-screen bg-[#333]"
+				className="flex flex-col min-h-screen bg-[#333] text-white"
 				onMouseMove={handleMouseMove}
 			>
 				<GoBack />
@@ -81,13 +81,13 @@ const Projects = () => {
 						<p className="font-clash flex-1 pl-2 pb-2 font-semibold">
 							projectname
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block">
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block text-white">
 							category
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block">
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block text-white">
 							initiator
 						</p>
-						<p className="font-clash flex-1 pl-2 pb-2 font-semibold text-right">
+						<p className="font-clash flex-1 pl-2 pb-2 font-semibold text-right text-white">
 							year
 						</p>
 					</div>
@@ -229,10 +229,10 @@ const Projects = () => {
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
 							This school project was basically all about bringing a simple tool
-							to the web. It should help landlords increasing their prices
-							adequatly to the VPI-index.
+							to the web. <br /> It should help landlords increasing their
+							prices adequatly to the VPI-index.
 						</p>
-						<div className="h-[100px]"></div>
+						<div className="h-[40px]"></div>
 						<p className="mb-4">
 							Learn more about the project on{" "}
 							<a href="https://waterbyte.club/projects/charge">
@@ -249,11 +249,9 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
 							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#vuejs</p>
+							<p>#figma</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -307,20 +305,22 @@ const Projects = () => {
 						initiator={"Contest"}
 						year={"2022"}
 					>
-						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for the coding club I am participating in so it
-							was practically without a budget and I used various tools for the
-							first time. It was the first project where I was embracing nextjs.
-							Instead of creating an dedicated backend I harnessed supabase to
-							host changing data.
+						<p className="font-[3rem] mt-4 max-w-[800px]">
+							Filli Studio emerged from a hackathon challenge where our mission
+							was to devise an innovative interface for ordering toys. Our
+							creative approach led us to develop an iOS app that allowed users
+							to order individual toy parts. What set this project apart was the
+							incorporation of a 3D animation showcasing the assembly process,
+							providing customers with a unique and engaging experience. To add
+							a touch of fun, we included a mini-game for users to enjoy while
+							awaiting their orders. The project's exceptional nature was
+							further heightened by the diverse skill set within our team, with
+							my partner and I spearheading the software development aspect. The
+							collaborative effort across various disciplines made this endeavor
+							not only exceptionally awesome but also a testament to the power
+							of cross-functional teamwork in hackathon settings.
 						</p>
 						<div className="h-[100px]"></div>
-						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
-							</a>
-						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
 								src="/project-imgs/filliStudio-project-3266x1400.png"
@@ -329,11 +329,8 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#flutter</p>
+							<p>#dart</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -343,16 +340,16 @@ const Projects = () => {
 						year={"2020"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This was my second freelancing project also with a primary focus
-							on displaying and organizing data in a modern way.
+							In 2020, I undertook a freelancing project for an investment
+							advisor based in Switzerland, secured through Fiverr. The task
+							involved digitalizing a survey to enable the agency to categorize
+							their clients and formulate optimal investment plans. The
+							experience proved to be a valuable learning opportunity, allowing
+							me to delve into the intricacies of financial advisory processes
+							and enhance my skills in digitalization within the context of
+							investment planning.
 						</p>
 						<div className="h-[100px]"></div>
-						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
-							</a>
-						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
 								src="/project-imgs/divex-project-1866x1400.png"
@@ -361,11 +358,9 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
+							<p>#figma</p>
+							<p>#adobe-photoshop</p>
 							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -375,21 +370,18 @@ const Projects = () => {
 						year={"2021"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							In 2021 a young group of people hit me up if I could do some
-							design and frontend work for them on a business idea they had.
-							They tried to sell a ticket-selling system to schools conducting
-							events and for them I implemented a UI/UX-design and some branding
-							so they could promote their product. Sadly the project is no
-							longer being maintained but I still gained a lot of experience
-							working with branding and modern UI-design.
+							In 2021, a group of young entrepreneurs approached me with an
+							opportunity to contribute to their business idea. They were
+							developing a ticket-selling system targeted at schools organizing
+							events. My role involved implementing UI/UX design and creating
+							branding elements to help them promote their product. Although the
+							project is no longer active, the experience was valuable,
+							providing insights into branding and modern UI design. It's a
+							testament to the dynamic nature of the field and the continuous
+							learning curve inherent in such projects.
 						</p>
 						<div className="h-[100px]"></div>
-						<p className="mb-4">
-							You can check out the website on{" "}
-							<a href="https://waterbyte.club">
-								<span className="underline font-semibold">waterbyte.club</span>
-							</a>
-						</p>
+
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
 								src="/project-imgs/ballkarten-project-1866x1400.png"
@@ -398,11 +390,9 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
-							<p>#nextjs</p>
-							<p>#grapesjs</p>
-							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#figma</p>
+							<p>#inkscape</p>
+							<p>#adobe-photoshop</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -412,17 +402,22 @@ const Projects = () => {
 						year={"2022 - 2023"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was for a fictional company in vienna where I used
-							reactjs to implement a static website - economocially speaking not
-							a good idea but the purpose was rather to apply my knowledge in
-							react. Looking at it from now on I would definetly use a tool like
-							framer to quickly bring the design alive.
+							This project involved crafting a static website for a fictional
+							company based in Vienna, using ReactJS. While not the most
+							economically pragmatic choice, the primary aim was to apply and
+							improve my React skills. Looking back, I see the potential
+							efficiency of using tools like Framer to bring the design to life
+							quickly. This experience has given me valuable insights,
+							influencing how I approach future projects for a more
+							straightforward development process. Notably, this project served
+							as a successful submission for a software agency, where I later
+							secured a position.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							You can check out the project here{" "}
+							You can check out the project here:{" "}
 							<a href="https://octagon.netlify.app">
-								<span className="underline font-semibold">
+								<span className="hover:underline italic font-semibold">
 									octagon.netlify.app
 								</span>
 							</a>
@@ -435,8 +430,10 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
+							<p>#reactjs</p>
+							<p>#react-spring</p>
 							<p>#sass-scss</p>
+							<p>#typescript</p>
 						</div>
 					</TableItem>
 					<TableItem
@@ -446,8 +443,13 @@ const Projects = () => {
 						year={"2022 - 2023"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							For this project I mostly did UI/UX Design and Frontend
-							Development using AngularJS and TailwindCSS.
+							Synposis was a school project where we aimed to create a practical
+							dashboard for managing school affairs. The main idea was to build
+							a straightforward platform that could easily accommodate plugins.
+							I played a part in conceptualizing the project, handling UI/UX
+							design, and working on the frontend development. The result ought
+							to be a functional and user-friendly tool that streamlined
+							administrative tasks and allowed for future modifications.
 						</p>
 						<div className="h-[100px]"></div>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
@@ -459,7 +461,6 @@ const Projects = () => {
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#angularjs</p>
-							<p>#nextjs</p>
 							<p>#typescript</p>
 							<p>#tailwindcss</p>
 						</div>
@@ -471,15 +472,23 @@ const Projects = () => {
 						year={"2022"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							This project was done in the context of an hackathon event and i
-							mainly focused on the implementation of the frontend and intuitive
-							ui/ux.
+							Heed, a captivating project born out of a hackathon, revolved
+							around the revitalization of motorcycle parts through innovative
+							sensor data utilization. The essence of the hackathon lay in
+							unleashing creativity with sensor data, prompting us to craft a
+							sophisticated panel. This panel intuitively displayed the gathered
+							data, empowering users to foresee potential breakdowns in specific
+							elements. The ultimate goal was to streamline the scheduling of
+							new part installations or repairs with utmost efficiency. In this
+							collaborative endeavor, I took charge of the branding, UI/UX
+							design, and frontend development, shaping the project into a
+							harmonious fusion of functionality and aesthetics.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
 							You can check out the project here on{" "}
 							<a href="https://waterbyte.club/projects/heed">
-								<span className="underline font-semibold">
+								<span className=" font-semibold italic hover:underline">
 									waterbyte.club/projects/heed
 								</span>
 							</a>
@@ -492,11 +501,10 @@ const Projects = () => {
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-							<p>#react</p>
+							<p>#reactjs</p>
 							<p>#nextjs</p>
-							<p>#grapesjs</p>
 							<p>#typescript</p>
-							<p>#SSR</p>
+							<p>#figma</p>
 						</div>
 					</TableItem>
 					{/* <TableItem
@@ -534,21 +542,24 @@ const Projects = () => {
 						year={"2020-2021"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							My first project that originated from the Fiverr Freelancing
-							platform and it started of with a really controversal topic:
-							"selling arms". After being scared of at first I agreed to
-							collaboration after understanding the purely non-violent
-							intentions the seller had. The client was a engineer for
-							gun-craftmanship and had the demand for an platform where users
-							could sell and buy arms backed up by a verification process.
-							Sadly, the project was never completed due to certain law-issues,
-							still purely out of an perspective for software development it was
-							a major learning for me.
+							My first venture on the Fiverr Freelancing platform took an
+							unexpected turn as it delved into a highly controversial topic –
+							'selling arms.' Initially hesitant, I cautiously embraced the
+							collaboration after understanding the client's commitment to
+							non-violent intentions. The client, an engineer specializing in
+							gun craftsmanship, envisioned a platform where users could engage
+							in the buying and selling of arms, complete with a thorough
+							verification process. Regrettably, the project remained incomplete
+							due to legal complexities. Despite this, the experience was a
+							pivotal lesson in software development, shedding light on
+							intricate challenges and ethical considerations that can arise in
+							the industry.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							Sadly I cannot share any source code nor published content about
-							this project, still it is worth a mention on my experience board.
+							I'm unable to share the source code or any published content
+							related to this project. However, its significance and the lessons
+							learned make it a noteworthy addition to my experience board.
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
@@ -582,24 +593,30 @@ const Projects = () => {
 						projectname={"Neighboroo"}
 						category={"frontend, ui/ux"}
 						initiator={"Own Project"}
-						year={"2019-2020"}
+						year={"2020"}
 					>
 						<p className="font-[3rem] mt-4 max-w-[1200px]">
-							My first project that originated from the Fiverr Freelancing
-							platform and it started of with a really controversal topic:
-							"selling arms". After being scared of at first I agreed to
-							collaboration after understanding the purely non-violent
-							intentions the seller had. The client was a engineer for
-							gun-craftmanship and had the demand for an platform where users
-							could sell and buy arms backed up by a verification process.
-							Sadly, the project was never completed due to certain law-issues,
-							still purely out of an perspective for software development it was
-							a major learning for me.
+							Amidst the challenges posed by the Covid-19 pandemic, I recognized
+							the significant difficulty many people faced in leaving their
+							homes. Motivated by a desire to contribute positively, I delved
+							into experimenting with the Flutter framework and embarked on
+							creating an app with a meaningful purpose. The goal is to foster
+							stronger connections within communities, particularly in similar
+							districts, ensuring that residents can communicate and interact
+							more easily. By facilitating a sense of unity, the app aims to
+							enhance the quality of life for everyone involved, ultimately
+							creating a more supportive and connected community.
 						</p>
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
-							Sadly I cannot share any source code nor published content about
-							this project, still it is worth a mention on my experience board.
+							The app was never released but you can check out the code for the
+							frontend project here:{" "}
+							<a
+								href="https://github.com/ungarmichael/neighboroo"
+								className="font-bold italic hover:underline"
+							>
+								github.com/ungarmichael/neighboroo
+							</a>
 						</p>
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<img
@@ -611,7 +628,6 @@ const Projects = () => {
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#flutter</p>
 							<p>#dart</p>
-							<p>#golang</p>
 						</div>
 					</TableItem>
 				</div>
