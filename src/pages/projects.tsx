@@ -1,3 +1,4 @@
+"use client";
 import UmFooter from "@um-p4/components/UmFooter";
 import { GoBack } from "./services";
 import Curve from "@um-p4/components/Curve";
@@ -107,20 +108,20 @@ const Projects = () => {
 						<div className="h-[100px]"></div>
 						<p className="mb-4">
 							You can check out the work on{" "}
-							<a href="https://frame-studio.at">
-								<span className="underline font-semibold">frame-studio.at</span>
+							<a href="https://framestudio.at">
+								<span className="underline font-semibold">framestudio.at</span>
 							</a>
 						</p>
 
-						<Marquee>
-							<div className="flex flex-nowrap gap-5 mr-5 ">
-								<img
-									src="/project-imgs/deets-project-3266x1400.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
-							</div>
-						</Marquee>
+						<div className="flex flex-nowrap gap-5 mr-5 ">
+							<video autoPlay loop style={{ height: "300px" }}>
+								<source src="/frame-vids/vid1.mov" />
+							</video>
+							<video autoPlay loop style={{ height: "300px" }}>
+								<source src="/frame-vids/vid2.mov" />
+							</video>
+						</div>
+
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
 							<p>#react</p>
 							<p>#nextjs</p>
