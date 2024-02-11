@@ -98,7 +98,7 @@ const Work = () => {
 						}
 					}
 				`}</style>
-				<div className="relative  z-0">
+				<div className="relative text-white z-0">
 					<span
 						id="head-i-1"
 						className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-300 -z-10 whitespace-nowrap"
@@ -139,7 +139,7 @@ const Work = () => {
 					</h1>
 				</div>
 				<hr />
-				<ul className="uppercase flex flex-col justify-start  flex-1 overflow-hidden">
+				<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
 					{[
 						{
 							name: "frontend development",
@@ -286,7 +286,7 @@ function ListItem({
 	return (
 		<li
 			key={text}
-			className="list-item text-[1.1rem]  sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer "
+			className="list-item text-[1.1rem] text-white sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer "
 		>
 			<div
 				ref={ref}

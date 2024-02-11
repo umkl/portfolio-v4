@@ -95,7 +95,7 @@ const Projects = () => {
 					<hr />
 					<TableItem
 						projectname={"Frame"}
-						category={"frontend, ui/ux"}
+						category={"frontend, ui/ux, creative-dev"}
 						initiator={"Client"}
 						year={"2023"}
 					>
@@ -115,10 +115,16 @@ const Projects = () => {
 
 						<div className="flex flex-nowrap gap-5 mr-5 ">
 							<video autoPlay loop style={{ height: "300px" }}>
+								<source src="/frame-vids/vid3.mov" />
+							</video>
+							<video autoPlay loop style={{ height: "300px" }}>
 								<source src="/frame-vids/vid1.mov" />
 							</video>
 							<video autoPlay loop style={{ height: "300px" }}>
 								<source src="/frame-vids/vid2.mov" />
+							</video>
+							<video autoPlay loop style={{ height: "300px" }}>
+								<source src="/frame-vids/vid4.mov" />
 							</video>
 						</div>
 
