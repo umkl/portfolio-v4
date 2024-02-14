@@ -47,14 +47,6 @@ const ContactSection = () => {
 				},
 				body: json,
 			})
-				.then(async (response) => {
-					let json = await response.json();
-					if (response.status == 200) {
-						console.log("succ");
-					} else {
-						console.log(response);
-					}
-				})
 				.catch((error) => {
 					console.log(error);
 					setProcessingState({
@@ -168,7 +160,7 @@ const ContactSection = () => {
 							)}
 							{processingState.success && (
 								<p className="font-clash font-extrabold uppercase h-full text-green-200">
-									success
+									sent!
 								</p>
 							)}
 							{processingState.error && (
