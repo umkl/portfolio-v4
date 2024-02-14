@@ -36,7 +36,10 @@ export default function Home() {
 					property="og:description"
 					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
 				/>
-				<meta property="og:image" content="/banner.png" />
+				<meta
+					property="og:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
 			</Head>
 			<Curve>
 				<Landing />
