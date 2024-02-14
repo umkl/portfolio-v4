@@ -95,7 +95,6 @@ const Landing = () => {
 						height={100}
 						priority
 					/>
-
 					<Image
 						id="pb"
 						style={{ opacity: 1 }}

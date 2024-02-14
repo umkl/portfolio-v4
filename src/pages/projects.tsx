@@ -17,6 +17,8 @@ const Projects = () => {
 		setPosition({ x: event.clientX, y: event.clientY });
 	};
 
+	const frameScrollItem = useRef<any>();
+
 	useEffect(() => {
 		// Calculate the distance between text and cursor
 		const deltaX = position.x - textPosition.x;
@@ -113,7 +115,11 @@ const Projects = () => {
 							</a>
 						</p>
 
-						<div className="flex flex-nowrap gap-5 mr-5 ">
+						<div
+							id="frame-vids-items"
+							ref={frameScrollItem}
+							className="flex flex-nowrap gap-5 mr-5 overflow-x-scroll hide-scrollbar"
+						>
 							<video autoPlay loop style={{ height: "300px" }}>
 								<source src="/frame-vids/vid3.mov" />
 							</video>
@@ -126,6 +132,25 @@ const Projects = () => {
 							<video autoPlay loop style={{ height: "300px" }}>
 								<source src="/frame-vids/vid4.mov" />
 							</video>
+						</div>
+
+						<div className=" flex justify-between mt-4">
+							<div
+								className="cursor-pointer"
+								onClick={() => {
+									frameScrollItem!.current!.scrollLeft += 20;
+								}}
+							>
+								&lt;-
+							</div>
+							<div
+								className="cursor-pointer"
+								onClick={() => {
+									frameScrollItem!.current!.scrollLeft -= 20;
+								}}
+							>
+								-&gt;
+							</div>
 						</div>
 
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
@@ -158,21 +183,21 @@ const Projects = () => {
 							</a>
 						</p>
 
-						<div className="flex flex-nowrap gap-5 mr-5 ">
-							<img
-								src="/project-imgs/deets-project-3266x1400.png"
-								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
-							/>
+						<div className="flex flex-nowrap gap-5 mr-5 overflow-x-scroll ">
 							<img
 								src="/projects/deets/image2.png"
 								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
+								className="h-[400px] md:h-[300px] shrink-0"
+							/>
+							<img
+								src="/project-imgs/deets-project-3266x1400.png"
+								alt="asdlkfj"
+								className="h-[400px] md:h-[300px] w-[auto] shrink-0"
 							/>
 							<img
 								src="/projects/deets/image3.png"
 								alt="asdlkfj"
-								className="h-[400px] md:h-[300px]"
+								className="h-[400px] md:h-[300px] shrink-0"
 							/>
 						</div>
 						<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">

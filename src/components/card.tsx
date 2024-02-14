@@ -22,7 +22,7 @@ const CardComponent = ({
 
 				if (window.innerWidth > 1024) {
 					gsap.to(ref.current, {
-						marginTop: "-200px",
+						marginTop: "-100px",
 					});
 				}
 			}}
