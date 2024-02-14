@@ -152,7 +152,6 @@ const Landing = () => {
 				>
 					<CardComponent
 						tap={() => {
-							// navCxt.work!.current?.scrollIntoView();
 							router.push("/services");
 						}}
 						classname="top-[1em] card-comp-item relative"
@@ -167,7 +166,6 @@ const Landing = () => {
 
 					<CardComponent
 						tap={() => {
-							// navCxt.projects!.current?.scrollIntoView();
 							router.push("/projects");
 						}}
 						dest="projects"
@@ -177,7 +175,6 @@ const Landing = () => {
 					/>
 					<CardComponent
 						tap={() => {
-							// navCxt.experience!.current?.scrollIntoView();
 							window.location.replace("https://blog.ungarmichael.me");
 						}}
 						dest="blog"
