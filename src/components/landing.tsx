@@ -10,7 +10,6 @@ const Landing = () => {
 	const navCxt = useContext(NavContext);
 	const router = useRouter();
 	const ref = useRef(null);
-
 	useEffect(() => {
 		let ctxt = gsap.context(() => {
 			gsap.to(ref.current, {
@@ -163,7 +162,6 @@ const Landing = () => {
 							</>
 						}
 					/>
-
 					<CardComponent
 						tap={() => {
 							router.push("/projects");

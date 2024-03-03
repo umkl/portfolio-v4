@@ -7,7 +7,6 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
-import Rive, { useRive } from "@rive-app/react-canvas";
 import Head from "next/head";
 
 const Work = () => {
@@ -47,25 +46,15 @@ const Work = () => {
 			const currentTime = Date.now();
 			const elapsed = currentTime - startTime;
 			const screenSize = window.innerWidth;
-
-			// Adjust the duration based on screen size
 			const adjustedDuration = screenSize < 768 ? duration * 2.8 : duration;
-
 			if (elapsed < adjustedDuration) {
-				// Calculate the eased value
 				const easedValue = easeInOut(elapsed, 400, -360, adjustedDuration);
-
-				// Update the marquee speed
 				setMarqueeSpeed(easedValue);
-
-				// Call the function recursively
 				requestAnimationFrame(updateSpeed);
 			} else {
-				// Ensure the final value is exactly 400
 				setMarqueeSpeed(400);
 			}
 		};
-		// Start the animation
 		updateSpeed();
 	}, []);
 
@@ -82,39 +71,28 @@ const Work = () => {
 	return (
 		<>
 			<Head>
-				<title>
-					Services - Ungar Michael - Freelance App Developer & UI/UX Designer
-				</title>
+				<meta charSet="utf-8" />
+				<title>Ungar Michael ✹ Creative App Development</title>
+				<meta name="title" content="Michael Ungar - Services" />
+				<meta name="description" content="Creative App Development" />
 				<meta property="og:url" content="https://ungarmichael.me" />
 				<meta property="og:type" content="website" />
-				<meta
-					property="og:title"
-					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
-				/>
-				<meta
-					property="og:description"
-					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
-				/>
+				<meta property="og:title" content="Ungar Michael" />
+				<meta property="og:description" content="Creative App Development" />
 				<meta
 					property="og:image"
 					content="https://ungarmichael.me/banner.png"
 				/>
-
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="ungarmichael.me" />
 				<meta property="twitter:url" content="https://ungarmichael.me" />
-				<meta
-					name="twitter:title"
-					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
-				/>
-				<meta
-					name="twitter:description"
-					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
-				/>
+				<meta name="twitter:title" content="Ungar Michael" />
+				<meta name="twitter:description" content="Creative App Development" />
 				<meta
 					name="twitter:image"
 					content="https://ungarmichael.me/banner.png"
 				/>
+				<meta name="theme-color" content="#333333"></meta>
 			</Head>
 			<Curve>
 				<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-[#333]">
@@ -330,27 +308,12 @@ function ListItem({
 				ref={ref}
 				className="truncate slide-in origin-top-left ml-[30px] sm:ml-[4vw]"
 				onClick={(e) => {
-					// gsap.to(e.target, {
-					// 	// height: "200px",
-					// 	rotateY: "180deg",
-					// 	duration: 1.8,
-					// });
 					if (disabled) {
 						return;
 					}
 					router.push(link);
 				}}
-				// onMouseEnter={(e) => {
-				// 	gsap.to(e.target, { marginLeft: "vw", duration: 0.3 });
-				// }}
-				// onMouseLeave={(e) => {
-				// 	gsap.to(e.target, { marginLeft: "4vw", duration: 0.3, delay: 0.1 });
-				// }}
 			>
-				{/* <h1 className="font-bold font-druk text-[3rem] text-[#C2CAD1] mb-0 leading-[3rem] mt-4">
-					01
-				</h1> */}
-
 				<Image
 					id="logo"
 					style={{ opacity: 1 }}
@@ -361,7 +324,6 @@ function ListItem({
 					height={20}
 					priority
 				/>
-
 				<p className={`text-left mr-4 mb-4 ${disabled && "text-[#737373]"}`}>
 					{text}
 				</p>
