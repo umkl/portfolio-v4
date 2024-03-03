@@ -8,6 +8,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
 import Rive, { useRive } from "@rive-app/react-canvas";
+import Head from "next/head";
 
 const Work = () => {
 	useEffect(() => {
@@ -79,141 +80,178 @@ const Work = () => {
 	};
 
 	return (
-		<Curve>
-			<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-[#333]">
-				{/* <div className="h-full w-full  fixed"> */}
-				{/* <Rive src="/bg-blob-blur.riv" /> */}
-				{/* <Rive
+		<>
+			<Head>
+				<title>
+					Services - Ungar Michael - Freelance App Developer & UI/UX Designer
+				</title>
+				<meta property="og:url" content="https://ungarmichael.me" />
+				<meta property="og:type" content="website" />
+				<meta
+					property="og:title"
+					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
+				/>
+				<meta
+					property="og:description"
+					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
+				/>
+				<meta
+					property="og:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="ungarmichael.me" />
+				<meta property="twitter:url" content="https://ungarmichael.me" />
+				<meta
+					name="twitter:title"
+					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
+				/>
+				<meta
+					name="twitter:description"
+					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
+				/>
+				<meta
+					name="twitter:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+			</Head>
+			<Curve>
+				<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-[#333]">
+					{/* <div className="h-full w-full  fixed"> */}
+					{/* <Rive src="/bg-blob-blur.riv" /> */}
+					{/* <Rive
 					
 						src="bg-blob-blur.riv"
 						automaticallyHandleEvents
 						style={{ width: "100%", height: "100%" }}
 					/> */}
-				{/* </div> */}
-				<GoBack />
-				<style jsx>{`
-					@media (max-width: 375px) {
-						section {
-							width: 375px;
+					{/* </div> */}
+					<GoBack />
+					<style jsx>{`
+						@media (max-width: 375px) {
+							section {
+								width: 375px;
+							}
 						}
-					}
-				`}</style>
-				<div className="relative text-white z-0">
-					<span
-						id="head-i-1"
-						className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-300 -z-10 whitespace-nowrap"
-					>
-						my services
-					</span>
-					<span
-						id="head-i-2"
-						className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-400 -z-20 whitespace-nowrap"
-					>
-						my services
-					</span>
-					<span
-						id="head-i-3"
-						className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-500 -z-30 whitespace-nowrap"
-					>
-						my services
-					</span>
-					<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 whitespace-nowrap">
-						my services
-					</h1>
-				</div>
-				<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold relative">
-					<h1 className="marquee_part  shrink-0">
-						Skills I'm comfortable with and open to sharing. &nbsp;
-					</h1>
-					<h1 className="marquee_part   shrink-0">
-						Skills I'm comfortable with and open to sharing. &nbsp;
-					</h1>
-					<h1 className="marquee_part  shrink-0">
-						Skills I'm comfortable with and open to sharing. &nbsp;
-					</h1>
-					<h1 className="marquee_part  shrink-0">
-						Skills I'm comfortable with and open to sharing. &nbsp;
-					</h1>
-					<h1 className="marquee_part  shrink-0">
-						Skills I'm comfortable with and open to sharing. &nbsp;
-					</h1>
-				</div>
-				<hr />
-				<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
-					{[
-						{
-							name: "frontend development",
-							link: "frontend-dev",
-							svglink: "/service-icons/icon-frontend-dev.svg",
-						},
-						{
-							name: "ui/ux design",
-							link: "ui-ux-design",
-							svglink: "/service-icons/icon-ui_ux-design.svg",
-						},
-						{
-							name: "branding",
-							link: "branding",
-							svglink: "/service-icons/icon-branding.svg",
-						},
-						{
-							name: "backend development",
-							link: "backend",
-							disabled: true,
-							svglink: "/service-icons/icon-backend_dev.svg",
-						},
-						{
-							name: "devops",
-							link: "devops",
-							disabled: true,
-							svglink: "/service-icons/icon-devops.svg",
-						},
-					].map((x, i) => {
-						return (
-							<ListItem
-								key={i}
-								text={x.name}
-								disabled={x.disabled}
-								link={`services/${x.link}`}
-								svglink={x.svglink}
-								delay={1.1 + i * 0.1}
+					`}</style>
+					<div className="relative text-white z-0">
+						<span
+							id="head-i-1"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-300 -z-10 whitespace-nowrap"
+						>
+							my services
+						</span>
+						<span
+							id="head-i-2"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-400 -z-20 whitespace-nowrap"
+						>
+							my services
+						</span>
+						<span
+							id="head-i-3"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-500 -z-30 whitespace-nowrap"
+						>
+							my services
+						</span>
+						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 whitespace-nowrap">
+							my services
+						</h1>
+					</div>
+					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold relative">
+						<h1 className="marquee_part  shrink-0">
+							Skills I'm comfortable with and open to sharing. &nbsp;
+						</h1>
+						<h1 className="marquee_part   shrink-0">
+							Skills I'm comfortable with and open to sharing. &nbsp;
+						</h1>
+						<h1 className="marquee_part  shrink-0">
+							Skills I'm comfortable with and open to sharing. &nbsp;
+						</h1>
+						<h1 className="marquee_part  shrink-0">
+							Skills I'm comfortable with and open to sharing. &nbsp;
+						</h1>
+						<h1 className="marquee_part  shrink-0">
+							Skills I'm comfortable with and open to sharing. &nbsp;
+						</h1>
+					</div>
+					<hr />
+					<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
+						{[
+							{
+								name: "frontend development",
+								link: "frontend-dev",
+								svglink: "/service-icons/icon-frontend-dev.svg",
+							},
+							{
+								name: "ui/ux design",
+								link: "ui-ux-design",
+								svglink: "/service-icons/icon-ui_ux-design.svg",
+							},
+							{
+								name: "branding",
+								link: "branding",
+								svglink: "/service-icons/icon-branding.svg",
+							},
+							{
+								name: "backend development",
+								link: "backend",
+								disabled: true,
+								svglink: "/service-icons/icon-backend_dev.svg",
+							},
+							{
+								name: "devops",
+								link: "devops",
+								disabled: true,
+								svglink: "/service-icons/icon-devops.svg",
+							},
+						].map((x, i) => {
+							return (
+								<ListItem
+									key={i}
+									text={x.name}
+									disabled={x.disabled}
+									link={`services/${x.link}`}
+									svglink={x.svglink}
+									delay={1.1 + i * 0.1}
+								/>
+							);
+						})}
+					</ul>
+					<Marquee speed={marqueeSpeed}>
+						<div className="flex flex-nowrap gap-5 mr-5 my-7">
+							<img
+								src="/work-1.png"
+								alt="asdlkfj"
+								className="h-[200px] md:h-[600px]"
 							/>
-						);
-					})}
-				</ul>
-				<Marquee speed={marqueeSpeed}>
-					<div className="flex flex-nowrap gap-5 mr-5 my-7">
-						<img
-							src="/work-1.png"
-							alt="asdlkfj"
-							className="h-[200px] md:h-[600px]"
-						/>
-					</div>
-					<div className="flex flex-nowrap gap-5 mr-5 my-7">
-						<img
-							src="/work-2.png"
-							alt="asdlkfj"
-							className="h-[200px] md:h-[600px]"
-						/>
-					</div>
-					<div className="flex flex-nowrap gap-5 mr-5 my-7">
-						<img
-							src="/work-3.png"
-							alt="asdlkfj"
-							className="h-[200px] md:h-[600px]"
-						/>
-					</div>
-					<div className="flex flex-nowrap gap-5 mr-5 my-7">
-						<img
-							src="/work-4.png"
-							alt="asdlkfj"
-							className="h-[200px] md:h-[600px]"
-						/>
-					</div>
-				</Marquee>
-				<UmFooter />
-			</section>
-		</Curve>
+						</div>
+						<div className="flex flex-nowrap gap-5 mr-5 my-7">
+							<img
+								src="/work-2.png"
+								alt="asdlkfj"
+								className="h-[200px] md:h-[600px]"
+							/>
+						</div>
+						<div className="flex flex-nowrap gap-5 mr-5 my-7">
+							<img
+								src="/work-3.png"
+								alt="asdlkfj"
+								className="h-[200px] md:h-[600px]"
+							/>
+						</div>
+						<div className="flex flex-nowrap gap-5 mr-5 my-7">
+							<img
+								src="/work-4.png"
+								alt="asdlkfj"
+								className="h-[200px] md:h-[600px]"
+							/>
+						</div>
+					</Marquee>
+					<UmFooter />
+				</section>
+			</Curve>
+		</>
 	);
 };
 
