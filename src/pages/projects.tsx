@@ -31,11 +31,11 @@ const Projects = () => {
 			<Head>
 				<meta charSet="utf-8" />
 				<title>Ungar Michael ✹ Creative App Development</title>
-				<meta name="title" content="Michael Ungar - Contact" />
+				<meta name="title" content="Michael Ungar - Projects" />
 				<meta name="description" content="Creative App Development" />
 				<meta property="og:url" content="https://ungarmichael.me" />
 				<meta property="og:type" content="website" />
-				<meta property="og:title" content="Ungar Michael - Contact" />
+				<meta property="og:title" content="Ungar Michael - Projects" />
 				<meta property="og:description" content="Creative App Development" />
 				<meta
 					property="og:image"
@@ -44,7 +44,7 @@ const Projects = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="ungarmichael.me" />
 				<meta property="twitter:url" content="https://ungarmichael.me" />
-				<meta name="twitter:title" content="Ungar Michael - Contact" />
+				<meta name="twitter:title" content="Ungar Michael - Projects" />
 				<meta name="twitter:description" content="Creative App Development" />
 				<meta
 					name="twitter:image"
