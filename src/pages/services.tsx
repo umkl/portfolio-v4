@@ -77,7 +77,7 @@ const Work = () => {
 				<meta name="description" content="Creative App Development" />
 				<meta property="og:url" content="https://ungarmichael.me" />
 				<meta property="og:type" content="website" />
-				<meta property="og:title" content="Ungar Michael" />
+				<meta property="og:title" content="Ungar Michael - Services" />
 				<meta property="og:description" content="Creative App Development" />
 				<meta
 					property="og:image"
@@ -86,7 +86,7 @@ const Work = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="ungarmichael.me" />
 				<meta property="twitter:url" content="https://ungarmichael.me" />
-				<meta name="twitter:title" content="Ungar Michael" />
+				<meta name="twitter:title" content="Ungar Michael - Services" />
 				<meta name="twitter:description" content="Creative App Development" />
 				<meta
 					name="twitter:image"
@@ -95,16 +95,7 @@ const Work = () => {
 				<meta name="theme-color" content="#333333"></meta>
 			</Head>
 			<Curve>
-				<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-[#333]">
-					{/* <div className="h-full w-full  fixed"> */}
-					{/* <Rive src="/bg-blob-blur.riv" /> */}
-					{/* <Rive
-					
-						src="bg-blob-blur.riv"
-						automaticallyHandleEvents
-						style={{ width: "100%", height: "100%" }}
-					/> */}
-					{/* </div> */}
+				<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-ne-700">
 					<GoBack />
 					<style jsx>{`
 						@media (max-width: 375px) {
@@ -116,27 +107,27 @@ const Work = () => {
 					<div className="relative text-white z-0">
 						<span
 							id="head-i-1"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-300 -z-10 whitespace-nowrap"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-400 -z-10 whitespace-nowrap"
 						>
 							my services
 						</span>
 						<span
 							id="head-i-2"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-400 -z-20 whitespace-nowrap"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-500 -z-20 whitespace-nowrap"
 						>
 							my services
 						</span>
 						<span
 							id="head-i-3"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-gray-500 -z-30 whitespace-nowrap"
+							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-600 -z-30 whitespace-nowrap"
 						>
 							my services
 						</span>
-						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 whitespace-nowrap">
+						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
 							my services
 						</h1>
 					</div>
-					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-[#C2CAD1] uppercase italic font-bold relative">
+					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-ne-200 uppercase italic font-bold relative">
 						<h1 className="marquee_part  shrink-0">
 							Skills I'm comfortable with and open to sharing. &nbsp;
 						</h1>
@@ -162,25 +153,24 @@ const Work = () => {
 								svglink: "/service-icons/icon-frontend-dev.svg",
 							},
 							{
+								name: "backend development",
+								link: "backend-dev",
+
+								svglink: "/service-icons/icon-backend_dev.svg",
+							},
+							{
 								name: "ui/ux design",
 								link: "ui-ux-design",
 								svglink: "/service-icons/icon-ui_ux-design.svg",
 							},
-							{
-								name: "branding",
-								link: "branding",
-								svglink: "/service-icons/icon-branding.svg",
-							},
-							{
-								name: "backend development",
-								link: "backend",
-								disabled: true,
-								svglink: "/service-icons/icon-backend_dev.svg",
-							},
+							// {
+							// 	name: "branding",
+							// 	link: "branding",
+							// 	svglink: "/service-icons/icon-branding.svg",
+							// },
 							{
 								name: "devops",
 								link: "devops",
-								disabled: true,
 								svglink: "/service-icons/icon-devops.svg",
 							},
 						].map((x, i) => {
@@ -188,7 +178,7 @@ const Work = () => {
 								<ListItem
 									key={i}
 									text={x.name}
-									disabled={x.disabled}
+									disabled={false}
 									link={`services/${x.link}`}
 									svglink={x.svglink}
 									delay={1.1 + i * 0.1}
@@ -261,9 +251,9 @@ export const GoBack = ({ to }: { to?: string }) => {
 			/>
 			<div
 				id="stick"
-				className="w-[0px]  h-[4px] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 "
+				className="w-[0px] h-[4px] bg-gradient-to-r from-pr-300 via-pr-400 to-pr-800 "
 			></div>
-			<span className="font-bold text-[1.6em] sm:text-[3em]   mr-4 uppercase text-[#f0f0f0]">
+			<span className="font-bold text-[1.6em] sm:text-[3em] mr-4 uppercase text-ne-200">
 				go back
 			</span>
 		</button>
@@ -302,7 +292,7 @@ function ListItem({
 	return (
 		<li
 			key={text}
-			className="list-item text-[1.1rem] text-white sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer "
+			className="list-item text-[1.1rem] text-ne-200 sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer"
 		>
 			<div
 				ref={ref}
@@ -324,9 +314,7 @@ function ListItem({
 					height={20}
 					priority
 				/>
-				<p className={`text-left mr-4 mb-4 ${disabled && "text-[#737373]"}`}>
-					{text}
-				</p>
+				<p className={`text-left mr-4 mb-4 ${"text-ne-200"}`}>{text}</p>
 			</div>
 			<hr />
 		</li>

@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Marquee from "react-fast-marquee";
 import { GoBack } from "../services";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const Page = () => {
 	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
@@ -66,313 +67,288 @@ const Page = () => {
 	}, []);
 	const router = useRouter();
 	return (
-		<Curve>
-			<section className="bg-[#222]">
-				<style jsx>{`
-					@media (max-width: 375px) {
-						section {
-							width: 375px;
+		<>
+			<Head>
+				<meta charSet="utf-8" />
+				<title>Ungar Michael ✹ Creative App Development</title>
+				<meta name="title" content="Michael Ungar - Frontend Development" />
+				<meta name="description" content="Creative App Development" />
+				<meta property="og:url" content="https://ungarmichael.me" />
+				<meta property="og:type" content="website" />
+				<meta
+					property="og:title"
+					content="Ungar Michael - Frontend Development"
+				/>
+				<meta property="og:description" content="Creative App Development" />
+				<meta
+					property="og:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="ungarmichael.me" />
+				<meta property="twitter:url" content="https://ungarmichael.me" />
+				<meta
+					name="twitter:title"
+					content="Ungar Michael - Frontend Development"
+				/>
+				<meta name="twitter:description" content="Creative App Development" />
+				<meta
+					name="twitter:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+				<meta name="theme-color" content="#333333"></meta>
+			</Head>
+			<Curve>
+				<section className="bg-ne-700">
+					<style jsx>{`
+						@media (max-width: 375px) {
+							section {
+								width: 375px;
+							}
 						}
-					}
-				`}</style>
-				<div className="flex flex-col min-h-screen font-clash ">
-					<GoBack to="/services" />
+					`}</style>
+					<div className="flex flex-col min-h-screen font-clash text-ne-200">
+						<GoBack to="/services" />
 
-					<div className="flex flex-row justify-center mb-4 gap-20">
-						<Image
-							id="frontend-logo-left"
-							style={{ opacity: 1 }}
-							src={"/service-icons/icon-frontend-dev.svg"}
-							alt=""
-							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-2 -mr-2 sm:mr-4"
-							width={20}
-							height={20}
-							priority
-						/>
-					</div>
-					<div className="flex flex-row justify-center">
-						<Image
-							id="frontend-logo-left"
-							style={{ opacity: 1 }}
-							src={"/service-icons/icon-frontend-dev.svg"}
-							alt=""
-							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2 -mr-2 sm:mr-0 rotate-[-45deg] shrink-0"
-							width={20}
-							height={20}
-							priority
-						/>
-						<div className="relative z-50 xl:mt-10 xl:mx-20">
-							<span
-								id="head-i-1"
-								style={{ opacity: 0 }}
-								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-10 w-full"
-							>
-								frontend development
+						<div className="flex flex-row justify-center mb-4 gap-20">
+							<Image
+								id="frontend-logo-left"
+								style={{ opacity: 1 }}
+								src={"/service-icons/icon-frontend-dev.svg"}
+								alt=""
+								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-2 -mr-2 sm:mr-4"
+								width={20}
+								height={20}
+								priority
+							/>
+						</div>
+						<div className="flex flex-row justify-center">
+							<Image
+								id="frontend-logo-left"
+								style={{ opacity: 1 }}
+								src={"/service-icons/icon-frontend-dev.svg"}
+								alt=""
+								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2 -mr-2 sm:mr-0 rotate-[-45deg] shrink-0"
+								width={20}
+								height={20}
+								priority
+							/>
+							<div className="relative z-50 text-ne-200 xl:mt-10 xl:mx-20">
+								<span
+									id="head-i-1"
+									style={{ opacity: 0 }}
+									className="text-[2em]  sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-10 w-full"
+								>
+									frontend development
+								</span>
+								<span
+									id="head-i-2"
+									style={{ opacity: 0 }}
+									className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-20 w-full"
+								>
+									frontend development
+								</span>
+								<span
+									id="head-i-3"
+									style={{ opacity: 0 }}
+									className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-30 w-full"
+								>
+									frontend development
+								</span>
+								<h1 className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] ml-4  uppercase font-bold z-20">
+									frontend development
+								</h1>
+							</div>
+							<Image
+								id="frontend-logo-right"
+								style={{ opacity: 1 }}
+								src={"/service-icons/icon-frontend-dev.svg"}
+								alt=""
+								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2  sm:ml-4 ml-0 stroke-white rotate-[45deg] shrink-0"
+								width={20}
+								height={20}
+								priority
+							/>
+						</div>
+						<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
+							FROM{" "}
+							<span className="font-bold flex-row inline-flex">
+								<span>CONCEPT </span>
+								<Image
+									id="a-concept"
+									src="/a-concept.svg"
+									alt="adsf"
+									className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
+									width={70}
+									height={70}
+								/>
+								{"  "}
 							</span>
-							<span
-								id="head-i-2"
-								style={{ opacity: 0 }}
-								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-20 w-full"
-							>
-								frontend development
+							<br className="md:hidden" />
+							TO{" "}
+							<span className="font-bold flex-row inline-flex">
+								<span>REALITY </span>
+								<Image
+									id="a-sun"
+									src="/a-sun.svg"
+									alt="adsf"
+									className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px] animate-spin duration-1000"
+									width={70}
+									height={70}
+								/>{" "}
 							</span>
-							<span
-								id="head-i-3"
-								style={{ opacity: 0 }}
-								className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-30 w-full"
-							>
-								frontend development
+						</h2>
+						<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
+							Creating everything from <br className="lg:hidden" />
+							<b>static Webpage</b> to <b>scalable Webapps</b>.
+						</span>
+						<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
+							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+								<Image
+									id="arrow-pointing-1"
+									src="/arrow-down-icon.svg"
+									alt="adsf"
+									className="box-border p-4 w-[60px] "
+									style={{ marginTop: "0%" }}
+									width={80}
+									height={80}
+								/>
 							</span>
-							<h1 className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] ml-4  uppercase font-bold z-20">
-								frontend development
+							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+								<Image
+									id="arrow-pointing-2"
+									src="/arrow-down-icon.svg"
+									alt="adsf"
+									className="box-border p-4 w-[70px]"
+									style={{ marginTop: "0%" }}
+									width={80}
+									height={80}
+								/>
+							</span>
+							<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
+								Creating everything from{" "}
+								<b>
+									<u>static Webpage</u>
+								</b>{" "}
+								to{" "}
+								<b>
+									<u>scalable Webapps</u>
+								</b>
+								.
+							</span>
+							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+								<Image
+									id="arrow-pointing-2"
+									src="/arrow-down-icon.svg"
+									alt="adsf"
+									className="box-border p-4 w-[60px]"
+									style={{ marginTop: "0%" }}
+									width={80}
+									height={80}
+								/>
+							</span>
+							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+								<Image
+									id="arrow-pointing-1"
+									src="/arrow-down-icon.svg"
+									alt="adsf"
+									className="box-border p-4 w-[80px]"
+									style={{ marginTop: "0%" }}
+									width={80}
+									height={80}
+								/>
+							</span>
+						</div>
+
+						<Marquee speed={600} pauseOnHover>
+							<div
+								className="flex flex-nowrap   mb-4"
+								onMouseEnter={() => {
+									console.log("hover");
+									setMarqueeSpeed(199);
+								}}
+								onMouseLeave={() => {
+									setMarqueeSpeed(200);
+								}}
+							>
+								<img
+									src="/project-imgs/ballkarten-project-1866x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/charge-project-3266x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/deets-project-3266x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/filliStudio-project-3266x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/heed-project-3266x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/octagon-project-1866x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/synopsis-project-2100x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+								<img
+									src="/project-imgs/wbyt_web-project-1866x1400.png"
+									alt="afasd"
+									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+								/>
+							</div>
+						</Marquee>
+
+						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
+							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
+								Web applications
 							</h1>
-						</div>
-						<Image
-							id="frontend-logo-right"
-							style={{ opacity: 1 }}
-							src={"/service-icons/icon-frontend-dev.svg"}
-							alt=""
-							className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2  sm:ml-4 ml-0 stroke-white rotate-[45deg] shrink-0"
-							width={20}
-							height={20}
-							priority
-						/>
+							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
+								I began my journey in desktop application development, utilizing
+								Python with Kivy and C# with the WPF Framework. My expertise has
+								since evolved to encompass web application development,
+								initially employing webpack for bundling, progressing to React,
+								and presently leveraging Next.js to craft sophisticated and
+								data-intensive web experiences.
+							</p>
+							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
+								Static Websites
+							</h1>
+							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
+								In my journey through web development, I initially employed
+								<span className="font-semibold">&nbsp;React&nbsp;</span>
+								for diverse projects, including{" "}
+								<span className="italic">static websites</span>. Prioritizing
+								speed and efficiency, I consciously transitioned towards a more
+								versatile toolkit, incorporating{" "}
+								<span className="font-semibold">&nbsp;Webflow</span>,{" "}
+								<span className="font-semibold">&nbsp;Framer</span>, and
+								<span className="font-semibold">&nbsp;Wordpress</span>. This
+								strategic shift ensures that I use the right tools for the right
+								tasks, maintaining a pragmatic approach that balances
+								functionality and simplicity in applications.
+							</p>
+						</section>
+						<UmFooter />
 					</div>
-					<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
-						FROM{" "}
-						<span className="font-bold flex-row inline-flex">
-							<span>CONCEPT </span>
-							<Image
-								id="a-concept"
-								src="/a-concept.svg"
-								alt="adsf"
-								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
-								width={70}
-								height={70}
-							/>
-							{"  "}
-						</span>
-						<br className="md:hidden" />
-						TO{" "}
-						<span className="font-bold flex-row inline-flex">
-							<span>REALITY </span>
-							<Image
-								id="a-sun"
-								src="/a-sun.svg"
-								alt="adsf"
-								className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px] animate-spin duration-1000"
-								width={70}
-								height={70}
-							/>{" "}
-						</span>
-					</h2>
-					<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-						Creating everything from <br className="lg:hidden" />
-						<b>static Webpage</b> to <b>scalable Webapps</b>.
-					</span>
-					<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
-						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-							<Image
-								id="arrow-pointing-1"
-								src="/arrow-down-icon.svg"
-								alt="adsf"
-								className="box-border p-4 w-[60px] "
-								style={{ marginTop: "0%" }}
-								width={80}
-								height={80}
-							/>
-						</span>
-						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-							<Image
-								id="arrow-pointing-2"
-								src="/arrow-down-icon.svg"
-								alt="adsf"
-								className="box-border p-4 w-[70px]"
-								style={{ marginTop: "0%" }}
-								width={80}
-								height={80}
-							/>
-						</span>
-						<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-							Creating everything from{" "}
-							<b>
-								<u>static Webpage</u>
-							</b>{" "}
-							to{" "}
-							<b>
-								<u>scalable Webapps</u>
-							</b>
-							.
-						</span>
-						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-							<Image
-								id="arrow-pointing-2"
-								src="/arrow-down-icon.svg"
-								alt="adsf"
-								className="box-border p-4 w-[60px]"
-								style={{ marginTop: "0%" }}
-								width={80}
-								height={80}
-							/>
-						</span>
-						<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-							<Image
-								id="arrow-pointing-1"
-								src="/arrow-down-icon.svg"
-								alt="adsf"
-								className="box-border p-4 w-[80px]"
-								style={{ marginTop: "0%" }}
-								width={80}
-								height={80}
-							/>
-						</span>
-					</div>
-
-					<Marquee speed={600} pauseOnHover>
-						<div
-							className="flex flex-nowrap   mb-4"
-							onMouseEnter={() => {
-								console.log("hover");
-								setMarqueeSpeed(199);
-							}}
-							onMouseLeave={() => {
-								setMarqueeSpeed(200);
-							}}
-						>
-							<img
-								src="/project-imgs/ballkarten-project-1866x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/charge-project-3266x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/deets-project-3266x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/filliStudio-project-3266x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/heed-project-3266x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/octagon-project-1866x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/synopsis-project-2100x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-							<img
-								src="/project-imgs/wbyt_web-project-1866x1400.png"
-								alt="afasd"
-								className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-							/>
-						</div>
-					</Marquee>
-
-					<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
-						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-							Web applications
-						</h1>
-						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							I began my journey in desktop application development, utilizing
-							Python with Kivy and C# with the WPF Framework. My expertise has
-							since evolved to encompass web application development, initially
-							employing webpack for bundling, progressing to React, and
-							presently leveraging Next.js to craft sophisticated and
-							data-intensive web experiences.
-						</p>
-						<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-							Static Websites
-						</h1>
-						<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-							In my journey through web development, I initially employed
-							<span className="font-semibold">&nbsp;React&nbsp;</span>
-							for diverse projects, including{" "}
-							<span className="italic">static websites</span>. Prioritizing
-							speed and efficiency, I consciously transitioned towards a more
-							versatile toolkit, incorporating{" "}
-							<span className="font-semibold">&nbsp;Webflow</span>,{" "}
-							<span className="font-semibold">&nbsp;Framer</span>, and
-							<span className="font-semibold">&nbsp;Wordpress</span>. This
-							strategic shift ensures that I use the right tools for the right
-							tasks, maintaining a pragmatic approach that balances
-							functionality and simplicity in applications.
-						</p>
-					</section>
-					{/* <h3 className="font-clash  font-bold uppercase text-center">
-						<span className="text-[1.4em]">//////////////////</span>
-						<span className="text-[3em] mx-8">My Toolbox</span>
-						<span className="text-[1.4em]">\\\\\\\\\\\\\\\\\</span>
-					</h3>
-					<div className="max-w-[900px] mx-auto">
-						<div className="grid grid-cols-3 gap-3 gap-y-1 p-0 m-0">
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									ReactJS
-								</p>
-							</div>
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									NextJs
-								</p>
-							</div>
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									Typescript
-								</p>
-							</div>
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									Webflow
-								</p>
-							</div>
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									Framer
-								</p>
-							</div>
-							<div className="group h-[300px] w-[300px] hover:bg-white border-4 border-white box-border relative">
-								<p className="uppercase  font-bold m-4  absolute bottom-0 right-0 text-white group-hover:text-[#333]">
-									GSAP
-								</p>
-							</div>
-						</div>
-					</div> */}
-
-					<h3
-						className="font-clash h-[2rem] sm:h-[2.6rem] md:h-[3rem] lg:h-[4rem] text-[0.7rem] sm:text-[0.9rem] md:text-[1.3rem] lg:text-[1.7rem] font-bold uppercase italic flex items-center gap-2 bg-white hover:bg-[#333]  fixed w-screen bottom-0 left-0 right-0 group hover:cursor-pointer z-50 px-2"
-						onClick={(e) => {
-							router.push("/contact");
-						}}
-					>
-						<span className=" shrink-0  text-[#333] group-hover:underline group-hover:underline-offset-8 group-hover:pointer group-hover:text-white">
-							Want to collaborate?
-						</span>
-						<div className="h-[2px] flex-1 bg-[#333] group-hover:pointer group-hover:bg-white"></div>
-						<button className=" group-hover:underline group-hover:underline-offset-8 uppercase shrink-0 appearance-none text-[#333] group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-500 group-hover:pointer">
-							contact me
-						</button>
-					</h3>
-
-					<div className="flex-1 w-full"></div>
-					<UmFooter />
-					<div className="h-[2rem] sm:h-[2.6rem] md:h-[3rem] lg:h-[4rem]"></div>
-				</div>
-			</section>
-		</Curve>
+				</section>
+			</Curve>
+		</>
 	);
 };
 

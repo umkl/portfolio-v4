@@ -82,37 +82,28 @@ const ContactSection = () => {
 	return (
 		<>
 			<Head>
-				<title>Ungar Michael - Freelance App Developer & UI/UX Designer</title>
+				<meta charSet="utf-8" />
+				<title>Ungar Michael ✹ Creative App Development</title>
+				<meta name="title" content="Michael Ungar - Contact" />
+				<meta name="description" content="Creative App Development" />
 				<meta property="og:url" content="https://ungarmichael.me" />
 				<meta property="og:type" content="website" />
-				<meta
-					property="og:title"
-					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
-				/>
-				<meta
-					property="og:description"
-					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
-				/>
+				<meta property="og:title" content="Ungar Michael - Contact" />
+				<meta property="og:description" content="Creative App Development" />
 				<meta
 					property="og:image"
 					content="https://ungarmichael.me/banner.png"
 				/>
-
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta property="twitter:domain" content="ungarmichael.me" />
 				<meta property="twitter:url" content="https://ungarmichael.me" />
-				<meta
-					name="twitter:title"
-					content="Ungar Michael - Freelance App Developer & UI/UX Designer"
-				/>
-				<meta
-					name="twitter:description"
-					content="Landing Page to present conducted projects in App Development, UI/UX Design and Website Coding."
-				/>
+				<meta name="twitter:title" content="Ungar Michael - Contact" />
+				<meta name="twitter:description" content="Creative App Development" />
 				<meta
 					name="twitter:image"
 					content="https://ungarmichael.me/banner.png"
 				/>
+				<meta name="theme-color" content="#333333"></meta>
 			</Head>
 			<Curve>
 				<section
@@ -125,12 +116,7 @@ const ContactSection = () => {
 						<h1 className="font-clash font-bold text-3xl ">
 							Awesome concept in mind?
 						</h1>
-						<h1 className="font-clash font-bold text-3xl ">
-							Let's get in contact!
-						</h1>
-						<h2 className="font-clash font-[500] text-2xl ">
-							I am currently quite busy but definitly open to new offers!
-						</h2>
+						<h2 className="font-clash text-3xl">Let's get in contact!</h2>
 						<div className="h-[3em]"></div>
 						<form>
 							<div className="relative z-0 mb-4">
@@ -210,7 +196,7 @@ const ContactSection = () => {
 								Contact Details
 							</h3>
 							<h4 className="font-clash text-[1.5rem]">
-								hello@ungarmichael.me
+								michael.ungar03@gmail.com
 							</h4>
 						</div>
 						<div className="mb-4">

@@ -10,7 +10,9 @@ const routes = {
 	"/contact": "Contact",
 	"/projects": "Projects",
 	"/services": "Services",
-	"/services/frontend-dev": "Frontend Development",
+	"/services/frontend-dev": "Frontend",
+	"/services/backend-dev": "Backend",
+	"/services/devops": "Devops",
 	"/services/ui-ux-design": "UI/UX Design",
 	"/services/branding": "Branding",
 };
