@@ -228,53 +228,7 @@ const Projects = () => {
 								<p>#figma</p>
 							</div>
 						</TableItem>
-						<TableItem
-							projectname={"Jamboree"}
-							categories={"frontend, backend"}
-							initiator={"Waterbyte"}
-							year={"2023"}
-						>
-							<p className="text-[1.2rem] lg:text-[1.4rem] mt-4 max-w-[1200px]">
-								This project was for the coding club I am participating in so it
-								was practically without a budget and I used various tools for
-								the first time. It was the first project where I was embracing
-								nextjs. Instead of creating an dedicated backend I harnessed
-								supabase to host changing data.
-							</p>
-							<div className="h-[100px]"></div>
-							<p className="mb-4">
-								You can check out the website on{" "}
-								<a href="https://waterbyte.club">
-									<span className="underline font-semibold">
-										waterbyte.club
-									</span>
-								</a>
-							</p>
-							<div className="flex flex-nowrap gap-5 mr-5 ">
-								<img
-									src="/project-imgs/wbyt_web-project-1866x1400.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
-								<img
-									src="/projects/wbyt-project-screenshot-1.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
-								<img
-									src="/projects/wbyt-project-screenshot-2.png"
-									alt="asdlkfj"
-									className="h-[400px] md:h-[300px]"
-								/>
-							</div>
-							<div className="flex flex-row gap-4 mt-5 font-semibold text-[1.3rem] mb-8">
-								<p>#react</p>
-								<p>#nextjs</p>
-								<p>#grapesjs</p>
-								<p>#typescript</p>
-								<p>#SSR</p>
-							</div>
-						</TableItem>
+
 						<TableItem
 							projectname={"Filli Studio"}
 							categories={"frontend, ui/ux"}
