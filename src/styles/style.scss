@@ -3,7 +3,8 @@
     svg, .background{
         position: fixed;
         height: calc(100vh + 600px);
-        width: 100vw;
+		
+        width: 100%;
         pointer-events: none;
         left: 0;
         top: 0;
@@ -16,7 +17,7 @@
 		z-index: 100;
     }
     .route{
-        position: absolute;
+        position: fixed;
         left: 50%;
         top: 40%;
         color: white;

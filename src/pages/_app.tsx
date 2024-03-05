@@ -37,30 +37,30 @@ export default function App({
 	router: any;
 }) {
 	const cursorRef = useRef(null);
-	const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-	useEffect(() => {
-		const handleMouseMove = (e: { clientX: any; clientY: any }) => {
-			setCursorPosition({ x: e.clientX, y: e.clientY });
-			gsap.to(cursorRef.current, {
-				x: cursorPosition.x,
-				y: cursorPosition.y,
-				duration: 1,
-				ease: "power1.in",
-			});
-		};
+	// const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+	// useEffect(() => {
+	// 	const handleMouseMove = (e: { clientX: any; clientY: any }) => {
+	// 		setCursorPosition({ x: e.clientX, y: e.clientY });
+	// 		gsap.to(cursorRef.current, {
+	// 			x: cursorPosition.x,
+	// 			y: cursorPosition.y,
+	// 			duration: 1,
+	// 			ease: "power1.in",
+	// 		});
+	// 	};
 
-		document.addEventListener("mousemove", handleMouseMove);
+	// 	document.addEventListener("mousemove", handleMouseMove);
 
-		return () => {
-			document.removeEventListener("mousemove", handleMouseMove);
-		};
-	}, []);
+	// 	return () => {
+	// 		document.removeEventListener("mousemove", handleMouseMove);
+	// 	};
+	// }, []);
 
 	return (
 		<div
-			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className} main overflow-hidden`}
+			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}  `}
 		>
-			<div ref={cursorRef} className="custom-cursor"></div>
+			{/* <div ref={cursorRef} className="custom-cursor"></div> */}
 			<AnimatePresence mode="wait">
 				<Component key={router.route} {...pageProps} />
 			</AnimatePresence>
