@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import React from "react";
 import { useEffect } from "react";
 
 export const LangPopup = () => {
@@ -15,14 +16,16 @@ export const LangPopup = () => {
 
 	return (
 		<div className="w-[200px] h-[200px] bg-red-50 fixed top-1/2 left-1/2 z-50">
-			<input
+			<button
 				className="bg-blue-200"
 				name="english"
 				value={"english"}
 				onClick={() => {
 					handleChangeLocale("en-US");
 				}}
-			/>
+			>
+				english
+			</button>
 			<button
 				onClick={() => {
 					handleChangeLocale("de-at");
