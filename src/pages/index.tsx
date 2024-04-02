@@ -17,8 +17,16 @@ import ProjectsSection from "@um-p4/components/projectsSection";
 import { NavContext } from "../navcontext";
 import { Metadata } from "next";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { LangPopup } from "@um-p4/components/lang-popup";
 
 export default function Home() {
+	const router = useRouter();
+
+	useEffect(() => {
+		console.log(router.locale);
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -48,6 +56,7 @@ export default function Home() {
 			<Curve>
 				<Landing />
 			</Curve>
+			<LangPopup />
 		</>
 	);
 }

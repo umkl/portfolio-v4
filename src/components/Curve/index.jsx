@@ -48,7 +48,7 @@ export default function Curve({ children }) {
 	}, []);
 
 	return (
-		<div className=" curve z-50 relative ">
+		<div className=" curve z-40 relative ">
 			<div
 				style={{ opacity: dimensions.width == null ? 1 : 0 }}
 				className="background"

@@ -118,18 +118,18 @@ const ContactSection = () => {
 						</h1>
 						<h2 className="font-clash text-3xl">Let's get in contact!</h2>
 						<div className="h-[3em]"></div>
-						<form>
+						<form className="max-w-[400px]">
 							<div className="relative z-0 mb-4">
 								<input
 									type="text"
-									id="fsd"
-									className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
+									id="email"
+									className="block  py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 									placeholder=" "
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 								/>
 								<label
-									htmlFor="fsd"
+									htmlFor="email"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
 									your email-adress
