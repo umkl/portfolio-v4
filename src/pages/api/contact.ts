@@ -19,7 +19,6 @@ const generateEmailContent = (data: any) => {
 
 const handler = async (req: any, res: any) => {
 	if (req.method === "POST") {
-		console.log(req.body);
 		const data = req.body;
 		try {
 			await transporter.sendMail({
@@ -30,7 +29,6 @@ const handler = async (req: any, res: any) => {
 		} catch (error: any) {
 			res.status(400).json({ message: error.message });
 		}
-		console.log("succ");
 		return res.status(200).json({ message: "Success" });
 	}
 	res.status(400).json({ message: "Bad Request" });

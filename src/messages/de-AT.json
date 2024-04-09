@@ -1,0 +1,26 @@
+{
+	"Landing": {
+		"title": "Servus!, mein Name ist",
+		"and": "und",
+		"from": "aus",
+		"Austria": "Österreich",
+		"App_Developer": "App Entwickler",
+		"Big_Description": "Ich verwende meine Zeit um mit <b>Code</b> und <b>Design</b> einen positiven Einfluss auf <b> die digitale Welt </b> zu haben. ",
+		"Services": "Services",
+		"Services_Text":"Sachen bei denen ich dir helfen kann.",
+		"Projects": "Projekte",
+		"Projects_Text": "Schau dir an, welche Dinge ich bereits erstellen konnte.",
+		"Blog":"Blog",
+		"Blog_Text":"Coding Dinge dich gerne teilen möchte.",
+		"Contact":"Kontakt",
+		"Contact_Text":"Lass uns in Kontakt treten, um großartige Projekte zu erstellen!",
+		"Language": "Sprache"
+	},
+	"Services":{
+		"goback":"zurück",
+		"my_services": "Meine Dienstleistungen",
+		"skills":"Fähigkeiten die ich mit der Welt teilen möchte.",
+		"development":"entwicklung"
+	}
+
+}

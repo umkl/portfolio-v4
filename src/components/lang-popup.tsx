@@ -5,13 +5,9 @@ import { useEffect } from "react";
 export const LangPopup = ({ onTap }: { onTap: () => {} }) => {
 	const router = useRouter();
 
-	useEffect(() => {
-		console.log(router.locale);
-	}, [router.locale]);
-
 	const handleChangeLocale = (newLocale: string) => {
-		console.log("triggered");
 		router.push(router.pathname, router.asPath, { locale: newLocale });
+		var langPref = localStorage.getItem("language-preference");
 	};
 
 	return (
@@ -34,8 +30,9 @@ export const LangPopup = ({ onTap }: { onTap: () => {} }) => {
 					}`}
 					onClick={() => {
 						setTimeout(() => {
-							handleChangeLocale("de-at");
-						}, 2000);
+							handleChangeLocale("de-AT");
+							localStorage.setItem("language-preference", "de-AT");
+						}, 1000);
 						onTap();
 					}}
 				>
@@ -50,7 +47,10 @@ export const LangPopup = ({ onTap }: { onTap: () => {} }) => {
 					name="english"
 					value={"english"}
 					onClick={() => {
-						handleChangeLocale("en-US");
+						setTimeout(() => {
+							handleChangeLocale("en-US");
+							localStorage.setItem("language-preference", "en-US");
+						}, 1000);
 						onTap();
 					}}
 				>

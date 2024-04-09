@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 import { GoBack } from "../services";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
 	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
@@ -66,6 +67,8 @@ const Page = () => {
 		return () => ctx.revert();
 	}, []);
 	const router = useRouter();
+	const t = useTranslations("Backend");
+	const a = useTranslations();
 	return (
 		<>
 			<Head>
@@ -139,24 +142,24 @@ const Page = () => {
 									style={{ opacity: 0 }}
 									className="text-[2em]  sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-10 w-full"
 								>
-									Backend Development
+									{t("Backend Development")}
 								</span>
 								<span
 									id="head-i-2"
 									style={{ opacity: 0 }}
 									className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-20 w-full"
 								>
-									Backend Development
+									{t("Backend Development")}
 								</span>
 								<span
 									id="head-i-3"
 									style={{ opacity: 0 }}
 									className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] m-0 uppercase font-bold absolute top-0 left-2 font-outline-1-gray text-transparent -z-30 w-full"
 								>
-									Backend Development
+									{t("Backend Development")}
 								</span>
 								<h1 className="text-[2em] sm:text-[3rem] md:text-[4rem] lg:text-[6em] text-center leading-[1em] ml-4  uppercase font-bold z-20">
-									Backend Development
+									{t("Backend Development")}
 								</h1>
 							</div>
 							<Image
@@ -170,10 +173,10 @@ const Page = () => {
 								priority
 							/>
 						</div>
-						<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
-							FROM{" "}
+						<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center uppercase ">
+							{a("from")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>CONCEPT </span>
+								<span>{t("Concept")}</span>
 								<Image
 									id="a-concept"
 									src="/a-concept.svg"
@@ -185,9 +188,9 @@ const Page = () => {
 								{"  "}
 							</span>
 							<br className="md:hidden" />
-							TO{" "}
+							{a("to")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>REALITY </span>
+								<span>{t("Reality")} </span>
 								<Image
 									id="a-sun"
 									src="/a-sun.svg"
@@ -199,8 +202,7 @@ const Page = () => {
 							</span>
 						</h2>
 						<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-							Creating everything from <br className="lg:hidden" />
-							<b>static Webpage</b> to <b>scalable Webapps</b>.
+							{t("punch-line")}
 						</span>
 						<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
@@ -226,11 +228,7 @@ const Page = () => {
 								/>
 							</span>
 							<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-								Creating reliable{" "}
-								<b>
-									<u>Sources of Information</u>
-								</b>
-								.
+								{t("punch-line")}
 							</span>
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
@@ -260,7 +258,6 @@ const Page = () => {
 							<div
 								className="flex flex-nowrap   mb-4"
 								onMouseEnter={() => {
-									console.log("hover");
 									setMarqueeSpeed(199);
 								}}
 								onMouseLeave={() => {
@@ -312,22 +309,16 @@ const Page = () => {
 
 						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-								API Services
+								{t("heading-1")}
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								So, I got into Backend Development because I wanted to tweak how
-								my CMS behaved. I had this data, and I wanted to manipulate it
-								further which can only be properly done by a dedicated backend.
+								{t("text-1")}
 							</p>
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-								Databases
+								{t("heading-2")}
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								So, most of my knowledge about databases comes from school where
-								I learned about crafting proper schemas. Furthermore I learned
-								about normalization, which is a fancy term for making sure our
-								data's neatly structured and not all over the place. It's like
-								tidying up your room but for information.
+								{t("text-2")}
 							</p>
 						</section>
 						<UmFooter />
@@ -357,3 +348,11 @@ const ImageComponent = ({
 		</div>
 	);
 };
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../../messages/${context.locale}.json`)).default,
+		},
+	};
+}

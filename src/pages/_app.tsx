@@ -5,6 +5,7 @@ import localfont from "next/font/local";
 import "../styles/style.scss";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
@@ -55,15 +56,20 @@ export default function App({
 	// 		document.removeEventListener("mousemove", handleMouseMove);
 	// 	};
 	// }, []);
-
 	return (
-		<div
-			className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}  `}
+		<NextIntlClientProvider
+			locale={router.locale}
+			timeZone="Europe/Vienna"
+			messages={pageProps.messages}
 		>
-			{/* <div ref={cursorRef} className="custom-cursor"></div> */}
-			<AnimatePresence mode="wait">
-				<Component key={router.route} {...pageProps} />
-			</AnimatePresence>
-		</div>
+			<div
+				className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}  `}
+			>
+				{/* <div ref={cursorRef} className="custom-cursor"></div> */}
+				<AnimatePresence mode="wait">
+					<Component key={router.route} {...pageProps} />
+				</AnimatePresence>
+			</div>
+		</NextIntlClientProvider>
 	);
 }

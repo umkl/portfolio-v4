@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 import { GoBack } from "../services";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
 	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
@@ -66,6 +67,7 @@ const Page = () => {
 		return () => ctx.revert();
 	}, []);
 	const router = useRouter();
+	const t = useTranslations("devops");
 	return (
 		<>
 			<Head>
@@ -165,9 +167,9 @@ const Page = () => {
 							/>
 						</div>
 						<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
-							FROM{" "}
+							{t("from")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>LOCAL </span>
+								<span>{t("local")} </span>
 								<Image
 									id="a-concept"
 									src="/a-concept.svg"
@@ -179,9 +181,9 @@ const Page = () => {
 								{"  "}
 							</span>
 							<br className="md:hidden" />
-							TO{" "}
+							{t("to")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>PROD </span>
+								<span>{t("prod")} </span>
 								<Image
 									id="a-sun"
 									src="/a-sun.svg"
@@ -193,8 +195,7 @@ const Page = () => {
 							</span>
 						</h2>
 						<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-							Creating everything from <br className="lg:hidden" />
-							<b>static Webpage</b> to <b>scalable Webapps</b>.
+							{t("punch-line")}
 						</span>
 						<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
@@ -220,11 +221,7 @@ const Page = () => {
 								/>
 							</span>
 							<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-								Releasing{" "}
-								<b>
-									<u>as fast as possible</u>
-								</b>
-								.
+								{t("punch-line")}
 							</span>
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
@@ -254,7 +251,6 @@ const Page = () => {
 							<div
 								className="flex flex-nowrap   mb-4"
 								onMouseEnter={() => {
-									console.log("hover");
 									setMarqueeSpeed(199);
 								}}
 								onMouseLeave={() => {
@@ -306,25 +302,17 @@ const Page = () => {
 
 						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-								Hosting
+								{t("heading-1")}
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								I began hosting simple web services at home using a Raspberry Pi
-								3B+. However, manually setting up everything for the Raspbian
-								environment each time proved to be quite a hassle. Currently, I
-								opt for a dedicated VPS provider to host my sandboxed Docker
-								containers.
+								{t("text-1")}
 							</p>
 
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
-								Version Control/Workflows
+								{t("heading-2")}
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								To stay motivated and efficiently implement changes in a
-								project, it's crucial for these modifications to reflect on the
-								production side as quickly as possible. That's why establishing
-								workflows using GitHub Actions, for instance, is an essential
-								part of my development processes.
+								{t("text-2")}
 							</p>
 						</section>
 						<UmFooter />
@@ -354,3 +342,11 @@ const ImageComponent = ({
 		</div>
 	);
 };
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../../messages/${context.locale}.json`)).default,
+		},
+	};
+}

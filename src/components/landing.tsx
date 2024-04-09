@@ -5,11 +5,14 @@ import Image from "next/image";
 import { NavContext } from "@um-p4/navcontext";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 const Landing = () => {
 	const navCxt = useContext(NavContext);
 	const router = useRouter();
 	const ref = useRef(null);
+	const t = useTranslations("Landing");
+
 	useEffect(() => {
 		let ctxt = gsap.context(() => {
 			gsap.to(ref.current, {
@@ -112,7 +115,7 @@ const Landing = () => {
 						className="relative flex flex-col w-full max-w-5xl pl-4 md:px-0 md:pr-2 mt-4 lg:mt-0 mb-7 z-30"
 					>
 						<h1 className="text-left  relative font-inter leading-[1.0rem] pb-1 pt-1  sm:mt-0 text-[1.3rem] sm:text-[1.9rem] sm:leading-10  md:text-[1.4rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold ">
-							Hi, my Name is
+							{t("title")}
 						</h1>
 						<h2 className="font-clash text-[2.1rem] sm:text-[3.4rem] lg:text-[5rem] leading-[2.2rem] lg:leading-[4.8rem] sm:leading-[4rem] font-[700] text-[#C2CAD1] relative mt-2">
 							<span className="letter-item relative top-[5px]">M</span>
@@ -132,16 +135,20 @@ const Landing = () => {
 						</h2>
 						<h3 className="font-inter font-bold mt-0 md:mt-2 text-[1.2rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem] text-[#81899B] overflow-hidden relative">
 							<span id="center-text-2" className="relative leading-[1.5rem]">
-								<u className="underline-offset-[0.38rem]">App Developer</u> and{" "}
+								<u className="underline-offset-[0.38rem]">
+									{t("App_Developer")}
+								</u>{" "}
+								{t("and")}{" "}
 								<u className="underline-offset-[0.38rem]">UI/UX Designer</u>{" "}
-								from <u className="underline-offset-[0.38rem]">Austria.</u>{" "}
+								{t("from")}{" "}
+								<u className="underline-offset-[0.38rem]">Austria.</u>{" "}
 							</span>
 						</h3>
 						<h4 className="font-inter font-medium text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-0 lg:mt-2 ">
 							<span id="center-text-3" className="relative top-[100px]">
-								I focus on all things <b>code</b> and <b>design</b> related.
-								With my work I aim to deliver <b>impactful experiences</b> so
-								digital spaces become more <b>interesting</b>.
+								{t.rich("Big_Description", {
+									b: (chunks) => <b className="font-bold">{chunks}</b>,
+								})}
 							</span>
 						</h4>
 					</div>
@@ -156,39 +163,35 @@ const Landing = () => {
 							}}
 							classname="top-[1em] card-comp-item relative"
 							dest="services"
-							name="Services"
-							desc={
-								<>
-									Explore the <b>services</b> I can provide to assist you.
-								</>
-							}
+							name={t("Services")}
+							desc={t("Services_Text")}
 						/>
 						<CardComponent
 							tap={() => {
 								router.push("/projects");
 							}}
-							dest="projects"
-							name="Projects"
 							classname="top-[1.9em] card-comp-item relative"
-							desc="Check out what things I was already able to create."
+							dest="projects"
+							name={t("Projects")}
+							desc={t("Projects_Text")}
 						/>
 						<CardComponent
 							tap={() => {
 								window.location.replace("https://blog.ungarmichael.me");
 							}}
-							dest="blog"
 							classname="top-[2.4em] card-comp-item relative"
-							name="Blog"
-							desc="Read some of my thoughts on Productivity, Coding and UI/UX-Design."
+							dest="blog"
+							name={t("Blog")}
+							desc={t("Blog_Text")}
 						/>
 						<CardComponent
 							tap={() => {
 								router.push("/contact");
 							}}
-							dest="contact"
-							name="Contact"
 							classname="top-[3.4em] card-comp-item relative"
-							desc="Let us get in touch for creating awesome projects!"
+							dest="contact"
+							name={t("Contact")}
+							desc={t("Contact_Text")}
 						/>
 					</div>
 					<div className="absolute h-8 md:h-20 z-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>

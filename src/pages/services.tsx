@@ -8,6 +8,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 const Work = () => {
 	useEffect(() => {
@@ -60,6 +61,7 @@ const Work = () => {
 
 	const [selectedItem, setSelectedItem] = useState();
 	const [marqueeSpeed, setMarqueeSpeed] = useState(4000);
+	const t = useTranslations("Services");
 
 	const easeInOut = (t: number, b: number, c: number, d: number) => {
 		t /= d / 2;
@@ -109,51 +111,41 @@ const Work = () => {
 							id="head-i-1"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-400 -z-10 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<span
 							id="head-i-2"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-500 -z-20 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<span
 							id="head-i-3"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-600 -z-30 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
-							my services
+							{t("my_services")}
 						</h1>
 					</div>
 					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-ne-200 uppercase italic font-bold relative">
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part   shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
+						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part   shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
 					</div>
 					<hr />
 					<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
 						{[
 							{
-								name: "frontend development",
+								name: `frontend ${t("development")}`,
 								link: "frontend-dev",
 								svglink: "/service-icons/icon-frontend-dev.svg",
 							},
 							{
-								name: "backend development",
+								name: `backend ${t("development")}`,
 								link: "backend-dev",
 
 								svglink: "/service-icons/icon-backend_dev.svg",
@@ -226,6 +218,8 @@ const Work = () => {
 export default Work;
 
 export const GoBack = ({ to }: { to?: string }) => {
+	const t = useTranslations("Services");
+
 	const router = useRouter();
 
 	return (
@@ -254,7 +248,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 				className="w-[0px] h-[4px] bg-gradient-to-r from-pr-300 via-pr-400 to-pr-800 "
 			></div>
 			<span className="font-bold text-[1.6em] sm:text-[3em] mr-4 uppercase text-ne-200">
-				go back
+				{t("goback")}
 			</span>
 		</button>
 	);
@@ -319,4 +313,12 @@ function ListItem({
 			<hr />
 		</li>
 	);
+}
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../messages/${context.locale}.json`)).default,
+		},
+	};
 }

@@ -45,22 +45,16 @@ const ExperienceSection = () => {
 	const navCxt = useContext(NavContext);
 	const [nowHeight, setNowHeight] = useState<number>(400);
 	useEffect(() => {
-		window.addEventListener("scroll", () => {
-			console.log("scroll");
-		});
+		window.addEventListener("scroll", () => {});
 	}, []);
 
 	const expcardRef = useRef<any>(null);
 
 	useEffect(() => {
-		console.log(expcardRef.current.clientHeight);
 		setNowHeight(expcardRef.current.clientHeight);
-		console.log(nowHeight);
 	}, [expcardRef]);
 
-	useEffect(() => {
-		console.log(nowHeight);
-	}, [nowHeight]);
+	useEffect(() => {}, [nowHeight]);
 
 	return (
 		<section

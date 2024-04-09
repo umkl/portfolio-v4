@@ -53,3 +53,11 @@ export default function Home() {
 		</>
 	);
 }
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../messages/${context.locale}.json`)).default,
+		},
+	};
+}
