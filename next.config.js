@@ -7,6 +7,9 @@ const nextConfig = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, "src/styles")],
 	},
+	images: {
+		domains: ["www.google.com", "upload.wikimedia.org"],
+	},
 	i18n: {
 		locales: ["en-US", "de-AT"],
 		defaultLocale: "de-AT",

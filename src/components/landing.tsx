@@ -75,7 +75,7 @@ const Landing = () => {
 
 	return (
 		<>
-			<section className="min-h-[100vh] w-full overflow-hidden relative ">
+			<section className="min-h-screen w-full overflow-hidden relative">
 				<style jsx>{`
 					@media (max-width: 375px) {
 						section {
@@ -199,6 +199,7 @@ const Landing = () => {
 					<div className="absolute w-8 md:w-20 z-20 h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
 					<div className="absolute w-8 md:w-20 z-20 h-full top-0 right-0 bg-gradient-to-l from-[#333333] to-transparent"></div>
 				</main>
+				<div className="h-[80px] lg:hidden"></div>
 			</section>
 		</>
 	);

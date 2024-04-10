@@ -7,8 +7,6 @@ import { LangPopup } from "@um-p4/components/lang-popup";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
 
-
-
 const anim = (variants) => {
 	return {
 		variants,
@@ -80,22 +78,19 @@ export default function Curve({ children }) {
 	}, [langPopupShown]);
 
 	return (
-		<div className=" curve z-40 relative bg-[#333333] ">
+		<div className=" curve z-40 min-h-screen relative bg-[#333333] flex flex-col">
 			<div
 				style={{ opacity: dimensions.width == null ? 1 : 0 }}
 				className="background"
 			/>
-
 			<motion.p
 				className="fixed  route font-bold font-clash text-[2rem] sm:text-[4rem] uppercase text-[#C2CAD1] drop-shadow-[0_0_0.3rem_#ffffff70]"
 				{...anim(text)}
 			>
 				{routes[router.route]}
 			</motion.p>
-
 			{dimensions.width != null && <SVG {...dimensions} />}
-			{children}
-
+			<div className="flex-1">{children}</div>
 			{langPopupShown && (
 				<div
 					className="h-screen w-full fixed top-0 left-0 z-50 opacity-0 backdrop-blur-sm overflow-hidden"
@@ -121,7 +116,7 @@ export default function Curve({ children }) {
 				</div>
 			)}
 
-			<footer className="lg:absolute relative bottom-0 flex w-full flex-row  text-neutral-500 font-druk uppercase z-50 justify-between text-[1.4rem] px-14 pb-8 pt-8 font-bold">
+			<footer className="absolute bottom-0 flex w-full flex-row  text-neutral-500 font-druk uppercase z-50 justify-between text-[1.4rem] px-14 pb-8 pt-8 font-bold">
 				<p
 					className="cursor-pointer"
 					onClick={() => {

@@ -65,7 +65,6 @@ export default function App({
 			<div
 				className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}  `}
 			>
-				{/* <div ref={cursorRef} className="custom-cursor"></div> */}
 				<AnimatePresence mode="wait">
 					<Component key={router.route} {...pageProps} />
 				</AnimatePresence>
