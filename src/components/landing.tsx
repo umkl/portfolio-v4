@@ -91,7 +91,7 @@ const Landing = () => {
 						<Image
 							id="logo"
 							style={{ opacity: 1 }}
-							src="/logo.svg"
+							src="./svgs/logo.svg"
 							alt="um logo"
 							className="w-[80px] md:w-[100px]"
 							width={100}
@@ -101,7 +101,7 @@ const Landing = () => {
 						<Image
 							id="pb"
 							style={{ opacity: 1 }}
-							src="/pb-layered.png"
+							src="images/pb-layered.png"
 							alt="Vercel Logo"
 							className="w-[80px] md:w-[100px] z-30"
 							unoptimized={true}

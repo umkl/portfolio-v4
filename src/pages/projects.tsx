@@ -196,15 +196,25 @@ const TableItem = ({
 				className="w-full overflow-hidden px-6 box-border"
 				style={{ height: "0px" }}
 			>
+				<div className="flex items-center relative uppercase sm:hidden mt-4">
+					{categories.map((x) => {
+						return (
+							<span className="bg-white relative  p-4 font-clash leading-4 text-[1.2rem] rounded-full font-bold text-black">
+								{x}
+							</span>
+						);
+					})}
+				</div>
 				<h1 className="text-[3rem] font-bold font-druk leading-10 mt-4 mb-2">
 					{projectname}
 				</h1>
+
 				<div className="flex flex-wrap">
 					{tags.map((x) => {
 						return <span className="font-druk mr-4 text-neutral-300">{x}</span>;
 					})}
 				</div>
-				<p className="font-clash font-medium text-neutral-100 text-[1.6rem] mt-4">
+				<p className="font-clash font-medium text-neutral-100 text-[0.8rem] sm:text-[1rem] md:text-[1.4rem] lg:text-[1.6rem] mt-4 max-w-[800px]">
 					{description}
 				</p>
 				<div className="my-10 flex gap-10 flex-wrap">

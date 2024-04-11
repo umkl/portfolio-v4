@@ -62,20 +62,21 @@
 		"Devops": "Devops",
 		"from": "from",
 		"local": "local",
-		"to":"to",
+		"to": "to",
 		"prod": "prod",
 		"punch-line": "Releasing as fast as possible.",
-		"heading-1":"Hosting",
-		"text-1":"I began hosting simple web services at home using a Raspberry Pi 3B+. However, manually setting up everything for the Raspbian environment each time proved to be quite a hassle. Currently, I opt for a dedicated VPS provider to host my sandboxed Docker containers.",
-		"heading-2":"Version Control/Workflows",
-		"text-2":"To stay motivated and efficiently implement changes in a project, it's crucial for these modifications to reflect on the production side as quickly as possible. That's why establishing workflows using GitHub Actions, for instance, is an essential part of my development processes."
+		"heading-1": "Hosting",
+		"text-1": "I began hosting simple web services at home using a Raspberry Pi 3B+. However, manually setting up everything for the Raspbian environment each time proved to be quite a hassle. Currently, I opt for a dedicated VPS provider to host my sandboxed Docker containers.",
+		"heading-2": "Version Control/Workflows",
+		"text-2": "To stay motivated and efficiently implement changes in a project, it's crucial for these modifications to reflect on the production side as quickly as possible. That's why establishing workflows using GitHub Actions, for instance, is an essential part of my development processes."
 	},
-	"projects":{
+	"projects": {
 		"featured": "featured",
-		"projects": "projects", 
+		"projects": "projects",
 		"projectname": "projectname",
-		"category":"category",
+		"category": "category",
 		"initiator": "initiator",
-		"year": "year"
+		"year": "year",
+		"link-ad": "check out the project here:"
 	}
 }

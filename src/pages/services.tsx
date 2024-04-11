@@ -131,7 +131,7 @@ const Work = () => {
 					</div>
 					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-ne-200 uppercase italic font-bold relative">
 						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
-						<h1 className="marquee_part   shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
 						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
 						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
 						<h1 className="marquee_part  shrink-0">{t("skills")} &nbsp;</h1>
@@ -179,32 +179,32 @@ const Work = () => {
 						})}
 					</ul>
 					<Marquee speed={marqueeSpeed}>
+						<Image
+							width={500}
+							height={500}
+							src="/images/work/work-1.png"
+							alt="asdlkfj"
+							className="h-[100px] md:h-[500px]"
+						/>
 						<div className="flex flex-nowrap gap-5 mr-5 my-7">
 							<img
-								src="/work-1.png"
+								src="images/work/work-2.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
 						</div>
 						<div className="flex flex-nowrap gap-5 mr-5 my-7">
 							<img
-								src="/work-2.png"
+								src="images/work/work-3.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
 						</div>
 						<div className="flex flex-nowrap gap-5 mr-5 my-7">
 							<img
-								src="/work-3.png"
+								src="images/work/work-4.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
-							/>
-						</div>
-						<div className="flex flex-nowrap gap-5 mr-5 my-7">
-							<img
-								src="/work-4.png"
-								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
 						</div>
 					</Marquee>
@@ -236,7 +236,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 			<Image
 				id="logo"
 				style={{ opacity: 1 }}
-				src="/arrow-icon.svg"
+				src="../svgs/arrow-icon.svg"
 				alt=""
 				className="w-[30px] sm:w-[60px] my-4 ml-4 mr-2"
 				width={20}
