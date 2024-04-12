@@ -17,20 +17,22 @@ const anim = (variants) => {
 };
 
 export default function Curve({ children }) {
+	const t = useTranslations("Landing");
+	const tnav = useTranslations("Navigation");
 	const routes = {
-		"/": "Landing",
-		"/blog": "Blog",
-		"/contact": "Contact",
-		"/projects": "Projects",
-		"/services": "Services",
-		"/services/frontend-dev": "Frontend",
-		"/services/backend-dev": "Backend",
-		"/services/devops": "Devops",
+		"/": tnav("Landing"),
+		"/blog": tnav("Blog"),
+		"/contact": tnav("Contact"),
+		"/projects": tnav("Projects"),
+		"/services": tnav("Services"),
+		"/services/frontend-dev": tnav("Frontend"),
+		"/services/backend-dev": tnav("Backend"),
+		"/services/devops": tnav("Devops"),
 		"/services/ui-ux-design": "UI/UX Design",
 		"/services/branding": "Branding",
 		"/impressum": "Impressum",
 	};
-	const t = useTranslations("Landing");
+	
 	const router = useRouter();
 	const [dimensions, setDimensions] = useState({
 		width: null,

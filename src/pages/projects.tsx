@@ -12,6 +12,7 @@ import Head from "next/head";
 import projects from "../projects.json";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const Projects = () => {
 	const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -162,6 +163,7 @@ const TableItem = ({
 
 		return jsxElements;
 	};
+	const t = useTranslations("projects");
 	return (
 		<>
 			<div
@@ -219,11 +221,11 @@ const TableItem = ({
 				</p>
 				<div className="my-10 flex gap-10 flex-wrap">
 					{images.map((x) => {
-						return <Image src={x} width={200} height={30} alt={""} />;
+						return <Image src={x} width={300} height={30} alt={""} />;
 					})}
 				</div>
 				<p className="font-bold font-druk text-[1rem] uppercase flex items-center gap-4 mb-4 ">
-					Check the project out here: {processHtml(link)}
+					{t("link-ad")} {processHtml(link)}
 				</p>
 			</div>
 
@@ -233,30 +235,34 @@ const TableItem = ({
 };
 
 const TableHead = () => {
+	const t = useTranslations("Projects");
 	return (
 		<div className="flex w-full px-4 pt-2 uppercase group ">
-			<p className="font-clash flex-1 pl-2 pb-2 font-semibold">projectname</p>
-			<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block text-white">
-				initiator
+			<p className="font-clash flex-1 pl-2 pb-2 font-semibold">
+				{t("projectname")}
 			</p>
 			<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block text-white">
-				category
+				{t("initiator")}
+			</p>
+			<p className="font-clash flex-1 pl-2 pb-2 font-semibold hidden sm:block text-white">
+				{t("category")}
 			</p>
 			<p className="font-clash flex-1 pl-2 pb-2 pr-2 font-semibold text-right text-white">
-				year
+				{t("year")}
 			</p>
 		</div>
 	);
 };
 const Heading = () => {
+	const t = useTranslations("Projects");
 	return (
 		<div className="">
 			<p className="font-druk uppercase text-[1.2em] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2.2rem] mt-2 sm:mt-4 md:mt-6 lg:mt-8 font-bold ml-4">
-				featured
+				{t("featured")}
 			</p>
 			<div className="relative text-white">
 				<h1 className="font-druk uppercase font-outline-2 text-transparent text-[2.3rem] sm:text-[2.5rem] md:text-[2.8rem] lg:text-[3rem] font-bold leading-[0.8em] ml-4 z-50 mb-6">
-					projects
+					{t("projects")}
 				</h1>
 			</div>
 		</div>

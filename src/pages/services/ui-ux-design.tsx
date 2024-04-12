@@ -202,7 +202,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[60px] "
 									style={{ marginTop: "0%" }}
@@ -213,7 +213,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[70px]"
 									style={{ marginTop: "0%" }}
@@ -227,7 +227,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[60px]"
 									style={{ marginTop: "0%" }}
@@ -238,7 +238,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[80px]"
 									style={{ marginTop: "0%" }}
@@ -306,13 +306,7 @@ const Page = () => {
 								UI/UX Design
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								My fascination with the seamless integration of design and code
-								has been a driving force throughout my career. The synergy
-								between visual aesthetics and functional coding has always
-								captivated me, leading me to specialize in UI/UX design. This
-								journey is fueled by a deep appreciation for how thoughtful
-								design choices can enhance user experiences through the
-								harmonious collaboration of creativity and technology.
+								{t("")}
 							</p>
 							<h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-[1.8rem] sm:leading-[3rem] mb-2 mt-4">
 								User-Centric Approach

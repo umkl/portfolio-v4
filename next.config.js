@@ -8,7 +8,11 @@ const nextConfig = {
 		includePaths: [path.join(__dirname, "src/styles")],
 	},
 	images: {
-		domains: ["www.google.com", "upload.wikimedia.org"],
+		domains: [
+			"www.google.com",
+			"upload.wikimedia.org",
+			"blobs.ungarmichael.me",
+		],
 	},
 	i18n: {
 		locales: ["en-US", "de-AT"],

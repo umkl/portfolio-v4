@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import Clock from "react-live-clock";
 import { GoBack } from "../services";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 interface formValues {
 	email: string;
@@ -77,6 +78,7 @@ const ContactSection = () => {
 		}
 	};
 
+	const t = useTranslations("Contact");
 	return (
 		<>
 			<Head>
@@ -112,10 +114,10 @@ const ContactSection = () => {
 					<GoBack />
 					<div className="p-4 left-1/2 -translate-x-1/2 w-full relative max-w-[1000px] ]">
 						<h1 className="font-clash font-bold text-[3rem] leading-7 mb-2">
-							Awesome concept in mind?
+							{t("concept")}
 						</h1>
 						<h2 className="font-clash font-bold text-neutral-300 text-[2.4rem]">
-							Let's get in contact!
+							{t("lets")}
 						</h2>
 						<div className="h-[3em]"></div>
 						<form className="w-full">
@@ -132,7 +134,7 @@ const ContactSection = () => {
 									htmlFor="email"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your email-adress
+									{t("your-email")}
 								</label>
 							</div>
 							<div className="relative z-0 mb-4">
@@ -148,7 +150,7 @@ const ContactSection = () => {
 									htmlFor="fsd"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your topic
+									{t("your-topic")}
 								</label>
 							</div>
 							<div className="relative z-0 mb-4">
@@ -164,14 +166,14 @@ const ContactSection = () => {
 									htmlFor="fsd"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your text
+									{t("your-text")}
 								</label>
 							</div>
 							<div className="flex gap-4 items-center mb-4">
 								<input
 									onClick={onSubmit}
 									type="button"
-									value="send it"
+									value={t("send-it")}
 									className="appearance-none border-2 rounded-full text-[1.6rem] w-fit font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
 								/>
 								{processingState.loading && (
@@ -193,7 +195,7 @@ const ContactSection = () => {
 						</form>
 						<div className="mb-4">
 							<h3 className="font-clash text-[2.4rem] font-bold">
-								Contact Details
+								{t("contact-details")}
 							</h3>
 							<h4 className="font-clash text-[2rem]">
 								michael.ungar03@gmail.com
@@ -203,7 +205,9 @@ const ContactSection = () => {
 							</a>
 						</div>
 						<div className="">
-							<h3 className="font-clash text-[2rem] font-bold">Location</h3>
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("location")}
+							</h3>
 							<h4 className="font-clash text-[2rem]">
 								Ried im Innkreis,{" "}
 								<Clock
@@ -214,11 +218,11 @@ const ContactSection = () => {
 							</h4>
 						</div>
 						<div className="mb-4 mt-4">
-							<h3 className="font-clash text-[2rem] font-bold">
-								Am I qualified?
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("qualifications")}
 							</h3>
 							<a href="https://bento.me/ungarmichael">
-								<h4 className="font-clash text-[2rem]">My Curriculum Vitae</h4>
+								<h4 className="font-clash text-[2rem]">{t("cv")}</h4>
 							</a>
 							<a href="https://github.com/ungarmichael">
 								<h4 className="font-clash text-[2rem]">Graduation Paper</h4>
@@ -230,8 +234,8 @@ const ContactSection = () => {
 							</a>
 						</div>
 						<div className="mb-4 mt-4">
-							<h3 className="font-clash text-[2rem] font-bold">
-								My other digital places
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("digital-spaces")}
 							</h3>
 							<a href="https://bento.me/ungarmichael">
 								<h4 className="font-clash text-[2rem]">Bento</h4>

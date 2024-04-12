@@ -10,9 +10,11 @@ import Head from "next/head";
 import { useTranslations } from "next-intl";
 
 const Page = () => {
-	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
 	const t = useTranslations("Frontend");
 	const a = useTranslations("");
+	const router = useRouter();
+
+	const iconPath = "/svgs/service-icons/icon-frontend-dev.svg";
 	useEffect(() => {
 		gsap.to("#head-i-1", {
 			delay: 1.1,
@@ -52,7 +54,6 @@ const Page = () => {
 				marginTop: "0%",
 			});
 	}, []);
-
 	useEffect(() => {
 		let ctx = gsap.context(() => {
 			gsap.from("#a-sun", {
@@ -68,7 +69,7 @@ const Page = () => {
 		});
 		return () => ctx.revert();
 	}, []);
-	const router = useRouter();
+
 	return (
 		<>
 			<Head>
@@ -112,12 +113,11 @@ const Page = () => {
 					`}</style>
 					<div className="flex flex-col min-h-screen font-clash text-ne-200">
 						<GoBack to="/services" />
-
 						<div className="flex flex-row justify-center mb-4 gap-20">
 							<Image
 								id="frontend-logo-left"
 								style={{ opacity: 1 }}
-								src={"/service-icons/icon-frontend-dev.svg"}
+								src={iconPath}
 								alt=""
 								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-2 -mr-2 sm:mr-4"
 								width={20}
@@ -129,7 +129,7 @@ const Page = () => {
 							<Image
 								id="frontend-logo-left"
 								style={{ opacity: 1 }}
-								src={"/service-icons/icon-frontend-dev.svg"}
+								src={iconPath}
 								alt=""
 								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2 -mr-2 sm:mr-0 rotate-[-45deg] shrink-0"
 								width={20}
@@ -165,7 +165,7 @@ const Page = () => {
 							<Image
 								id="frontend-logo-right"
 								style={{ opacity: 1 }}
-								src={"/service-icons/icon-frontend-dev.svg"}
+								src={iconPath}
 								alt=""
 								className="w-[70px] sm:w-[100px] lg:w-[240px] mt-8 mb-2  sm:ml-4 ml-0 stroke-white rotate-[45deg] shrink-0"
 								width={20}
@@ -179,7 +179,7 @@ const Page = () => {
 								<span>{t("Concept")}</span>
 								<Image
 									id="a-concept"
-									src="/a-concept.svg"
+									src="/svgs/a-concept.svg"
 									alt="adsf"
 									className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px]"
 									width={70}
@@ -193,7 +193,7 @@ const Page = () => {
 								<span>{t("Reality")} </span>
 								<Image
 									id="a-sun"
-									src="/a-sun.svg"
+									src="/svgs/a-sun.svg"
 									alt="adsf"
 									className="box-border inline w-[20px] sm:w-[40px] lg:w-[70px] animate-spin duration-1000"
 									width={70}
@@ -201,114 +201,8 @@ const Page = () => {
 								/>{" "}
 							</span>
 						</h2>
-						<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-							{t("punch-line-1")} <br className="lg:hidden" />
-							{t("punch-line-2")}
-						</span>
-						<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
-							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-								<Image
-									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
-									alt="adsf"
-									className="box-border p-4 w-[60px] "
-									style={{ marginTop: "0%" }}
-									width={80}
-									height={80}
-								/>
-							</span>
-							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-								<Image
-									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
-									alt="adsf"
-									className="box-border p-4 w-[70px]"
-									style={{ marginTop: "0%" }}
-									width={80}
-									height={80}
-								/>
-							</span>
-							<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-								{t("punch-line-1")}
-								{t("punch-line-2")}
-							</span>
-							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-								<Image
-									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
-									alt="adsf"
-									className="box-border p-4 w-[60px]"
-									style={{ marginTop: "0%" }}
-									width={80}
-									height={80}
-								/>
-							</span>
-							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
-								<Image
-									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
-									alt="adsf"
-									className="box-border p-4 w-[80px]"
-									style={{ marginTop: "0%" }}
-									width={80}
-									height={80}
-								/>
-							</span>
-						</div>
-
-						<Marquee speed={600} pauseOnHover>
-							<div
-								className="flex flex-nowrap mb-4"
-								onMouseEnter={() => {
-									setMarqueeSpeed(199);
-								}}
-								onMouseLeave={() => {
-									setMarqueeSpeed(200);
-								}}
-							>
-								<img
-									src="/project-imgs/ballkarten-project-1866x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/charge-project-3266x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/deets-project-3266x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/filliStudio-project-3266x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/heed-project-3266x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/octagon-project-1866x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/synopsis-project-2100x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-								<img
-									src="/project-imgs/wbyt_web-project-1866x1400.png"
-									alt="afasd"
-									className="h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-								/>
-							</div>
-						</Marquee>
-
+						<PunchLine />
+						<ProjectsSlider />
 						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
 								{t("webapps")}
@@ -347,6 +241,110 @@ const ImageComponent = ({
 			style={{ width: "fit-content", height: "500px", position: "relative" }}
 		>
 			<Image src={src} alt={alt} fill />
+		</div>
+	);
+};
+
+export const ProjectsSlider = () => {
+	const featured_projects = [
+		"ballkarten-project-1866x1400",
+		"charge-project-3266x1400",
+		"deets-project-3266x1400",
+		"filliStudio-project-3266x1400",
+		"heed-project-3266x1400",
+		"octagon-project-1866x1400",
+		"synopsis-project-2100x1400",
+		"wbyt_web-project-1866x1400",
+	];
+	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
+	return (
+		<Marquee speed={600} pauseOnHover>
+			<div
+				className="flex flex-nowrap mb-4 gap-10 mr-10"
+				onMouseEnter={() => {
+					setMarqueeSpeed(199);
+				}}
+				onMouseLeave={() => {
+					setMarqueeSpeed(200);
+				}}
+			>
+				{featured_projects.map((x) => {
+					return (
+						<Image
+							src={`/images/project-imgs/${x}.png`}
+							style={{
+								width: "auto",
+								height: "400px",
+							}}
+							width={600}
+							height={400}
+							quality={100}
+							objectFit="contain"
+							alt={`/images/project-imgs/${x}`}
+						/>
+					);
+				})}
+			</div>
+		</Marquee>
+	);
+};
+
+const PunchLine = () => {
+	const t = useTranslations("Frontend");
+	return (
+		<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
+			<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+				<Image
+					id="arrow-pointing-1"
+					src="/svgs/arrow-down-icon.svg"
+					alt="arrow-down-icon.svg"
+					className="box-border p-4 w-[60px] "
+					style={{ marginTop: "0%" }}
+					width={80}
+					height={80}
+				/>
+			</span>
+			<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+				<Image
+					id="arrow-pointing-2"
+					src="/svgs/arrow-down-icon.svg"
+					alt="arrow-down-icon.svg"
+					className="box-border p-4 w-[70px]"
+					style={{ marginTop: "0%" }}
+					width={80}
+					height={80}
+				/>
+			</span>
+			<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
+				{t("punch-line-1")}
+				{t("punch-line-2")}
+			</span>
+			<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
+				{t("punch-line-1")}
+				{t("punch-line-2")}
+			</span>
+			<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+				<Image
+					id="arrow-pointing-2"
+					src="/svgs/arrow-down-icon.svg"
+					alt="arrow-down-icon.svg"
+					className="box-border p-4 w-[60px]"
+					style={{ marginTop: "0%" }}
+					width={80}
+					height={80}
+				/>
+			</span>
+			<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
+				<Image
+					id="arrow-pointing-1"
+					src="/svgs/arrow-down-icon.svg"
+					alt="arrow-down-icon.svg"
+					className="box-border p-4 w-[60px]"
+					style={{ marginTop: "0%" }}
+					width={80}
+					height={80}
+				/>
+			</span>
 		</div>
 	);
 };

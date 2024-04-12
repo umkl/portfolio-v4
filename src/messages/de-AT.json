@@ -7,20 +7,99 @@
 		"App_Developer": "App Entwickler",
 		"Big_Description": "Ich verwende meine Zeit um mit <b>Code</b> und <b>Design</b> einen positiven Einfluss auf <b> die digitale Welt </b> zu haben. ",
 		"Services": "Services",
-		"Services_Text":"Sachen bei denen ich dir helfen kann.",
+		"Services_Text": "Sachen bei denen ich dir helfen kann.",
 		"Projects": "Projekte",
 		"Projects_Text": "Schau dir an, welche Dinge ich bereits erstellen konnte.",
-		"Blog":"Blog",
-		"Blog_Text":"Coding Dinge dich gerne teilen möchte.",
-		"Contact":"Kontakt",
-		"Contact_Text":"Lass uns in Kontakt treten, um großartige Projekte zu erstellen!",
+		"Blog": "Blog",
+		"Blog_Text": "Coding Dinge dich gerne teilen möchte.",
+		"Contact": "Kontakt",
+		"Contact_Text": "Lass uns in Kontakt treten, um großartige Projekte zu erstellen!",
 		"Language": "Sprache"
 	},
-	"Services":{
-		"goback":"zurück",
+	"Services": {
+		"goback": "zurück",
 		"my_services": "Meine Dienstleistungen",
-		"skills":"Fähigkeiten die ich mit der Welt teilen möchte.",
-		"development":"entwicklung"
+		"skills": "Fähigkeiten die ich mit der Welt teilen möchte.",
+		"development": "entwicklung"
+	},
+	"from": "Aus dem",
+	"to": "in die",
+	"Frontend": {
+		"Frontend Development": "Frontend Entwicklung",
+		"Concept": "Konzept",
+		"Reality": "Realität",
+		"punch-line-1": "Alles von ",
+		"punch-line-2": "statische Webseiten bis zu dynamsiche Web-Anwendungen",
+		"webapps": "Webanwendungen",
+		"webapps-text": "Ich begann meine Reise in der Desktop-Anwendungsentwicklung und nutzte Python mit Kivy und C# mit dem WPF-Framework. Meine Expertise hat sich seitdem weiterentwickelt und umfasst nun die Entwicklung von Webanwendungen, wobei ich zunächst webpack für das Bündeln einsetzte, dann zu React überging und derzeit Next.js nutze, um anspruchsvolle und datenintensive Web-Erlebnisse zu gestalten.",
+		"static-sites": "Statische Websites",
+		"static-sites-text": "Auf meinem Weg durch die Webentwicklung habe ich zunächst React für verschiedene Projekte eingesetzt, einschließlich statischer Websites. Mit dem Schwerpunkt auf Geschwindigkeit und Effizienz bin ich bewusst zu einem vielseitigeren Toolkit übergegangen, das Webflow, Framer und Wordpress umfasst. Dieser strategische Wechsel stellt sicher, dass ich die richtigen Werkzeuge für die richtigen Aufgaben einsetze und einen pragmatischen Ansatz verfolge, der Funktionalität und Einfachheit in Anwendungen ausbalanciert."
+	},
+	"Backend": {
+		"Backend Development": "Backend-Entwicklung",
+		"Concept": "Konzept",
+		"Reality": "Realität",
+		"punch-line": "Vertrauenswürdige Informationsquellen schaffen.",
+		"heading-1": "API-Dienste",
+		"text-1": "Also, ich bin in die Backend-Entwicklung eingestiegen, weil ich das Verhalten meines CMS anpassen wollte. Ich hatte diese Daten und wollte sie weiter bearbeiten, was nur mit einem dedizierten Backend ordentlich gemacht werden kann.",
+		"heading-2": "Datenbanken",
+		"text-2": "Mein Wissen über Datenbanken stammt größtenteils aus der Schule, wo ich gelernt habe, angemessene Schemas zu erstellen. Darüber hinaus habe ich über Normalisierung gelernt, was ein eleganter Begriff dafür ist, sicherzustellen, dass unsere Daten ordentlich strukturiert und nicht überall verstreut sind. Es ist wie das Aufräumen deines Zimmers, aber für Informationen."
+	},
+	"making": "machen",
+	"more": "mehr",
+	"design": {
+		"thoughts": "Gedanken",
+		"tangible": "Greifbar",
+		"punch-line": "Entwicklung von Entwürfen für Websites und mobile Apps.",
+		"heading-1": "UI/UX-Design",
+		"text-1": "Meine Faszination für die nahtlose Integration von Design und Code war eine treibende Kraft meiner Karriere. Die Synergie zwischen visueller Ästhetik und funktionalem Codieren hat mich immer fasziniert und dazu geführt, dass ich mich auf UI/UX-Design spezialisiert habe. Diese Reise wird von einer tiefen Wertschätzung dafür angetrieben, wie durchdachte Designentscheidungen Benutzererfahrungen durch die harmonische Zusammenarbeit von Kreativität und Technologie verbessern können.",
+		"heading-1-1": "Benutzerzentrierter Ansatz",
+		"text-2": "Indem ich den Benutzer in den Mittelpunkt des Designprozesses stelle, strebe ich danach, Schnittstellen zu erstellen, die intuitiv und benutzerfreundlich sind. Das Verständnis von Benutzerverhalten und -präferenzen ermöglicht die Erstellung von Designs, die nicht nur ansprechend aussehen, sondern auch eine nahtlose und angenehme Interaktion bieten.",
+		"heading-1-2": "Visuelle Ästhetik",
+		"text-3": "Die Verbindung von Form und Funktion steht im Mittelpunkt meiner Designphilosophie. Die Aufmerksamkeit für visuelle Details, Farbschemata und Typografie gewährleistet, dass die von mir erstellten Schnittstellen nicht nur funktionale Anforderungen erfüllen, sondern auch eine ästhetisch ansprechende Erfahrung für Benutzer bieten."
+	},
+	"devops": {
+		"Devops": "DevOps",
+		"from": "von",
+		"local": "lokal",
+		"to": "zu",
+		"prod": "prod",
+		"punch-line": "So schnell wie möglich veröffentlichen.",
+		"heading-1": "Hosting",
+		"text-1": "Ich begann damit, einfache Webdienste zu Hause mit einem Raspberry Pi 3B+ zu hosten. Das manuelle Einrichten alles für die Raspbian-Umgebung jedes Mal war jedoch ziemlich mühsam. Derzeit entscheide ich mich für einen dedizierten VPS-Anbieter, um meine abgeschotteten Docker-Container zu hosten.",
+		"heading-2": "Versionskontrolle/Workflows",
+		"text-2": "Um motiviert zu bleiben und Änderungen in einem Projekt effizient umzusetzen, ist es entscheidend, dass diese Modifikationen so schnell wie möglich auf der Produktionsseite sichtbar werden. Daher ist die Einrichtung von Workflows mit GitHub Actions beispielsweise ein wesentlicher Bestandteil meiner Entwicklungsprozesse."
+	},
+	"Projects": {
+		"featured": "vorgestellt",
+		"projects": "Projekte",
+		"projectname": "Projektname",
+		"category": "Kategorie",
+		"initiator": "Initiator",
+		"year": "Jahr",
+		"link-ad": "Schau dir das Projekt hier an:"
+	},
+	"Navigation": {
+		"Landing": "Start",
+		"Blog": "Blog",
+		"Contact": "Kontakt",
+		"Projects": "Projekte",
+		"Services": "Dienstleistungen",
+		"Devops": "DevOps",
+		"Frontend": "Frontend",
+		"Backend": "Backend"
+	},
+	"Contact": {
+		"concept": "Tolle Idee im Kopf?",
+		"lets": "Lass uns Kontakt aufnehmen!",
+		"your-email": "deine E-Mail-Adresse",
+		"your-topic": "dein Thema",
+		"your-text": "dein Text",
+		"send-it": "Absenden",
+		"contact-details": "Kontaktdaten",
+		"location": "Standort",
+		"qualifications": "Qualifikationen",
+		"cv":"Mein Lebenslauf",
+		"digital-spaces": "Meine anderen digitalen Räume"
 	}
-
 }

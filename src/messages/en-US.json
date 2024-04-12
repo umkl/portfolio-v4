@@ -70,7 +70,7 @@
 		"heading-2": "Version Control/Workflows",
 		"text-2": "To stay motivated and efficiently implement changes in a project, it's crucial for these modifications to reflect on the production side as quickly as possible. That's why establishing workflows using GitHub Actions, for instance, is an essential part of my development processes."
 	},
-	"projects": {
+	"Projects": {
 		"featured": "featured",
 		"projects": "projects",
 		"projectname": "projectname",
@@ -78,5 +78,28 @@
 		"initiator": "initiator",
 		"year": "year",
 		"link-ad": "check out the project here:"
+	},
+	"Navigation": {
+		"Landing": "Landing",
+		"Blog": "Blog",
+		"Frontend":"Frontend",
+		"Backend":"Backend",
+		"Contact": "Contact",
+		"Projects": "Projekte",
+		"Services": "Services",
+		"Devops": "Devops"
+	},
+	"Contact": {
+		"concept": "Awesome concept in mind?",
+		"lets": "Let's get in contact!",
+		"your-email": "your email-address",
+		"your-topic": "your topic",
+		"your-text": "your text",
+		"send-it": "send it",
+		"contact-details": "Contact Details",
+		"location": "Location",
+		"qualifications": "Qualifications",
+		"cv":"My Curriculum Vitae",
+		"digital-spaces": "My other digital spaces"
 	}
 }
