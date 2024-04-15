@@ -163,7 +163,7 @@ const TableItem = ({
 
 		return jsxElements;
 	};
-	const t = useTranslations("projects");
+	const t = useTranslations("Projects");
 	return (
 		<>
 			<div
@@ -182,7 +182,7 @@ const TableItem = ({
 				<p className="font-clash flex-1 pl-2  py-4 font-semibold group-hover:text-[#333] uppercase hidden sm:flex sm:flex-wrap">
 					{categories.map((x, i) => {
 						return (
-							<span className="">
+							<span key={i}>
 								{x}
 								{i + 1 == categories.length ? "" : ","}
 							</span>
@@ -199,9 +199,12 @@ const TableItem = ({
 				style={{ height: "0px" }}
 			>
 				<div className="flex items-center relative uppercase sm:hidden mt-4">
-					{categories.map((x) => {
+					{categories.map((x, i) => {
 						return (
-							<span className="bg-white relative  p-4 font-clash leading-4 text-[1.2rem] rounded-full font-bold text-black">
+							<span
+								className="bg-white relative  p-4 font-clash leading-4 text-[1.2rem] rounded-full font-bold text-black"
+								key={i}
+							>
 								{x}
 							</span>
 						);
@@ -212,16 +215,20 @@ const TableItem = ({
 				</h1>
 
 				<div className="flex flex-wrap">
-					{tags.map((x) => {
-						return <span className="font-druk mr-4 text-neutral-300">{x}</span>;
+					{tags.map((x, i) => {
+						return (
+							<span className="font-druk mr-4 text-neutral-300" key={i}>
+								{x}
+							</span>
+						);
 					})}
 				</div>
 				<p className="font-clash font-medium text-neutral-100 text-[0.8rem] sm:text-[1rem] md:text-[1.4rem] lg:text-[1.6rem] mt-4 max-w-[800px]">
 					{description}
 				</p>
 				<div className="my-10 flex gap-10 flex-wrap">
-					{images.map((x) => {
-						return <Image src={x} width={300} height={30} alt={""} />;
+					{images.map((x, i) => {
+						return <Image src={x} key={i} width={300} height={30} alt={""} />;
 					})}
 				</div>
 				<p className="font-bold font-druk text-[1rem] uppercase flex items-center gap-4 mb-4 ">
@@ -256,7 +263,7 @@ const TableHead = () => {
 const Heading = () => {
 	const t = useTranslations("Projects");
 	return (
-		<div className="">
+		<div>
 			<p className="font-druk uppercase text-[1.2em] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2.2rem] mt-2 sm:mt-4 md:mt-6 lg:mt-8 font-bold ml-4">
 				{t("featured")}
 			</p>
