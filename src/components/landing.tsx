@@ -141,7 +141,7 @@ const Landing = () => {
 								{t("and")}{" "}
 								<u className="underline-offset-[0.38rem]">UI/UX Designer</u>{" "}
 								{t("from")}{" "}
-								<u className="underline-offset-[0.38rem]">Austria.</u>{" "}
+								<u className="underline-offset-[0.38rem]">{t("Austria")}.</u>{" "}
 							</span>
 						</h3>
 						<h4 className="font-inter font-medium text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-0 lg:mt-2 ">
