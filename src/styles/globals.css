@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-cursor {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	background-color: #ff0000;
-	border-radius: 50%;
-	transform: translate(-50%, -50%);
-	pointer-events: none;
-	z-index: 9999;
-	mix-blend-mode: difference;
-}
-
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;
@@ -58,15 +46,11 @@ html {
 
 .landing-bg {
 	background-color: #333;
-	/* background-repeat: repeat; */
 	background-size: cover;
-	/* background-attachment: fixed;
-	background-size: 150px 150px; */
 	background-position: center;
-	background-image: url("../../public/background-image.webp");
-
-	opacity: 0; /* Set initial opacity to 0 */
-	animation: fadeIn 3s ease-in-out 0.7s forwards; /* Animation properties */
+	background-image: url("../../public/images/background-image.webp");
+	opacity: 0;
+	animation: fadeIn 3s ease-in-out 0.7s forwards;
 }
 
 @keyframes fadeIn {
@@ -76,13 +60,6 @@ html {
 
 	to {
 		opacity: 1;
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.landing-bg {
-		/* background-size: 200px 200px; */
-		/* background-position: 45px; */
 	}
 }
 
@@ -117,50 +94,20 @@ html {
 	overflow: auto;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	background-color: "#333333";
 }
 
-/* 
-#landing{
-	background-repeat: repeat;
-	background-attachment: fixed;
-	background-image: url("../../public/raster.svg");
-	background-size: 150px 150px;
-} */
 
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
 
-.art-bg {
-	background-color: #333333;
-	/* background-repeat: repeat; */
-	/* background-attachment: fixed; */
-	background-image: url("../../public/pattern.png");
-}
-
-.contact-image {
-	background-image: url("../../public/setup1.jpg");
-	background-size: cover;
-	background-position-x: center;
-}
-
-.focus-cross-bg:hover {
-	background-image: url("../../public/cross-bg.svg");
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: repeat;
-
-	background-size: 400px 400px;
-	stroke-width: 30px;
-	cursor: pointer;
-}
 
 html,
 body {
 	height: 100%;
 	margin: 0;
 	font-synthesis: none;
-	
 }
 
 .hide-scrollbar::-webkit-scrollbar {

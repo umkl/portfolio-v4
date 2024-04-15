@@ -225,7 +225,6 @@ const Page = () => {
 						<div
 							className="flex flex-nowrap gap-5 mr-5  mb-4"
 							onMouseEnter={() => {
-								console.log("hover");
 								setMarqueeSpeed(199);
 							}}
 							onMouseLeave={() => {
@@ -392,3 +391,11 @@ const ImageComponent = ({
 		</div>
 	);
 };
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../../messages/${context.locale}.json`)).default,
+		},
+	};
+}

@@ -7,9 +7,17 @@ const nextConfig = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, "src/styles")],
 	},
+	images: {
+		domains: [
+			"www.google.com",
+			"upload.wikimedia.org",
+			"blobs.ungarmichael.me",
+		],
+	},
 	i18n: {
-		locales: ["en-US", "de-AT"],
-		defaultLocale: "en-US",
+		locales: ["de-AT", "en-US"],
+		defaultLocale: "de-AT",
+		localeDetection: false,
 	},
 };
 

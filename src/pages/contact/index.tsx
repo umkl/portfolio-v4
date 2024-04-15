@@ -8,6 +8,7 @@ import { useContext, useState } from "react";
 import Clock from "react-live-clock";
 import { GoBack } from "../services";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 interface formValues {
 	email: string;
@@ -49,7 +50,6 @@ const ContactSection = () => {
 				body: json,
 			})
 				.catch((error) => {
-					console.log(error);
 					setProcessingState({
 						loading: false,
 						success: false,
@@ -74,11 +74,11 @@ const ContactSection = () => {
 					}, 5000);
 				});
 		} catch (error) {
-			console.log(error);
 			setProcessingState({ loading: false, success: false, error: true });
 		}
 	};
 
+	const t = useTranslations("Contact");
 	return (
 		<>
 			<Head>
@@ -109,16 +109,18 @@ const ContactSection = () => {
 				<section
 					ref={navCxt.contact}
 					id="contact"
-					className="w-full min-h-screen snap-start bg-[#333] text-white"
+					className="w-full  relative min-h-screen snap-start bg-[#333] text-white"
 				>
 					<GoBack />
-					<div className="p-4">
-						<h1 className="font-clash font-bold text-3xl ">
-							Awesome concept in mind?
+					<div className="p-4 left-1/2 -translate-x-1/2 w-full relative max-w-[1000px] ]">
+						<h1 className="font-clash font-bold text-[3rem] leading-7 mb-2">
+							{t("concept")}
 						</h1>
-						<h2 className="font-clash text-3xl">Let's get in contact!</h2>
+						<h2 className="font-clash font-bold text-neutral-300 text-[2.4rem]">
+							{t("lets")}
+						</h2>
 						<div className="h-[3em]"></div>
-						<form className="max-w-[400px]">
+						<form className="w-full">
 							<div className="relative z-0 mb-4">
 								<input
 									type="text"
@@ -132,7 +134,7 @@ const ContactSection = () => {
 									htmlFor="email"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your email-adress
+									{t("your-email")}
 								</label>
 							</div>
 							<div className="relative z-0 mb-4">
@@ -148,7 +150,7 @@ const ContactSection = () => {
 									htmlFor="fsd"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your topic
+									{t("your-topic")}
 								</label>
 							</div>
 							<div className="relative z-0 mb-4">
@@ -164,15 +166,15 @@ const ContactSection = () => {
 									htmlFor="fsd"
 									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
-									your text
+									{t("your-text")}
 								</label>
 							</div>
 							<div className="flex gap-4 items-center mb-4">
 								<input
 									onClick={onSubmit}
 									type="button"
-									value="send it"
-									className="appearance-none border-2 rounded-full w-14 font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
+									value={t("send-it")}
+									className="appearance-none border-2 rounded-full text-[1.6rem] w-fit font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
 								/>
 								{processingState.loading && (
 									<p className="font-clash font-extrabold uppercase h-full text-white/50">
@@ -192,32 +194,21 @@ const ContactSection = () => {
 							</div>
 						</form>
 						<div className="mb-4">
-							<h3 className="font-clash text-[1.5rem] font-bold">
-								Contact Details
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("contact-details")}
 							</h3>
-							<h4 className="font-clash text-[1.5rem]">
+							<h4 className="font-clash text-[2rem]">
 								michael.ungar03@gmail.com
 							</h4>
-						</div>
-						<div className="mb-4">
-							<h3 className="font-clash text-[1.5rem] font-bold">
-								My other digital places
-							</h3>
-							<a href="https://bento.me/ungarmichael">
-								<h4 className="font-clash text-[1.5rem]">Bento</h4>
-							</a>
-							<a href="https://github.com/ungarmichael">
-								<h4 className="font-clash text-[1.5rem]">GitHub</h4>
-							</a>
-							<a href="https://youtube.com/@ungarmichael">
-								<h4 className="font-clash text-[1.5rem]">YouTube</h4>
+							<a className="font-clash text-[2rem]" href="tel:004367761451490">
+								+43 677 614 514 90
 							</a>
 						</div>
-						<div className="mb-4">
-							<h3 className="font-clash text-[1.5rem] font-semibold">
-								Location
+						<div className="">
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("location")}
 							</h3>
-							<h4 className="font-clash text-[1.5rem]">
+							<h4 className="font-clash text-[2rem]">
 								Ried im Innkreis,{" "}
 								<Clock
 									format={"HH:mm:ss"}
@@ -226,6 +217,37 @@ const ContactSection = () => {
 								/>
 							</h4>
 						</div>
+						<div className="mb-4 mt-4">
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("qualifications")}
+							</h3>
+							<a href="https://bento.me/ungarmichael">
+								<h4 className="font-clash text-[2rem]">{t("cv")}</h4>
+							</a>
+							<a href="https://github.com/ungarmichael">
+								<h4 className="font-clash text-[2rem]">Graduation Paper</h4>
+							</a>
+							<a href="https://youtube.com/@ungarmichael">
+								<h4 className="font-clash text-[2rem]">
+									selbststudium.ungarmichael.me
+								</h4>
+							</a>
+						</div>
+						<div className="mb-4 mt-4">
+							<h3 className="font-clash text-[2.4rem] font-bold">
+								{t("digital-spaces")}
+							</h3>
+							<a href="https://bento.me/ungarmichael">
+								<h4 className="font-clash text-[2rem]">Bento</h4>
+							</a>
+							<a href="https://github.com/ungarmichael">
+								<h4 className="font-clash text-[2rem]">GitHub</h4>
+							</a>
+							<a href="https://youtube.com/@ungarmichael">
+								<h4 className="font-clash text-[2rem]">YouTube</h4>
+							</a>
+						</div>
+						<div className="h-[100px]"></div>
 					</div>
 				</section>
 			</Curve>
@@ -235,12 +257,10 @@ const ContactSection = () => {
 
 export default ContactSection;
 
-// <Image
-// 					src="/logo-skeleton.svg"
-// 					alt="Vercel Logo"
-// 					className=""
-// 					objectFit=""
-// 					height={60}
-// 					width={60}
-// 					priority
-// 				/>
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../../messages/${context.locale}.json`)).default,
+		},
+	};
+}

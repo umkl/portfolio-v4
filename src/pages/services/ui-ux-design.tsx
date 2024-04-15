@@ -7,9 +7,12 @@ import Marquee from "react-fast-marquee";
 import { GoBack } from "../services";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 const Page = () => {
 	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
+	const t = useTranslations("design");
+	const a = useTranslations();
 	useEffect(() => {
 		gsap.to("#head-i-1", {
 			delay: 1.1,
@@ -165,9 +168,9 @@ const Page = () => {
 							/>
 						</div>
 						<h2 className="font-clash text-[1.2rem] sm:text-[2rem] lg:text-[4rem] leading-[2rem] sm:leading-[2.7rem] md:leading-[4rem] mt-[1rem]  whitespace-wrap uppercase font-normal p-2 w-full text-center ">
-							MAKING{" "}
+							{a("making")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>THOUGHTS </span>
+								<span>{t("thoughts")} </span>
 								<Image
 									id="a-concept"
 									src="/a-concept.svg"
@@ -179,9 +182,9 @@ const Page = () => {
 								{"  "}
 							</span>
 							<br className="md:hidden" />
-							MORE{" "}
+							{a("more")}{" "}
 							<span className="font-bold flex-row inline-flex">
-								<span>TANGIBLE </span>
+								<span>{t("tangible")} </span>
 								<Image
 									id="a-sun"
 									src="/a-sun.svg"
@@ -193,14 +196,13 @@ const Page = () => {
 							</span>
 						</h2>
 						<span className="text-[0.9rem] sm:text-[1.3rem] md:text-[1.3rem] lg:hidden shrink-0 mb-2 text-center mt-[80px]">
-							Developing Mockups for <br className="lg:hidden" />
-							<b>Websites</b> and <b>Mobile Apps</b>.
+							{t("punch-line")}
 						</span>
 						<div className="flex flex-row max-w-[1800px] mx-auto sm:mt-10 justify-end items-end">
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[60px] "
 									style={{ marginTop: "0%" }}
@@ -211,7 +213,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[70px]"
 									style={{ marginTop: "0%" }}
@@ -220,13 +222,12 @@ const Page = () => {
 								/>
 							</span>
 							<span className="text-[1.5rem] shrink-0 mb-2 hidden lg:block">
-								Developing Mockups for <br className="lg:hidden" />
-								<b>Websites</b> and <b>Mobile Apps</b>.
+								{t("punch-line")}
 							</span>
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-2"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[60px]"
 									style={{ marginTop: "0%" }}
@@ -237,7 +238,7 @@ const Page = () => {
 							<span className=" max-h-[80px] overflow-hidden inline-block relative shrink-0">
 								<Image
 									id="arrow-pointing-1"
-									src="/arrow-down-icon.svg"
+									src="/svgs/arrow-down-icon.svg"
 									alt="adsf"
 									className="box-border p-4 w-[80px]"
 									style={{ marginTop: "0%" }}
@@ -251,7 +252,6 @@ const Page = () => {
 							<div
 								className="flex flex-nowrap gap-5 mr-5  mb-4"
 								onMouseEnter={() => {
-									console.log("hover");
 									setMarqueeSpeed(199);
 								}}
 								onMouseLeave={() => {
@@ -306,13 +306,7 @@ const Page = () => {
 								UI/UX Design
 							</h1>
 							<p className="text-[1rem] sm:text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem]">
-								My fascination with the seamless integration of design and code
-								has been a driving force throughout my career. The synergy
-								between visual aesthetics and functional coding has always
-								captivated me, leading me to specialize in UI/UX design. This
-								journey is fueled by a deep appreciation for how thoughtful
-								design choices can enhance user experiences through the
-								harmonious collaboration of creativity and technology.
+								{t("")}
 							</p>
 							<h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] font-bold leading-[1.8rem] sm:leading-[3rem] mb-2 mt-4">
 								User-Centric Approach
@@ -362,3 +356,10 @@ const ImageComponent = ({
 		</div>
 	);
 };
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../../messages/${context.locale}.json`)).default,
+		},
+	};
+}

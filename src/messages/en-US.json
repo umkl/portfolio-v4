@@ -1,0 +1,105 @@
+{
+	"Landing": {
+		"title": "Hey, my Name is",
+		"and": "and",
+		"from": "from",
+		"Austria": "Austria",
+		"App_Developer": "App Developer",
+		"Big_Description": "I focus on all things <b>code</b> and <b>design</b> related. With my work I aim to deliver <b>impactful experiences</b> so digital spaces become more <b>interesting</b>.",
+		"Services": "Services",
+		"Services_Text": "Explore the services I can provide to assist you.",
+		"Projects": "Projects",
+		"Projects_Text": "Check out what things I was already able to create",
+		"Blog": "Blog",
+		"Blog_Text": "Read some of my thoughts on Coding.",
+		"Contact": "Contact",
+		"Contact_Text": "Let us get in touch for creating awesome projects!",
+		"Language": "Language"
+	},
+	"Services": {
+		"goback": "go back",
+		"my_services": "My Services",
+		"skills": "Skills I'm confortable with and open to sharing.",
+		"development": "development"
+	},
+	"from": "from",
+	"to": "to",
+	"Frontend": {
+		"Frontend Development": "Frontend Development",
+		"Concept": "Concept",
+		"Reality": "Reality",
+		"punch-line-1": "Creating everything from",
+		"punch-line-2": "static Webpage to scalable Webapps",
+		"webapps": "Web applications",
+		"webapps-text": "I began my journey in desktop application development, utilizing Python with Kivy and C# with the WPF Framework. My expertise has since evolved to encompass web application development, initially employing webpack for bundling, progressing to React, and presently leveraging Next.js to craft sophisticated and data-intensive web experiences.",
+		"static-sites": "Static Websites",
+		"static-sites-text": "In my journey through web development, I initially employed React for diverse projects, including static websites. Prioritizing speed and efficiency, I consciously transitioned towards a more versatile toolkit, incorporating  Webflow,  Framer, and Wordpress. This strategic shift ensures that I use the right tools for the right tasks, maintaining a pragmatic approach that balances functionality and simplicity in applications."
+	},
+	"Backend": {
+		"Backend Development": "Backend Development",
+		"Concept": "Concept",
+		"Reality": "Reality",
+		"punch-line": "Creating trustworthy sources of information.",
+		"heading-1": "API Services",
+		"text-1": "So, I got into Backend Development because I wanted to tweak how my CMS behaved. I had this data, and I wanted to manipulate it further which can only be properly done by a dedicated backend.",
+		"heading-2": "Databases",
+		"text-2": "So, most of my knowledge about databases comes from school where I learned about crafting proper schemas. Furthermore I learned about normalization, which is a fancy term for making sure our data's neatly structured and not all over the place. It's like tidying up your room but for information."
+	},
+	"making": "making",
+	"more": "more",
+	"design": {
+		"thoughts": "thoughts",
+		"tangible": "tangible",
+		"punch-line": "Developing Mockups for Websites and Mobile Apps.",
+		"heading-1": "UI/UX Design",
+		"text-1": "My fascination with the seamless integration of design and code has been a driving force throughout my career. The synergy between visual aesthetics and functional coding has always captivated me, leading me to specialize in UI/UX design. This journey is fueled by a deep appreciation for how thoughtful design choices can enhance user experiences through the harmonious collaboration of creativity and technology.",
+		"heading-1-1": "User-Centric Approach",
+		"text-2": "Placing the user at the center of the design process, I strive to create interfaces that are intuitive and user-friendly. Understanding user behaviors and preferences enables the crafting of designs that not only look appealing but also deliver a seamless and enjoyable interaction.",
+		"heading-1-2": "Visual Aesthetics",
+		"text-3": "The marriage of form and function is at the core of my design philosophy. Attention to visual details, color schemes, and typography ensures that the interfaces I create not only meet functional requirements but also provide an aesthetically pleasing experience for users."
+	},
+	"devops": {
+		"Devops": "Devops",
+		"from": "from",
+		"local": "local",
+		"to": "to",
+		"prod": "prod",
+		"punch-line": "Releasing as fast as possible.",
+		"heading-1": "Hosting",
+		"text-1": "I began hosting simple web services at home using a Raspberry Pi 3B+. However, manually setting up everything for the Raspbian environment each time proved to be quite a hassle. Currently, I opt for a dedicated VPS provider to host my sandboxed Docker containers.",
+		"heading-2": "Version Control/Workflows",
+		"text-2": "To stay motivated and efficiently implement changes in a project, it's crucial for these modifications to reflect on the production side as quickly as possible. That's why establishing workflows using GitHub Actions, for instance, is an essential part of my development processes."
+	},
+	"Projects": {
+		"featured": "featured",
+		"projects": "projects",
+		"projectname": "projectname",
+		"category": "category",
+		"initiator": "initiator",
+		"year": "year",
+		"link-ad": "check out the project here:"
+	},
+	"Navigation": {
+		"Landing": "Landing",
+		"Blog": "Blog",
+		"Frontend":"Frontend",
+		"Backend":"Backend",
+		"Contact": "Contact",
+		"Projects": "Projekte",
+		"Services": "Services",
+		"Devops": "Devops"
+	},
+	"Contact": {
+		"concept": "Awesome concept in mind?",
+		"lets": "Let's get in contact!",
+		"your-email": "your email-address",
+		"your-topic": "your topic",
+		"your-text": "your text",
+		"send-it": "send it",
+		"contact-details": "Contact Details",
+		"location": "Location",
+		"qualifications": "Qualifications",
+		"cv":"My Curriculum Vitae",
+		"digital-spaces": "My other digital spaces"
+	}
+}

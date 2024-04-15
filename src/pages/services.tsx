@@ -8,6 +8,7 @@ import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
 import Head from "next/head";
+import { useTranslations } from "next-intl";
 
 const Work = () => {
 	useEffect(() => {
@@ -60,6 +61,35 @@ const Work = () => {
 
 	const [selectedItem, setSelectedItem] = useState();
 	const [marqueeSpeed, setMarqueeSpeed] = useState(4000);
+	const t = useTranslations("Services");
+	const services_i_offer = [
+		{
+			name: `frontend ${t("development")}`,
+			link: "frontend-dev",
+			svglink: "icon-frontend-dev",
+		},
+		{
+			name: `backend ${t("development")}`,
+			link: "backend-dev",
+
+			svglink: "icon-backend_dev",
+		},
+		{
+			name: "ui/ux design",
+			link: "ui-ux-design",
+			svglink: "icon-ui_ux-design",
+		},
+		// {
+		// 	name: "branding",
+		// 	link: "branding",
+		// 	svglink: "icon-branding",
+		// },
+		{
+			name: "devops",
+			link: "devops",
+			svglink: "icon-devops",
+		},
+	];
 
 	const easeInOut = (t: number, b: number, c: number, d: number) => {
 		t /= d / 2;
@@ -109,110 +139,75 @@ const Work = () => {
 							id="head-i-1"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-400 -z-10 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<span
 							id="head-i-2"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-500 -z-20 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<span
 							id="head-i-3"
 							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-600 -z-30 whitespace-nowrap"
 						>
-							my services
+							{t("my_services")}
 						</span>
 						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
-							my services
+							{t("my_services")}
 						</h1>
 					</div>
 					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-ne-200 uppercase italic font-bold relative">
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part   shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
-						<h1 className="marquee_part  shrink-0">
-							Skills I'm comfortable with and open to sharing. &nbsp;
-						</h1>
+						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
+						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
 					</div>
 					<hr />
 					<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
-						{[
-							{
-								name: "frontend development",
-								link: "frontend-dev",
-								svglink: "/service-icons/icon-frontend-dev.svg",
-							},
-							{
-								name: "backend development",
-								link: "backend-dev",
-
-								svglink: "/service-icons/icon-backend_dev.svg",
-							},
-							{
-								name: "ui/ux design",
-								link: "ui-ux-design",
-								svglink: "/service-icons/icon-ui_ux-design.svg",
-							},
-							// {
-							// 	name: "branding",
-							// 	link: "branding",
-							// 	svglink: "/service-icons/icon-branding.svg",
-							// },
-							{
-								name: "devops",
-								link: "devops",
-								svglink: "/service-icons/icon-devops.svg",
-							},
-						].map((x, i) => {
+						{services_i_offer.map((x, i) => {
 							return (
 								<ListItem
 									key={i}
 									text={x.name}
 									disabled={false}
 									link={`services/${x.link}`}
-									svglink={x.svglink}
+									svglink={`/svgs/service-icons/${x.svglink}.svg`}
 									delay={1.1 + i * 0.1}
 								/>
 							);
 						})}
 					</ul>
 					<Marquee speed={marqueeSpeed}>
-						<div className="flex flex-nowrap gap-5 mr-5 my-7">
-							<img
-								src="/work-1.png"
+						<div className="flex gap-8 flex-row my-8">
+							<Image
+								width={500}
+								height={500}
+								src="/images/work/work-1.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
-						</div>
-						<div className="flex flex-nowrap gap-5 mr-5 my-7">
-							<img
-								src="/work-2.png"
+							<Image
+								width={500}
+								height={500}
+								src="/images/work/work-2.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
-						</div>
-						<div className="flex flex-nowrap gap-5 mr-5 my-7">
-							<img
-								src="/work-3.png"
+							<Image
+								width={500}
+								height={500}
+								src="/images/work/work-3.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
-						</div>
-						<div className="flex flex-nowrap gap-5 mr-5 my-7">
-							<img
-								src="/work-4.png"
+							<Image
+								width={500}
+								height={500}
+								src="/images/work/work-4.png"
 								alt="asdlkfj"
-								className="h-[200px] md:h-[600px]"
+								className="h-[100px] md:h-[500px]"
 							/>
 						</div>
 					</Marquee>
@@ -226,6 +221,8 @@ const Work = () => {
 export default Work;
 
 export const GoBack = ({ to }: { to?: string }) => {
+	const t = useTranslations("Services");
+
 	const router = useRouter();
 
 	return (
@@ -242,7 +239,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 			<Image
 				id="logo"
 				style={{ opacity: 1 }}
-				src="/arrow-icon.svg"
+				src="/svgs/arrow-icon.svg"
 				alt=""
 				className="w-[30px] sm:w-[60px] my-4 ml-4 mr-2"
 				width={20}
@@ -254,7 +251,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 				className="w-[0px] h-[4px] bg-gradient-to-r from-pr-300 via-pr-400 to-pr-800 "
 			></div>
 			<span className="font-bold text-[1.6em] sm:text-[3em] mr-4 uppercase text-ne-200">
-				go back
+				{t("goback")}
 			</span>
 		</button>
 	);
@@ -319,4 +316,56 @@ function ListItem({
 			<hr />
 		</li>
 	);
+}
+
+const ProjectsSlider = () => {
+	const featured_projects = [
+		"ballkarten-project-1866x1400",
+		"charge-project-3266x1400",
+		"deets-project-3266x1400",
+		"filliStudio-project-3266x1400",
+		"heed-project-3266x1400",
+		"octagon-project-1866x1400",
+		"synopsis-project-2100x1400",
+		"wbyt_web-project-1866x1400",
+	];
+	const [marqueeSpeed, setMarqueeSpeed] = useState(200);
+	return (
+		<Marquee speed={600} pauseOnHover>
+			<div
+				className="flex flex-nowrap mb-4 gap-10 mr-10"
+				onMouseEnter={() => {
+					setMarqueeSpeed(199);
+				}}
+				onMouseLeave={() => {
+					setMarqueeSpeed(200);
+				}}
+			>
+				{featured_projects.map((x) => {
+					return (
+						<Image
+							src={`/images/project-imgs/${x}.png`}
+							style={{
+								width: "auto",
+								height: "400px",
+							}}
+							width={600}
+							height={400}
+							quality={100}
+							objectFit="contain"
+							alt={`/images/project-imgs/${x}`}
+						/>
+					);
+				})}
+			</div>
+		</Marquee>
+	);
+};
+
+export async function getStaticProps(context: any) {
+	return {
+		props: {
+			messages: (await import(`../messages/${context.locale}.json`)).default,
+		},
+	};
 }

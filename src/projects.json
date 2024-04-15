@@ -1,0 +1,27 @@
+[
+	{
+		"projectname": "Frame",
+		"categories": ["frontend", "ui/ux", "creative-dev"],
+		"tags":[
+			"#react",
+			"#nextjs",
+			"#lenis-scroll",
+			"#creative-dev"
+		],
+		"initiator": "Client",
+		"start_date": "c2309",
+		"end_date": "c2403",
+		"description": {
+			"de-AT": "Ein Projekt für einen lokalen Videoschnitt-Editor, einschließlich eines groben Portfolios und eines Kontaktbereichs. Der Fokus lag hier hauptsächlich darauf, alternative und moderne Möglichkeiten zur Darstellung von Inhalten zu nutzen, damit die Website sich von Mitbewerbern abhebt und einen bleibenden Eindruck hinterlässt.",
+			"en-US": "A project for a local video editor including a rough portfolio and a contact section. The focus here was mostly on using alternative and modern ways of displaying content so the website would elevate over any competitors and leave a lasting impression."
+		},
+		"link": "<a href=\"https://framestudio.at\">framestudio.at</a>",
+		"images":[
+			"https://blobs.ungarmichael.me/images/frame/screenshot-1.png",
+			"https://blobs.ungarmichael.me/images/frame/screenshot-2.png",
+			"https://blobs.ungarmichael.me/images/frame/screenshot-3.png",
+			"https://blobs.ungarmichael.me/images/frame/screenshot-4.png",
+			"https://blobs.ungarmichael.me/images/frame/screenshot-5.png"
+		]
+	}
+]
