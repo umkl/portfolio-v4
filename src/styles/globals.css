@@ -141,3 +141,27 @@ body {
 	font-weight: 450;
 	font-size: 2rem;
 }
+
+.contact-text-styling > h1 {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.100');
+	font-size: 3.4rem;
+	margin-top: 4rem;
+	font-weight: 600;
+}
+
+.contact-text-styling > h2 {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.100');
+	font-size: 2.4rem;
+	font-weight: 550;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+.contact-text-styling > p {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.400');
+	font-weight: 450;
+	font-size: 2rem;
+}

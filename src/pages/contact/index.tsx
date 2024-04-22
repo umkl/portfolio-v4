@@ -106,65 +106,58 @@ const ContactSection = () => {
 				<meta name="theme-color" content="#333333"></meta>
 			</Head>
 			<Curve>
-				<section
-					ref={navCxt.contact}
-					id="contact"
-					className="w-full  relative min-h-screen snap-start bg-[#333] text-white"
-				>
-					<GoBack />
-					<div className="p-4 left-1/2 -translate-x-1/2 w-full relative max-w-[1000px] ]">
-						<h1 className="font-clash font-bold text-[3rem] leading-7 mb-2">
-							{t("concept")}
-						</h1>
-						<h2 className="font-clash font-bold text-neutral-300 text-[2.4rem]">
-							{t("lets")}
-						</h2>
-						<div className="h-[3em]"></div>
+				<GoBack />
+				<div className="h-fit w-full flex justify-center p-10">
+					<div className="max-w-[1200px] mr-8 w-full mb-[100px] contact-text-styling">
+						<h1>{t("concept")}</h1>
+						<p className="font-bold">{t("lets")}</p>
+
+						<h2>Kontaktformular</h2>
 						<form className="w-full">
-							<div className="relative z-0 mb-4">
+							<div className="relative z-0 mb-10">
 								<input
 									type="text"
 									id="email"
-									className="block  py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
+									className="block py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 									placeholder=" "
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 								/>
 								<label
 									htmlFor="email"
-									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
 									{t("your-email")}
 								</label>
 							</div>
-							<div className="relative z-0 mb-4">
+							<div className="relative z-0 mb-10">
 								<input
 									type="text"
-									id="fsd"
-									className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
+									id="topic"
+									className="block  py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
 									placeholder=" "
 									onChange={(e) => setTopic(e.target.value)}
 									value={topic}
 								/>
 								<label
-									htmlFor="fsd"
-									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									htmlFor="topic"
+									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
 									{t("your-topic")}
 								</label>
 							</div>
-							<div className="relative z-0 mb-4">
+							<div className="relative z-0 mb-10">
 								<textarea
 									rows={4}
 									id="fsd"
-									className="block py-2.5 px-0 w-full text-[1.6rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash overflow-hidden"
+									className="block py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-white peer font-clash overflow-hidden"
 									placeholder=" "
 									onChange={(e) => setText(e.target.value)}
 									value={text}
 								/>
 								<label
 									htmlFor="fsd"
-									className="absolute text-[1.2rem] text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
 								>
 									{t("your-text")}
 								</label>
@@ -174,7 +167,7 @@ const ContactSection = () => {
 									onClick={onSubmit}
 									type="button"
 									value={t("send-it")}
-									className="appearance-none border-2 rounded-full text-[1.6rem] w-fit font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer"
+									className="appearance-none border-2 font-medium rounded-full text-[1.8rem] w-fit font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer text-neutral-100"
 								/>
 								{processingState.loading && (
 									<p className="font-clash font-extrabold uppercase h-full text-white/50">
@@ -193,63 +186,21 @@ const ContactSection = () => {
 								)}
 							</div>
 						</form>
-						<div className="mb-4">
-							<h3 className="font-clash text-[2.4rem] font-bold">
-								{t("contact-details")}
-							</h3>
-							<h4 className="font-clash text-[2rem]">
-								michael.ungar03@gmail.com
-							</h4>
-							<a className="font-clash text-[2rem]" href="tel:004367761451490">
-								+43 677 614 514 90
-							</a>
-						</div>
-						<div className="">
-							<h3 className="font-clash text-[2.4rem] font-bold">
-								{t("location")}
-							</h3>
-							<h4 className="font-clash text-[2rem]">
-								Ried im Innkreis,{" "}
-								<Clock
-									format={"HH:mm:ss"}
-									ticking={true}
-									timezone={"Europe/Vienna"}
-								/>
-							</h4>
-						</div>
-						<div className="mb-4 mt-4">
-							<h3 className="font-clash text-[2.4rem] font-bold">
-								{t("qualifications")}
-							</h3>
-							<a href="https://bento.me/ungarmichael">
-								<h4 className="font-clash text-[2rem]">{t("cv")}</h4>
-							</a>
-							<a href="https://github.com/ungarmichael">
-								<h4 className="font-clash text-[2rem]">Graduation Paper</h4>
-							</a>
-							<a href="https://youtube.com/@ungarmichael">
-								<h4 className="font-clash text-[2rem]">
-									selbststudium.ungarmichael.me
-								</h4>
-							</a>
-						</div>
-						<div className="mb-4 mt-4">
-							<h3 className="font-clash text-[2.4rem] font-bold">
-								{t("digital-spaces")}
-							</h3>
-							<a href="https://bento.me/ungarmichael">
-								<h4 className="font-clash text-[2rem]">Bento</h4>
-							</a>
-							<a href="https://github.com/ungarmichael">
-								<h4 className="font-clash text-[2rem]">GitHub</h4>
-							</a>
-							<a href="https://youtube.com/@ungarmichael">
-								<h4 className="font-clash text-[2rem]">YouTube</h4>
-							</a>
-						</div>
-						<div className="h-[100px]"></div>
+						<h2>Weitere Platformen</h2>
+						<p>Youtube - @ungarmichael - Coding Videos</p>
+						<p>Instagram - @ungrmkl - UI-Challenges</p>
+						<h2>Zeit&Ort</h2>
+						<p>
+							{" "}
+							<Clock
+								format={"HH:mm:ss"}
+								ticking={true}
+								timezone={"Europe/Vienna"}
+							/>
+							, Ried im Innkreis
+						</p>
 					</div>
-				</section>
+				</div>
 			</Curve>
 		</>
 	);

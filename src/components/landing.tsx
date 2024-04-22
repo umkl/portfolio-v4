@@ -155,7 +155,7 @@ const Landing = () => {
 					<div
 						id="cards"
 						style={{ opacity: 0, transform: "translate(0px, 20px)" }}
-						className=" grid gap-4 text-center lg:max-w-5xl lg:w-full relative lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full  z-30"
+						className=" grid gap-4 text-center lg:max-w-5xl lg:w-full relative lg:mb-32 lg:grid-cols-4 lg:text-left lg:gap-4 w-full z-30"
 					>
 						<CardComponent
 							tap={() => {
@@ -194,6 +194,7 @@ const Landing = () => {
 							desc={t("Contact_Text")}
 						/>
 					</div>
+
 					<div className="absolute h-8 md:h-20 z-20 w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
 					<div className="absolute h-8 md:h-20 z-20 w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
 					<div className="absolute w-8 md:w-20 z-20 h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>

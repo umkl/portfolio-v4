@@ -6,7 +6,7 @@
 		"Austria": "Österreich",
 		"App_Developer": "Web Entwickler",
 		"Big_Description": "Ich verwende meine Zeit um mit <b>Code</b> und <b>Design</b> einen positiven Einfluss auf <b> die digitale Welt </b> zu haben. ",
-		"Services": "Produkte",
+		"Services": "Services",
 		"Services_Text": "Sachen bei denen ich dir helfen kann.",
 		"Projects": "Projekte",
 		"Projects_Text": "Schau dir an, welche Dinge ich bereits erstellen konnte.",
@@ -99,11 +99,20 @@
 		"contact-details": "Kontaktdaten",
 		"location": "Standort",
 		"qualifications": "Qualifikationen",
-		"cv":"Mein Lebenslauf",
+		"cv": "Mein Lebenslauf",
 		"digital-spaces": "Meine anderen digitalen Räume"
 	},
-	"Impressum":{
-		"Subheading":"Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.",
-		"Name":""
+	"Impressum": {
+		"why": "Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.",
+		"phone": "Mobil",
+		"austria": "Österreich",
+		"profession": "Berufszweig",
+		"it-services": "IT-Dienstleistung",
+		"commercial": "Gewerbewortlaut",
+		"commercial-value": "Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik",
+		"static": "statisches Webhosting",
+		"static-value": "Diese Website wird durch eine Contabo VPS Instanz zur Verfügung gestellt. Contabo erlangt hierbei Zugriff auf ihre HTTP Anfrage - diese Anfrage beinhaltet ihre IP-Adresse und ihren User-Agent (Name und Version ihres Browsers).",
+		"further-questions": "Insofern irgendwelche weiteren Fragen bestehen, kontaktieren sie mich:"
 	}
+
 }

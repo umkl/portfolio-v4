@@ -95,10 +95,15 @@ export default function Curve({ children }) {
 			<div className="flex-1">{children}</div>
 			{langPopupShown && (
 				<div
-					className="h-screen w-full fixed top-0 left-0 z-50 opacity-0 backdrop-blur-sm overflow-hidden"
+					onClick={(e) => {
+						if (e.target != this) return;
+						console.log("alarm");
+						e.stopPropagation()
+					}}
+					className="h-screen w-full fixed top-0 left-0  z-50 opacity-0 backdrop-blur-lg overflow-hidden"
 					ref={ref}
 				>
-					<div className=" absolute right-0 bottom-0 z-50 mr-8">
+					<div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
 						<LangPopup
 							onTap={() => {
 								gsap.to(ref.current, {
@@ -119,8 +124,7 @@ export default function Curve({ children }) {
 			)}
 
 			<footer className="absolute bottom-0 flex w-full  text-neutral-500 font-druk uppercase z-50 justify-center text-[1.4rem] px-14 pb-8 pt-8 font-bold">
-				<div className="flex justify-between flex-row-reverse w-full max-w-[1200px]">
-					
+				<div className="flex justify-between flex-row-reverse w-full max-w-[1220px]">
 					<p
 						className="cursor-pointer"
 						onClick={() => {

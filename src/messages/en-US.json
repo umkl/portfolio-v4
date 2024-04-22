@@ -82,8 +82,8 @@
 	"Navigation": {
 		"Landing": "Landing",
 		"Blog": "Blog",
-		"Frontend":"Frontend",
-		"Backend":"Backend",
+		"Frontend": "Frontend",
+		"Backend": "Backend",
 		"Contact": "Contact",
 		"Projects": "Projekte",
 		"Services": "Services",
@@ -99,10 +99,19 @@
 		"contact-details": "Contact Details",
 		"location": "Location",
 		"qualifications": "Qualifications",
-		"cv":"My Curriculum Vitae",
+		"cv": "My Curriculum Vitae",
 		"digital-spaces": "My other digital spaces"
 	},
-	"Impressum":{
-		"Subheading":"Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz."
+	"Impressum": {
+		"why": "Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.",
+		"phone": "Mobil",
+		"austria": "Österreich",
+		"profession": "Berufszweig",
+		"it-services": "IT-Dienstleistung",
+		"commercial": "Gewerbewortlaut",
+		"commercial-value": "Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik",
+		"static": "statisches Webhosting",
+		"static-value": "Diese Website wird durch eine Contabo VPS Instanz zur Verfügung gestellt. Contabo erlangt hierbei Zugriff auf ihre HTTP Anfrage - diese Anfrage beinhaltet ihre IP-Adresse und ihren User-Agent (Name und Version ihres Browsers).",
+		"further-questions": "Insofern irgendwelche weiteren Fragen bestehen, kontaktieren sie mich:"
 	}
 }
