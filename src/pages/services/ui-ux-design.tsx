@@ -301,7 +301,7 @@ const Page = () => {
 							</div>
 						</Marquee>
 
-						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40">
+						<section className="max-w-[1500px] w-full mx-auto px-4 mb-40 ">
 							<h1 className="text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem] font-bold leading-[2rem] sm:leading-[4rem] mb-2 mt-4">
 								UI/UX Design
 							</h1>

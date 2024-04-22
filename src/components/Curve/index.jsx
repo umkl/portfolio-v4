@@ -32,7 +32,7 @@ export default function Curve({ children }) {
 		"/services/branding": "Branding",
 		"/impressum": "Impressum",
 	};
-	
+
 	const router = useRouter();
 	const [dimensions, setDimensions] = useState({
 		width: null,
@@ -118,23 +118,28 @@ export default function Curve({ children }) {
 				</div>
 			)}
 
-			<footer className="absolute bottom-0 flex w-full flex-row  text-neutral-500 font-druk uppercase z-50 justify-between text-[1.4rem] px-14 pb-8 pt-8 font-bold">
-				<p
-					className="cursor-pointer"
-					onClick={() => {
-						router.push("/impressum");
-					}}
-				>
-					impressum
-				</p>
-				<p
-					className="cursor-pointer"
-					onClick={() => {
-						setLangPopupShown(true);
-					}}
-				>
-					{t("Language")}
-				</p>
+			<footer className="absolute bottom-0 flex w-full  text-neutral-500 font-druk uppercase z-50 justify-center text-[1.4rem] px-14 pb-8 pt-8 font-bold">
+				<div className="flex justify-between flex-row-reverse w-full max-w-[1200px]">
+					
+					<p
+						className="cursor-pointer"
+						onClick={() => {
+							setLangPopupShown(true);
+						}}
+					>
+						{t("Language")}
+					</p>
+					{router.asPath != "/impressum" && (
+						<p
+							className="cursor-pointer"
+							onClick={() => {
+								router.push("/impressum");
+							}}
+						>
+							impressum
+						</p>
+					)}
+				</div>
 			</footer>
 		</div>
 	);

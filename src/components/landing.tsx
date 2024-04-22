@@ -194,7 +194,7 @@ const Landing = () => {
 							desc={t("Contact_Text")}
 						/>
 					</div>
-					<div className="absolute h-8 md:h-20 z-20  w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
+					<div className="absolute h-8 md:h-20 z-20 w-full bottom-0 left-0 bg-gradient-to-b from-transparent to-[#333333]"></div>
 					<div className="absolute h-8 md:h-20 z-20 w-full top-0 left-0 bg-gradient-to-b from-[#333333] to-transparent"></div>
 					<div className="absolute w-8 md:w-20 z-20 h-full top-0 left-0 bg-gradient-to-r from-[#333333] to-transparent"></div>
 					<div className="absolute w-8 md:w-20 z-20 h-full top-0 right-0 bg-gradient-to-l from-[#333333] to-transparent"></div>

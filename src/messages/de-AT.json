@@ -6,7 +6,7 @@
 		"Austria": "Österreich",
 		"App_Developer": "Web Entwickler",
 		"Big_Description": "Ich verwende meine Zeit um mit <b>Code</b> und <b>Design</b> einen positiven Einfluss auf <b> die digitale Welt </b> zu haben. ",
-		"Services": "Services",
+		"Services": "Produkte",
 		"Services_Text": "Sachen bei denen ich dir helfen kann.",
 		"Projects": "Projekte",
 		"Projects_Text": "Schau dir an, welche Dinge ich bereits erstellen konnte.",
@@ -101,5 +101,9 @@
 		"qualifications": "Qualifikationen",
 		"cv":"Mein Lebenslauf",
 		"digital-spaces": "Meine anderen digitalen Räume"
+	},
+	"Impressum":{
+		"Subheading":"Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.",
+		"Name":""
 	}
 }

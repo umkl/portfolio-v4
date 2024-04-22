@@ -97,11 +97,9 @@ html {
 	background-color: "#333333";
 }
 
-
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
-
 
 html,
 body {
@@ -117,4 +115,29 @@ body {
 .hide-scrollbar {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+}
+
+.impressum-text-styling > h1 {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.100');
+	font-size: 3.4rem;
+	margin-top: 4rem;
+	
+	font-weight: 600;
+
+}
+
+.impressum-text-styling > h2 {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.100');
+	font-size: 2.4rem;
+	font-weight: 550;
+	margin: 2rem 0;
+}
+
+.impressum-text-styling > p {
+	font-family: var(--font-clash);
+	color: theme('colors.neutral.400');
+	font-weight: 450;
+	font-size: 2rem;
 }
