@@ -177,10 +177,11 @@ body {
 .services-text-styling h3 {
 	font-family: var(--font-clash);
 	color: theme("colors.neutral.300");
-	font-size: 3.6rem;
+	font-size: clamp(2rem, 3.8vw, 3.9rem);
 	font-weight: 550;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: -10px;
+
 }
 
 .services-text-styling h4 {
@@ -193,13 +194,11 @@ body {
 	margin-bottom: 1rem;
 }
 
-
-
 .services-text-styling .list-1 {
 	list-style-type: disc;
 	color: theme("colors.neutral.400");
-	font-family: var(--font-clash);
-	font-size: 3rem;
+	font-family: var(--font-inter);
+	font-size: 2rem;
 	font-weight: 550;
 	margin-left: 8%;
 }
@@ -208,7 +207,6 @@ body {
 	list-style-type: none;
 	text-wrap: pretty;
 	display: flex;
-	/* flex-wrap: wrap; */
 	color: theme("colors.neutral.400");
 	font-family: var(--font-clash);
 	font-size: 3rem;
@@ -221,4 +219,14 @@ body {
 .services-text-styling .list-2 li {
 	transform: rotate(-45deg);
 	margin-left: -60px;
+}
+
+.subheading-text{
+	font-size: larger;
+	/* background: #000; */
+	color: theme("colors.neutral.400");
+	opacity: 0.6;
+	font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+	font-weight: 500;
+	margin-left: 40px;
 }

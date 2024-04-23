@@ -135,7 +135,7 @@ const Work = () => {
 							}
 						}
 					`}</style>
-					<StaggeredHeading text={t("my_services")} />
+					{/* <StaggeredHeading text={t("my_services")} />
 					<h2>Fähigkeiten gebündelt in einheitliche Produkte</h2>
 					<Product />
 					<div className="h-[100px]"></div>
@@ -222,7 +222,7 @@ const Work = () => {
 							/>
 						</div>
 					</Marquee>
-					<UmFooter />
+					<UmFooter /> */}
 				</main>
 			</Curve>
 		</>
@@ -414,7 +414,7 @@ export async function getStaticProps(context: any) {
 
 const Product = () => {
 	return (
-		<section className="h-full  max-w-[2000px] w-full flex flex-col md:flex-row border-neutral-200 border-2 relative ">
+		<section className="h-full  max-w-[1800px] w-full flex flex-col xl:flex-row border-neutral-200 border-2 relative ">
 			<div className="relative flex flex-1 overflow-hidden  flex-col w-full border-neutral-200 border-r-2 ">
 				<div className="h-fit w-full relative border-b-2 border-neutral-100 md:hidden block">
 					<Image
@@ -426,15 +426,15 @@ const Product = () => {
 					/>
 				</div>
 				<div className="border-b-2 flex-1 border-neutral-200 px-10 pb-12 ">
-					<h3 className="!font-extrabold uppercase !bg-clip-text !text-transparent bg-gradient-to-b from-[#d3d3d3] to-[#6f8798] ">
+					<h3 className="!font-extrabold uppercase !bg-clip-text !text-transparent bg-gradient-to-b from-[#d3d3d3] to-[#6f8798]">
 						static Web Development
 					</h3>
-					<p>suitable for small businesses</p>
+					<p className="subheading-text">suitable for small businesses</p>
 					<ul className="list-1">
 						<li>Designing a simple Landing Page</li>
-						<li>Designing a simple Landing Page</li>
-						<li>Designing a simple Landing Page</li>
-						<li>Designing a simple Landing Page</li>
+						<li>Implementing it with CMS</li>
+						<li>verg guud</li>
+						<li>created using jsjsj</li>
 					</ul>
 				</div>
 				<div className=" border-neutral-200 z-10 h-[200px] relative">
@@ -488,8 +488,7 @@ const Product = () => {
 				</div>
 				<div className="flex-1"></div>
 				<div className="flex text-[4rem] justify-between text-neutral-100 w-full gap-4 px-10 py-10">
-					<p>300€/P</p>
-
+					<p className="font-bold text-neutral-200">300€/P</p>
 					<Image
 						id="logo"
 						style={{ opacity: 1 }}
