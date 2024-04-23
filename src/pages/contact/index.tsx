@@ -186,10 +186,10 @@ const ContactSection = () => {
 								)}
 							</div>
 						</form>
-						<h2>Weitere Platformen</h2>
+						<h2>{t("further")}</h2>
 						<p>Youtube - @ungarmichael - Coding Videos</p>
 						<p>Instagram - @ungrmkl - UI-Challenges</p>
-						<h2>Zeit&Ort</h2>
+						<h2>{t("time-place")}</h2>
 						<p>
 							{" "}
 							<Clock

@@ -48,7 +48,7 @@ html {
 	background-color: #333;
 	background-size: cover;
 	background-position: center;
-	background-image: url("../../public/images/background-image.webp");
+	background-image: url("../../public/images/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg");
 	opacity: 0;
 	animation: fadeIn 3s ease-in-out 0.7s forwards;
 }

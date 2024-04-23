@@ -100,18 +100,21 @@
 		"location": "Location",
 		"qualifications": "Qualifications",
 		"cv": "My Curriculum Vitae",
-		"digital-spaces": "My other digital spaces"
+		"digital-spaces": "My other digital spaces",
+		"further": "My other digital spaces",
+		"time-place": "Time&Place"
 	},
+
 	"Impressum": {
-		"why": "Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.",
-		"phone": "Mobil",
-		"austria": "Österreich",
-		"profession": "Berufszweig",
-		"it-services": "IT-Dienstleistung",
-		"commercial": "Gewerbewortlaut",
-		"commercial-value": "Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik",
-		"static": "statisches Webhosting",
-		"static-value": "Diese Website wird durch eine Contabo VPS Instanz zur Verfügung gestellt. Contabo erlangt hierbei Zugriff auf ihre HTTP Anfrage - diese Anfrage beinhaltet ihre IP-Adresse und ihren User-Agent (Name und Version ihres Browsers).",
-		"further-questions": "Insofern irgendwelche weiteren Fragen bestehen, kontaktieren sie mich:"
+		"why": "Information obligation according to §5 E-Commerce Act, §14 Commercial Code, §63 Trade Regulation Act and disclosure obligation according to §25 Media Act.",
+		"phone": "Mobile",
+		"austria": "Austria",
+		"profession": "Occupational field",
+		"it-services": "IT services",
+		"commercial": "Commercial designation",
+		"commercial-value": "Services in automatic data processing and information technology",
+		"static": "Static web hosting",
+		"static-value": "This website is provided by a Contabo VPS instance. Contabo gains access to your HTTP request - this request includes your IP address and your User-Agent (name and version of your browser).",
+		"further-questions": "If you have any further questions, please contact me:"
 	}
 }
