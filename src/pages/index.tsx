@@ -12,7 +12,6 @@ import WorkSection from "@um-p4/pages/services";
 import Landing from "@um-p4/components/landing";
 import Curve from "@um-p4/components/Curve";
 
-import { NavContext } from "../navcontext";
 import { Metadata } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";

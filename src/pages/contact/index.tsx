@@ -1,8 +1,6 @@
 "use client";
 import Curve from "@um-p4/components/Curve";
 import { sendContactForm } from "@um-p4/lib/api";
-import { NavContext } from "@um-p4/navcontext";
-
 import Image from "next/image";
 import { useContext, useState } from "react";
 import Clock from "react-live-clock";
@@ -17,7 +15,6 @@ interface formValues {
 }
 
 const ContactSection = () => {
-	const navCxt = useContext(NavContext);
 	const [email, setEmail] = useState("");
 	const [topic, setTopic] = useState("");
 	const [text, setText] = useState("");

@@ -2,12 +2,7 @@
 	{
 		"projectname": "Frame",
 		"categories": ["frontend", "ui/ux", "creative-dev"],
-		"tags":[
-			"#react",
-			"#nextjs",
-			"#lenis-scroll",
-			"#creative-dev"
-		],
+		"tags": ["#react", "#nextjs", "#lenis-scroll", "#creative-dev"],
 		"initiator": "Client",
 		"start_date": "c2309",
 		"end_date": "c2403",
@@ -16,7 +11,7 @@
 			"en-US": "A project for a local video editor including a rough portfolio and a contact section. The focus here was mostly on using alternative and modern ways of displaying content so the website would elevate over any competitors and leave a lasting impression."
 		},
 		"link": "<a href=\"https://framestudio.at\">framestudio.at</a>",
-		"images":[
+		"images": [
 			"https://blobs.ungarmichael.me/images/frame/screenshot-1.png",
 			"https://blobs.ungarmichael.me/images/frame/screenshot-2.png",
 			"https://blobs.ungarmichael.me/images/frame/screenshot-3.png",

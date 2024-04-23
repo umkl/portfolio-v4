@@ -2,13 +2,11 @@
 import { RefObject, useContext, useEffect, useRef } from "react";
 import CardComponent from "./card";
 import Image from "next/image";
-import { NavContext } from "@um-p4/navcontext";
 import { useRouter } from "next/navigation";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
 
 const Landing = () => {
-	const navCxt = useContext(NavContext);
 	const router = useRouter();
 	const ref = useRef(null);
 	const t = useTranslations("Landing");
