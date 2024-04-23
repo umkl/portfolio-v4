@@ -119,17 +119,16 @@ body {
 
 .impressum-text-styling > h1 {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.100');
+	color: theme("colors.neutral.100");
 	font-size: 3.4rem;
 	margin-top: 4rem;
-	
-	font-weight: 600;
 
+	font-weight: 600;
 }
 
 .impressum-text-styling > h2 {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.100');
+	color: theme("colors.neutral.100");
 	font-size: 2.4rem;
 	font-weight: 550;
 	margin: 2rem 0;
@@ -137,14 +136,14 @@ body {
 
 .impressum-text-styling > p {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.400');
+	color: theme("colors.neutral.400");
 	font-weight: 450;
 	font-size: 2rem;
 }
 
 .contact-text-styling > h1 {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.100');
+	color: theme("colors.neutral.100");
 	font-size: 3.4rem;
 	margin-top: 4rem;
 	font-weight: 600;
@@ -152,7 +151,7 @@ body {
 
 .contact-text-styling > h2 {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.100');
+	color: theme("colors.neutral.100");
 	font-size: 2.4rem;
 	font-weight: 550;
 	margin-top: 3rem;
@@ -161,7 +160,65 @@ body {
 
 .contact-text-styling > p {
 	font-family: var(--font-clash);
-	color: theme('colors.neutral.400');
+	color: theme("colors.neutral.400");
 	font-weight: 450;
 	font-size: 2rem;
+}
+
+.services-text-styling > h2 {
+	font-family: var(--font-clash);
+	color: theme("colors.neutral.300");
+	font-size: 3.6rem;
+	font-weight: 550;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.services-text-styling h3 {
+	font-family: var(--font-clash);
+	color: theme("colors.neutral.300");
+	font-size: 3.6rem;
+	font-weight: 550;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.services-text-styling h4 {
+	font-family: var(--font-clash);
+	position: absolute;
+	color: theme("colors.neutral.300");
+	font-size: 7rem;
+	font-weight: 550;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+
+
+.services-text-styling .list-1 {
+	list-style-type: disc;
+	color: theme("colors.neutral.400");
+	font-family: var(--font-clash);
+	font-size: 3rem;
+	font-weight: 550;
+	margin-left: 8%;
+}
+
+.services-text-styling .list-2 {
+	list-style-type: none;
+	text-wrap: pretty;
+	display: flex;
+	/* flex-wrap: wrap; */
+	color: theme("colors.neutral.400");
+	font-family: var(--font-clash);
+	font-size: 3rem;
+	font-weight: 550;
+	height: 200px;
+	gap: 10px;
+	line-height: 40px;
+}
+
+.services-text-styling .list-2 li {
+	transform: rotate(-45deg);
+	margin-left: -60px;
 }

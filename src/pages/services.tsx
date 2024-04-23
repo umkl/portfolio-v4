@@ -9,6 +9,7 @@ import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
 import Head from "next/head";
 import { useTranslations } from "next-intl";
+import { FrontendBadge, UiUxBadge } from "@um-p4/components/badges";
 
 const Work = () => {
 	useEffect(() => {
@@ -125,8 +126,8 @@ const Work = () => {
 				<meta name="theme-color" content="#333333"></meta>
 			</Head>
 			<Curve>
-				<section className="font-clash overflow-x-hidden w-full min-h-screen  flex flex-col relative bg-ne-700">
-					<GoBack />
+				<GoBack />
+				<main className="font-clash w-full min-h-screen flex flex-col relative services-text-styling p-10">
 					<style jsx>{`
 						@media (max-width: 375px) {
 							section {
@@ -134,37 +135,12 @@ const Work = () => {
 							}
 						}
 					`}</style>
-					<div className="relative text-white z-0">
-						<span
-							id="head-i-1"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-400 -z-10 whitespace-nowrap"
-						>
-							{t("my_services")}
-						</span>
-						<span
-							id="head-i-2"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-500 -z-20 whitespace-nowrap"
-						>
-							{t("my_services")}
-						</span>
-						<span
-							id="head-i-3"
-							className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0 left-3 text-ne-600 -z-30 whitespace-nowrap"
-						>
-							{t("my_services")}
-						</span>
-						<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] ml-2 sm:ml-4 uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
-							{t("my_services")}
-						</h1>
-					</div>
-					<div className="flex w-screen h-[0.6em] leading-auto flex-row mb-[60px] text-[1rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[3.5rem] mt-2 text-ne-200 uppercase italic font-bold relative">
-						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
-						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
-						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
-						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
-						<h1 className="marquee_part shrink-0">{t("skills")} &nbsp;</h1>
-					</div>
-					<hr />
+					<StaggeredHeading text={t("my_services")} />
+					<h2>Fähigkeiten gebündelt in einheitliche Produkte</h2>
+					<Product />
+					<div className="h-[100px]"></div>
+					<StaggeredHeading text={t("my_skills")} />
+					<h2>Fähigkeiten gebündelt in einheitliche Produkte</h2>
 					<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
 						{services_i_offer.map((x, i) => {
 							return (
@@ -179,15 +155,50 @@ const Work = () => {
 							);
 						})}
 					</ul>
+					<div className="h-[100px]"></div>
+					<StaggeredHeading text={t("my_tools")} />
+					<h2>Auf diese Dinge bin ich ansprechbar</h2>
+					<ul className="flex gap-8">
+						<li className="inline rounded-full bg-neutral-200 px-16 text-[4rem] font-bold text-[#333333]">
+							#nextjs
+						</li>
+						<li className="inline rounded-full bg-neutral-200 px-16 text-[4rem] font-bold text-[#333333]">
+							#nextjs
+						</li>
+						<li className="inline rounded-full bg-neutral-200 px-16 text-[4rem] font-bold text-[#333333]">
+							#nextjs
+						</li>
+						<li className="inline rounded-full bg-neutral-200 px-16 text-[4rem] font-bold text-[#333333]">
+							#nextjs
+						</li>
+					</ul>
+					<div className="w-full h-[200px]"></div>
+					<div className="h-[100px]"></div>
+					<StaggeredHeading text={t("my_images")} />
+					<h2>Der Gelehrte bei seiner Arbeit</h2>
 					<Marquee speed={marqueeSpeed}>
 						<div className="flex gap-8 flex-row my-8">
-							<Image
-								width={500}
-								height={500}
-								src="/images/work/work-1.png"
-								alt="asdlkfj"
-								className="h-[100px] md:h-[500px]"
-							/>
+							<div className="relative flex items-center justify-center">
+								<div className="absolute flex flex-col  justify-center items-center gap-10 w-[80%]">
+									<Image
+										className="!stroke-white !fill-white"
+										src={"/svgs/service-icons/icon-frontend-dev.svg"}
+										alt={""}
+										width={300}
+										height={100}
+									/>
+									<p className="uppercase text-center w-fit font-bold text-neutral-200 text-[3rem]">
+										frontend development
+									</p>
+								</div>
+								<Image
+									width={500}
+									height={500}
+									src="/images/work/work-1.png"
+									alt="asdlkfj"
+									className="h-[100px] md:h-[500px]"
+								/>
+							</div>
 							<Image
 								width={500}
 								height={500}
@@ -212,9 +223,40 @@ const Work = () => {
 						</div>
 					</Marquee>
 					<UmFooter />
-				</section>
+				</main>
 			</Curve>
 		</>
+	);
+};
+
+const StaggeredHeading = ({ text }: { text: string }) => {
+	return (
+		<div className="relative z-0">
+			<span
+				aria-hidden="true"
+				id="head-i-1"
+				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-400 -z-10 whitespace-nowrap"
+			>
+				{text}
+			</span>
+			<span
+				aria-hidden="true"
+				id="head-i-2"
+				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-500 -z-20 whitespace-nowrap"
+			>
+				{text}
+			</span>
+			<span
+				aria-hidden="true"
+				id="head-i-3"
+				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-600 -z-30 whitespace-nowrap"
+			>
+				{text}
+			</span>
+			<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
+				{text}
+			</h1>
+		</div>
 	);
 };
 
@@ -369,3 +411,101 @@ export async function getStaticProps(context: any) {
 		},
 	};
 }
+
+const Product = () => {
+	return (
+		<section className="h-full  max-w-[2000px] w-full flex flex-col md:flex-row border-neutral-200 border-2 relative ">
+			<div className="relative flex flex-1 overflow-hidden  flex-col w-full border-neutral-200 border-r-2 ">
+				<div className="h-fit w-full relative border-b-2 border-neutral-100 md:hidden block">
+					<Image
+						src={"/images/services/image-1.png"}
+						className="w-full h-fit"
+						width={1000}
+						height={1000}
+						alt={""}
+					/>
+				</div>
+				<div className="border-b-2 flex-1 border-neutral-200 px-10 pb-12 ">
+					<h3 className="!font-extrabold uppercase !bg-clip-text !text-transparent bg-gradient-to-b from-[#d3d3d3] to-[#6f8798] ">
+						static Web Development
+					</h3>
+					<p>suitable for small businesses</p>
+					<ul className="list-1">
+						<li>Designing a simple Landing Page</li>
+						<li>Designing a simple Landing Page</li>
+						<li>Designing a simple Landing Page</li>
+						<li>Designing a simple Landing Page</li>
+					</ul>
+				</div>
+				<div className=" border-neutral-200 z-10 h-[200px] relative">
+					<h4 className="w-full text-center top-1/2 -translate-y-1/2 absolute">
+						Skills
+					</h4>
+					<div>
+						<ul className="list-2 mb-2 -z-20">
+							<Marquee
+								gradientColor={"#333333"}
+								gradientWidth={100}
+								speed={200}
+								gradient={true}
+							>
+								<li>#nextjs</li>
+								<li>#js</li>
+								<li>#reactjs</li>
+								<li>#tailwind</li>
+								<li>#gsap</li>
+								<li>#figma</li>
+								<li>#nextjs</li>
+								<li>#nextjs</li>
+								<li>#nextjs</li>
+							</Marquee>
+						</ul>
+					</div>
+				</div>
+				<div className=" border-neutral-200 border-t-2">
+					<h4 className="hidden">Categoreis</h4>
+					<div className="flex flex-row border-neutral-200 mb-8 ">
+						<Marquee speed={200} direction="right">
+							<UiUxBadge />
+							<FrontendBadge />
+							<UiUxBadge />
+							<FrontendBadge />
+							<UiUxBadge />
+							<FrontendBadge />
+						</Marquee>
+					</div>
+				</div>
+			</div>
+			<div className="relative w-full flex-1 overflow-hidden flex flex-col border-neutral-200 ">
+				<div className="h-fit w-full relative border-b-2 border-neutral-100 hidden md:block">
+					<Image
+						src={"/images/services/image-1.png"}
+						className="w-full h-fit"
+						width={1000}
+						height={1000}
+						alt={""}
+					/>
+				</div>
+				<div className="flex-1"></div>
+				<div className="flex text-[4rem] justify-between text-neutral-100 w-full gap-4 px-10 py-10">
+					<p>300€/P</p>
+
+					<Image
+						id="logo"
+						style={{ opacity: 1 }}
+						src="/svgs/arrow-icon.svg"
+						alt=""
+						className="w-[30px] sm:w-[60px] my-4 ml-4 mr-2"
+						width={20}
+						height={20}
+						priority
+					/>
+
+					<button className=" rounded-full border-2 border-neutral-100 px-10">
+						get started
+					</button>
+				</div>
+			</div>
+		</section>
+	);
+};

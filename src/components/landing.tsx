@@ -117,8 +117,8 @@ const Landing = () => {
 						<h1 className="text-left  relative font-inter leading-[1.0rem] pb-1 pt-1  sm:mt-0 text-[1.3rem] sm:text-[1.9rem] sm:leading-10  md:text-[1.4rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold ">
 							{t("title")}
 						</h1>
-						<h2 className="font-clash text-[2.1rem] sm:text-[3.4rem] lg:text-[5rem] leading-[2.2rem] lg:leading-[4.8rem] sm:leading-[4rem] font-[700] text-[#C2CAD1] relative mt-2">
-							<span className="letter-item relative top-[5px]">M</span>
+						<h2 className="font-clash text-[2.1rem] sm:text-[3.4rem] lg:text-[5rem] leading-[2.2rem] lg:leading-[4.8rem] sm:leading-[4rem] font-[700] text-[#C2CAD1] relative mt-2 ">
+							<span className="letter-item relative top-[5px] ">M</span>
 							<span className="letter-item relative top-[10px]">i</span>
 							<span className="letter-item relative top-[15px]">c</span>
 							<span className="letter-item relative top-[20px]">h</span>
