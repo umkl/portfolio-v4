@@ -123,7 +123,7 @@ export default function Curve({ children }) {
 				</div>
 			)}
 
-			<footer className="absolute bottom-0 flex w-full  text-neutral-500 font-druk uppercase z-50 justify-center text-[1.4rem] px-14 pb-8 pt-8 font-bold">
+			<footer className="absolute bottom-0 flex w-full  text-ne-300/70 font-clash uppercase z-50 justify-center text-[2rem] px-14 pb-8 pt-8 font-bold">
 				<div className="flex justify-between flex-row-reverse w-full max-w-[1220px]">
 					<p
 						className="cursor-pointer"

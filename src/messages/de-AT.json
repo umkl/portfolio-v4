@@ -5,15 +5,15 @@
 		"from": "aus",
 		"Austria": "Österreich",
 		"App_Developer": "Web Entwickler",
-		"Big_Description": "Ich versuche mit <b>Code</b> und <b>Design</b> die <b>digitale Welt</b> positiv zu beeinflussen.",
+		"Big_Description": "Mit <b>Code</b> und <b>Design</b> versuche Ich die <b>digitale Welt</b> positiv zu beeinflussen.",
 		"Services": "Services",
-		"Services_Text": "Sachen bei denen ich dir helfen kann.",
 		"Projects": "Projekte",
-		"Projects_Text": "Schau dir an, welche Dinge ich bereits erstellen konnte.",
 		"Blog": "Blog",
-		"Blog_Text": "Coding Dinge dich gerne teilen möchte.",
 		"Contact": "Kontakt",
-		"Contact_Text": "Lass uns in Kontakt treten, um großartige Projekte zu erstellen!",
+		"Services_Text": "Hiermit kann ich behilflich sein.",
+		"Projects_Text": "Hier habe ich bereits geholfen.",
+		"Blog_Text": "Hier teile ich, wie ich helfe.",
+		"Contact_Text": "Hier können wir direkt loslegen:)",
 		"Language": "Sprache"
 	},
 	"Services": {
@@ -80,7 +80,7 @@
 		"link-ad": "Schau dir das Projekt hier an:"
 	},
 	"Navigation": {
-		"Landing": "Start",
+		"Landing": "Willkommen",
 		"Blog": "Blog",
 		"Contact": "Kontakt",
 		"Projects": "Projekte",
