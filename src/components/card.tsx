@@ -31,7 +31,7 @@ const CardComponent = ({
 			<h2 className="text-left font-[600] bg-clip-text text-transparent bg-gradient-to-b text-[2rem] sm:tex from-ne-200 to-ne-600 font-clash uppercase whitespace-nowrap">
 				<LinkArrowIcon
 					className={
-						"!relative !w-[20px] !h-[20px] !scale-[140%] mr-2 ml-2 !inline"
+						"!relative !w-[28px] !h-[20px] !scale-[90%] mr-2 mb-2 ml-2 !inline"
 					}
 				/>
 				{name}
@@ -63,11 +63,11 @@ const FancyResponsiveBox = ({
 }) => {
 	return (
 		<div
-			className={`px-2 py-2 lg:pt-2 from-ne-600/80 bg-gradient-to-r lg:bg-gradient-to-b transition-all backdrop-blur-[1px] cursor-pointer ${classname}`}
+			className={`px-2 py-2 lg:pt-2 from-ne-600/80 bg-gradient-to-r lg:bg-gradient-to-b transition-all backdrop-blur-[1px] cursor-pointer rounded-t-xl ${classname}`}
 		>
 			<div
 				onClick={onTap}
-				className={`group block relative  border-neutral-600/90 hover:border-ne-100 bg-gradient-to-r lg:bg-gradient-to-b drop-shadow-lg from-ne-700/50 pl-4 py-4`}
+				className={`group block relative  border-neutral-600/90 hover:border-ne-100 bg-gradient-to-r lg:bg-gradient-to-b drop-shadow-lg rounded-t-lg from-ne-700/50 pl-4 py-4`}
 			>
 				{children}
 			</div>
