@@ -3,7 +3,6 @@ import React, { useEffect, useReducer, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { text, curve, translate } from "./anim";
-import { LangPopup } from "@um-p4/components/lang-popup";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
 import LangItem from "../../../public/svgs/lang-icons/icon-at.svg";
@@ -44,8 +43,6 @@ export default function Curve({ children }) {
 
 	const ref = useRef();
 
-	const [langPopupShown, setLangPopupShown] = useState(false);
-
 	useEffect(() => {
 		function resize() {
 			setDimensions({
@@ -56,31 +53,26 @@ export default function Curve({ children }) {
 		resize();
 		window.addEventListener("resize", resize);
 		var langPref = localStorage.getItem("language-preference");
-		if (langPref == null) {
-			setTimeout(() => {
-				setLangPopupShown(true);
-			}, 2000);
-		}
 		return () => {
 			window.removeEventListener("resize", resize);
 		};
 	}, []);
 
-	useEffect(() => {
-		let ctxt = gsap.context(() => {
-			if (langPopupShown) {
-				gsap.to(ref.current, {
-					opacity: 1,
-					delay: 0.7,
-					duration: 1,
+	// useEffect(() => {
+	// 	let ctxt = gsap.context(() => {
+	// 		if (langPopupShown) {
+	// 			gsap.to(ref.current, {
+	// 				opacity: 1,
+	// 				delay: 0.7,
+	// 				duration: 1,
 
-					ease: "power1.out",
-				});
-				return;
-			}
-		});
-		return ctxt.clear();
-	}, [langPopupShown]);
+	// 				ease: "power1.out",
+	// 			});
+	// 			return;
+	// 		}
+	// 	});
+	// 	return ctxt.clear();
+	// }, [langPopupShown]);
 
 	return (
 		<div className=" curve z-40 min-h-screen relative bg-[#333333] flex flex-col">
@@ -96,35 +88,6 @@ export default function Curve({ children }) {
 			</motion.p>
 			{dimensions.width != null && <SVG {...dimensions} />}
 			<div className="flex-1">{children}</div>
-			{langPopupShown && (
-				<div
-					onClick={(e) => {
-						if (e.target != this) return;
-						console.log("alarm");
-						e.stopPropagation();
-					}}
-					className="h-screen w-full fixed top-0 left-0  z-50 opacity-0 backdrop-blur-lg overflow-hidden"
-					ref={ref}
-				>
-					<div className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
-						<LangPopup
-							onTap={() => {
-								gsap.to(ref.current, {
-									opacity: 0,
-									delay: 0.7,
-									duration: 1,
-									y: 30,
-									top: 0,
-									ease: "power1.out",
-								});
-								setTimeout(() => {
-									setLangPopupShown(false);
-								}, 2000);
-							}}
-						/>
-					</div>
-				</div>
-			)}
 			<Footer />
 		</div>
 	);

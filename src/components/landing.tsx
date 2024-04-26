@@ -111,7 +111,7 @@ const Landing = () => {
 					>
 						<h1
 							aria-hidden="true"
-							className="text-left  relative font-inter leading-[1.0rem] sm:leading-0  pb-1 pt-1  sm:mt-0 text-[1.5rem] sm:text-[1.5rem] md:text-[1.7rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold "
+							className="text-left relative font-inter leading-[1.3rem] sm:leading-[1.4rem] pb-1 pt-1 sm:mt-0 text-[1.5rem] sm:text-[1.5rem] md:text-[1.7rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold "
 						>
 							{t("title")}
 						</h1>
@@ -141,7 +141,6 @@ const Landing = () => {
 								</u>{" "}
 								{t("and")}{" "}
 								<u className="underline-offset-[0.38rem]">UI/UX Designer</u>{" "}
-								<br className="sm:hidden" />
 								{t("from")}{" "}
 								<u className="underline-offset-[0.38rem]">{t("Austria")}.</u>{" "}
 							</span>
