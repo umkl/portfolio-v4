@@ -44,7 +44,7 @@ const CardComponent = ({
 				-&gt;
 			</span> */}
 			<p
-				className={`m-0 font-inter text-left text-ne-400 font-medium break-words hyphens-auto text-[1.2rem] sm:text-[1.5rem] md:text-[1.5rem] lg:text-[1.5rem]  lg:pb-[4rem] `}
+				className={`m-0 mr-4 font-inter text-left text-ne-400 font-medium break-words hyphens-auto text-[1.4rem] sm:text-[1.5rem] md:text-[1.5rem] lg:text-[1.5rem]  lg:pb-[4rem] `}
 			>
 				{desc}
 			</p>
@@ -63,11 +63,11 @@ const FancyResponsiveBox = ({
 }) => {
 	return (
 		<div
-			className={`px-2 py-2 lg:pt-2 from-ne-600/80 bg-gradient-to-r lg:bg-gradient-to-b transition-all backdrop-blur-[1px] cursor-pointer rounded-t-xl ${classname}`}
+			className={`px-2 py-2 lg:pt-2 from-ne-600/80 bg-gradient-to-r lg:bg-gradient-to-b transition-all backdrop-blur-[1px] cursor-pointer lg:rounded-t-xl rounded-l-xl ${classname}`}
 		>
 			<div
 				onClick={onTap}
-				className={`group block relative  border-neutral-600/90 hover:border-ne-100 bg-gradient-to-r lg:bg-gradient-to-b drop-shadow-lg rounded-t-lg from-ne-700/50 pl-4 py-4`}
+				className={`group block relative  border-neutral-600/90 hover:border-ne-100 bg-gradient-to-r lg:bg-gradient-to-b drop-shadow-lg  lg:rounded-t-lg rounded-l-lg  from-ne-700/50 pl-4 py-4`}
 			>
 				{children}
 			</div>

@@ -123,15 +123,13 @@ export default function Curve({ children }) {
 				</div>
 			)}
 
-			<footer className="absolute bottom-0 flex w-full  text-ne-300/70 font-clash uppercase z-50 justify-center text-[2rem] px-14 pb-8 pt-8 font-bold">
+			<footer className="absolute bottom-0 flex w-full  text-ne-300/70 font-inter z-50 justify-center text-[1.5rem] px-6 pb-8 pt-8 font-bold">
 				<div className="flex justify-between flex-row-reverse w-full max-w-[1220px]">
 					<p
 						className="cursor-pointer"
-						onClick={() => {
-							setLangPopupShown(true);
-						}}
+						
 					>
-						{t("Language")}
+						<div></div>
 					</p>
 					{router.asPath != "/impressum" && (
 						<p
@@ -140,7 +138,7 @@ export default function Curve({ children }) {
 								router.push("/impressum");
 							}}
 						>
-							impressum
+							Impressum
 						</p>
 					)}
 				</div>

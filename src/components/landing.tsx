@@ -111,13 +111,13 @@ const Landing = () => {
 					>
 						<h1
 							aria-hidden="true"
-							className="text-left  relative font-inter leading-[1.0rem] sm:leading-0  pb-1 pt-1  sm:mt-0 text-[1.3rem] sm:text-[1.5rem] md:text-[1.7rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold "
+							className="text-left  relative font-inter leading-[1.0rem] sm:leading-0  pb-1 pt-1  sm:mt-0 text-[1.5rem] sm:text-[1.5rem] md:text-[1.7rem] lg:text-[1.8rem] inline-block w-[fit-content] bg-clip-text text-transparent bg-gradient-to-r  from-[#a8c3c3] to-[#6f8798] font-inter font-extrabold "
 						>
 							{t("title")}
 						</h1>
 						<h1
 							aria-hidden="true"
-							className="font-clash text-[2.7rem] sm:text-[3.4rem] md:text-[4.6rem] lg:text-[5rem] leading-[2.5rem] lg:leading-[4.8rem] xl:leading-[5.4rem] sm:leading-[4rem] font-[700] text-ne-200/80 relative mt-2 "
+							className="font-clash text-[3.2rem] sm:text-[3.4rem] md:text-[4.6rem] lg:text-[5rem] leading-[3.2rem] lg:leading-[4.8rem] xl:leading-[5.4rem] sm:leading-[4rem] font-[700] text-ne-200/80 relative mt-2 "
 						>
 							<span className="letter-item relative top-[5px]">M</span>
 							<span className="letter-item relative top-[10px]">i</span>
@@ -134,7 +134,7 @@ const Landing = () => {
 							<span className="letter-item relative top-[65px]">r</span>
 							<span className="letter-item relative top-[70px]">.</span>
 						</h1>
-						<h2 className="font-inter font-bold mt-0 md:mt-2 text-[1.2rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem]  text-[#81899B] overflow-hidden relative">
+						<h2 className="font-inter font-bold mt-0 md:mt-2 text-[1.5rem] sm:text-[1.6rem] md:text-[1.8rem] lg:text-[2rem]  text-[#81899B] overflow-hidden relative">
 							<span id="center-text-2" className="relative leading-[1.5rem]">
 								<u className="underline-offset-[0.38rem]">
 									{t("App_Developer")}
@@ -146,7 +146,7 @@ const Landing = () => {
 								<u className="underline-offset-[0.38rem]">{t("Austria")}.</u>{" "}
 							</span>
 						</h2>
-						<h3 className="font-inter font-medium text-[1.2rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-2 lg:mt-2 ">
+						<h3 className="font-inter font-medium text-[1.4rem] sm:text-[1.2rem] md:text-[1.4rem] lg:text-[1.8rem] text-[#797c82] mt-2 lg:mt-2 ">
 							<span id="center-text-3" className="relative top-[100px]">
 								{t.rich("Big_Description", {
 									b: (chunks) => <b className="font-bold">{chunks}</b>,
@@ -154,7 +154,7 @@ const Landing = () => {
 							</span>
 						</h3>
 					</div>
-					<div className="w-full flex flex-col items-center">
+					<div className="w-full flex flex-col items-center mt-8 mb-2">
 						<div
 							id="cards"
 							style={{ opacity: 0, transform: "translate(0px, 20px)" }}
