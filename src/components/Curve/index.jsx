@@ -6,6 +6,9 @@ import { text, curve, translate } from "./anim";
 import { LangPopup } from "@um-p4/components/lang-popup";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
+import LangItem from "../../../public/svgs/lang-icons/icon-at.svg";
+import Pyramid from "../../../public/svgs/pyramid.svg";
+import LangSelector from "../lang-selector";
 
 const anim = (variants) => {
 	return {
@@ -98,7 +101,7 @@ export default function Curve({ children }) {
 					onClick={(e) => {
 						if (e.target != this) return;
 						console.log("alarm");
-						e.stopPropagation()
+						e.stopPropagation();
 					}}
 					className="h-screen w-full fixed top-0 left-0  z-50 opacity-0 backdrop-blur-lg overflow-hidden"
 					ref={ref}
@@ -122,30 +125,48 @@ export default function Curve({ children }) {
 					</div>
 				</div>
 			)}
-
-			<footer className="absolute bottom-0 flex w-full  text-ne-300/70 font-inter z-50 justify-center text-[1.5rem] px-6 pb-8 pt-8 font-bold">
-				<div className="flex justify-between flex-row-reverse w-full max-w-[1220px]">
-					<p
-						className="cursor-pointer"
-						
-					>
-						<div></div>
-					</p>
-					{router.asPath != "/impressum" && (
-						<p
-							className="cursor-pointer"
-							onClick={() => {
-								router.push("/impressum");
-							}}
-						>
-							Impressum
-						</p>
-					)}
-				</div>
-			</footer>
+			<Footer />
 		</div>
 	);
 }
+
+const Footer = () => {
+	const router = useRouter();
+	const [isHovered, setIfHovered] = useState(false);
+
+	return (
+		<footer className="absolute bottom-0 flex flex-row-reverse flex-wrap w-full  text-ne-300/70 font-inter items-center z-50 justify-between text-[1.5rem] px-6 sm:px-10 md:px-10 pb-8 pt-8 font-bold ">
+			<div
+				className="w-[300px] h-[70px] relative cursor-pointer justify-center"
+				onMouseOver={() => {
+					setIfHovered(true);
+				}}
+				onMouseLeave={() => {
+					setIfHovered(false);
+				}}
+			>
+				{!isHovered ? (
+					<p className="cursor-pointer top-1/2 relative -translate-y-1/2 text-nowrap text-right">
+						Sprache auswählen
+					</p>
+				) : (
+					<LangSelector />
+				)}
+			</div>
+
+			{router.asPath != "/impressum" && (
+				<p
+					className="cursor-pointer"
+					onClick={() => {
+						router.push("/impressum");
+					}}
+				>
+					Impressum
+				</p>
+			)}
+		</footer>
+	);
+};
 
 const SVG = ({ height, width }) => {
 	const initialPath = `
