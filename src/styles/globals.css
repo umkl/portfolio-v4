@@ -120,25 +120,26 @@ body {
 .impressum-text-styling > h1 {
 	font-family: var(--font-clash);
 	color: theme("colors.neutral.100");
-	font-size: 3.4rem;
-	margin-top: 4rem;
-
+	font-size: 2.4rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.4rem;
 	font-weight: 600;
 }
 
 .impressum-text-styling > h2 {
 	font-family: var(--font-clash);
-	color: theme("colors.neutral.100");
-	font-size: 2.4rem;
+	color: theme("colors.neutral.200");
+	font-size: 2rem;
 	font-weight: 550;
-	margin: 2rem 0;
+	margin: 1rem 0;
 }
 
 .impressum-text-styling > p {
-	font-family: var(--font-clash);
+	font-family: var(--font-inter);
 	color: theme("colors.neutral.400");
-	font-weight: 450;
-	font-size: 2rem;
+	font-weight: 500;
+	font-size: 1.4rem;
+
 }
 
 .contact-text-styling > h1 {

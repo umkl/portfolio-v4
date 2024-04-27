@@ -1,69 +1,96 @@
 import Curve from "@um-p4/components/Curve";
 import { GoBack } from "./services";
 import { useTranslations } from "next-intl";
+import Head from "next/head";
 
 const ImpressumPage = () => {
 	const t = useTranslations("Impressum");
 	return (
-		<Curve>
-			<GoBack />
-			<div className="h-fit w-full flex justify-center p-10">
-				<div className="max-w-[1200px] w-full mb-[100px] impressum-text-styling">
-					<h1>Impressum</h1>
-					<p>{t("why")}</p>
-					&nbsp;
-					<p className=" !text-neutral-300">Michael Ungar</p>
-					<p>4932 Kirchheim · {t("austria")}</p>
-					&nbsp;
-					<p>
-						<span>Mail:&nbsp;</span>{" "}
-						<a
-							className="!text-neutral-200 hover:font-medium"
-							href="mailto:michael.ungar03@gmail.com"
-						>
-							michael.ungar03@gmail.com
-						</a>
-					</p>
-					<p>
-						<span>{t("phone")}:&nbsp;</span>
-						<a
-							className="!text-neutral-200 hover:font-medium"
-							href="tel:+43 677 614 514 90"
-						>
-							+43 677 614 514 90
-						</a>
-					</p>
-					<br />
-					<p>
-						<span>GLN:</span> 9110034873240
-					</p>
-					<p>
-						<span>GISA:</span> 36419524
-					</p>
-					<br />
-					<p>
-						<span>{t("profession")}:</span> {t("it-services")}
-					</p>
-					<p>
-						<span>{t("commercial")}: </span>
-						{t("commercial-value")}
-					</p>
-					&nbsp;
-					<h2>{t("static")}</h2>
-					<p>{t("static-value")}</p>
-					&nbsp; <br /> &nbsp;
-					<p>
-						{t("further-questions")}&nbsp;
-						<a
-							className="!text-neutral-200 hover:font-medium"
-							href="mailto:michael.ungar03@gmail.com"
-						>
-							michael.ungar03@gmail.com
-						</a>
-					</p>
+		<>
+			<Head>
+				<meta charSet="utf-8" />
+				<title>Ungar Michael ✹ Creative App Development</title>
+				<meta name="title" content="Michael Ungar - Impressum" />
+				<meta name="description" content="Creative App Development" />
+				<meta property="og:url" content="https://ungarmichael.me" />
+				<meta property="og:type" content="website" />
+				<meta property="og:title" content="Ungar Michael - Impressum" />
+				<meta property="og:description" content="Creative App Development" />
+				<meta
+					property="og:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta property="twitter:domain" content="ungarmichael.me" />
+				<meta property="twitter:url" content="https://ungarmichael.me" />
+				<meta name="twitter:title" content="Ungar Michael - Contact" />
+				<meta name="twitter:description" content="Creative App Development" />
+				<meta
+					name="twitter:image"
+					content="https://ungarmichael.me/banner.png"
+				/>
+				<meta name="theme-color" content="#333333"></meta>
+			</Head>
+			<Curve>
+				<GoBack />
+				<div className="h-fit w-full flex justify-center px-5 sm:px-8 pt-4">
+					<div className="max-w-[1200px] w-full mb-[140px] impressum-text-styling">
+						<h1>Impressum</h1>
+						<p>{t("why")}</p>
+						&nbsp;
+						<p className=" !text-neutral-300">Michael Ungar</p>
+						<p>4932 Kirchheim · {t("austria")}</p>
+						&nbsp;
+						<p>
+							<span>Mail:&nbsp;</span>{" "}
+							<a
+								className="!text-neutral-200 hover:font-medium"
+								href="mailto:michael.ungar03@gmail.com"
+							>
+								michael.ungar03@gmail.com
+							</a>
+						</p>
+						<p>
+							<span>{t("phone")}:&nbsp;</span>
+							<a
+								className="!text-neutral-200 hover:font-medium"
+								href="tel:+43 677 614 514 90"
+							>
+								+43 677 614 514 90
+							</a>
+						</p>
+						<br />
+						<p>
+							<span>GLN:</span> 9110034873240
+						</p>
+						<p>
+							<span>GISA:</span> 36419524
+						</p>
+						<br />
+						<p>
+							<span>{t("profession")}:</span> {t("it-services")}
+						</p>
+						<p>
+							<span>{t("commercial")}: </span>
+							{t("commercial-value")}
+						</p>
+						&nbsp;
+						<h2>{t("static")}</h2>
+						<p>{t("static-value")}</p>
+						&nbsp; <br /> &nbsp;
+						<p>
+							{t("further-questions")}&nbsp;
+							<a
+								className="!text-neutral-200 hover:font-medium"
+								href="mailto:michael.ungar03@gmail.com"
+							>
+								michael.ungar03@gmail.com
+							</a>
+						</p>
+					</div>
 				</div>
-			</div>
-		</Curve>
+			</Curve>
+		</>
 	);
 };
 

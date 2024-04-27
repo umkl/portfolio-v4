@@ -269,7 +269,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 
 	return (
 		<button
-			className="flex w-full font-clash justify-start sm:justify-start items-center mb-0 sm:mb-4 z-40"
+			className="flex w-full font-clash justify-start sm:justify-start items-center mb-0 mt-4 z-40"
 			onClick={() => {
 				gsap.to("#stick", {
 					flex: 1,
@@ -283,7 +283,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 				style={{ opacity: 1 }}
 				src="/svgs/arrow-icon.svg"
 				alt=""
-				className="w-[30px] sm:w-[60px] my-4 ml-4 mr-2"
+				className="w-[36px]  ml-4 mr-2"
 				width={20}
 				height={20}
 				priority
@@ -292,7 +292,7 @@ export const GoBack = ({ to }: { to?: string }) => {
 				id="stick"
 				className="w-[0px] h-[4px] bg-gradient-to-r from-pr-300 via-pr-400 to-pr-800 "
 			></div>
-			<span className="font-bold text-[1.6em] sm:text-[3em] mr-4 uppercase text-ne-200">
+			<span className="font-bold text-[1.8rem] sm:text-[2rem] mr-4 uppercase text-ne-400">
 				{t("goback")}
 			</span>
 		</button>
