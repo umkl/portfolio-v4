@@ -88,7 +88,7 @@ const Landing = () => {
 							style={{ opacity: 1 }}
 							src="./svgs/logo.svg"
 							alt="um logo"
-							className="w-[80px] md:w-[100px]"
+							className="w-[80px] h-auto md:w-[100px]"
 							width={100}
 							height={100}
 							priority
