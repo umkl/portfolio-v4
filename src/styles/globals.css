@@ -135,11 +135,10 @@ body {
 }
 
 .impressum-text-styling > p {
-	font-family: var(--font-inter);
+	font-family: var(--font-clash);
 	color: theme("colors.neutral.400");
 	font-weight: 500;
 	font-size: 1.4rem;
-
 }
 
 .contact-text-styling > h1 {
@@ -167,22 +166,22 @@ body {
 }
 
 .services-text-styling > h2 {
-	font-family: var(--font-clash);
-	color: theme("colors.neutral.300");
-	font-size: 3.6rem;
+	font-family: var(--font-inter);
+	color: theme("colors.ne.500");
+	font-size: 1.3rem;
 	font-weight: 550;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+	text-align: center;
 }
 
 .services-text-styling h3 {
 	font-family: var(--font-clash);
 	color: theme("colors.neutral.300");
-	font-size: clamp(2rem, 3.8vw, 3.9rem);
+	font-size: 1.6rem;
 	font-weight: 550;
 	margin-top: 1rem;
 	margin-bottom: -10px;
-
 }
 
 .services-text-styling h4 {
@@ -196,12 +195,13 @@ body {
 }
 
 .services-text-styling .list-1 {
-	list-style-type: disc;
+	list-style-type: square;
 	color: theme("colors.neutral.400");
 	font-family: var(--font-inter);
-	font-size: 2rem;
+	font-size: 1.4rem;
 	font-weight: 550;
-	margin-left: 8%;
+	margin-left: 20px;
+	margin-bottom: 1.4rem;
 }
 
 .services-text-styling .list-2 {
@@ -222,12 +222,29 @@ body {
 	margin-left: -60px;
 }
 
-.subheading-text{
-	font-size: larger;
-	/* background: #000; */
+/* .subheading-text{
 	color: theme("colors.neutral.400");
 	opacity: 0.6;
 	font-size: clamp(1.6rem, 2.8vw, 2.8rem);
 	font-weight: 500;
 	margin-left: 40px;
+} */
+
+/* Define gradient colors */
+.gradient-from {
+	background-color: #fc8181; /* start color */
+}
+.gradient-to {
+	background-color: #63b3ed; /* end color */
+}
+
+/* Define gradient direction */
+.border-gradient {
+	border: 2px solid transparent; /* set border width and make it transparent */
+	border-image: linear-gradient(
+			to right,
+			var(--tw-gradient-from),
+			var(--tw-gradient-to)
+		)
+		1;
 }

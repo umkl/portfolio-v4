@@ -63,7 +63,7 @@ export default function App({
 			messages={pageProps.messages}
 		>
 			<div
-				className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className}  `}
+				className={`${clash.variable} ${sora.variable} ${druk.variable} ${inter.className} `}
 			>
 				<AnimatePresence mode="wait">
 					<Component key={router.route} {...pageProps} />

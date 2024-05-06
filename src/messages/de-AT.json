@@ -19,7 +19,8 @@
 	},
 	"Services": {
 		"goback": "zurück",
-		"my_services": "Meine Dienstleistungen",
+		"my_services": "Meine Services",
+		"my_skills": "Meine Fähigkeiten",
 		"skills": "Fähigkeiten die ich mit der Welt teilen möchte.",
 		"development": "entwicklung"
 	},

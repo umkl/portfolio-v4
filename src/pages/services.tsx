@@ -3,13 +3,14 @@ import Curve from "@um-p4/components/Curve";
 import UmFooter from "@um-p4/components/UmFooter";
 import gsap from "gsap";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { easeInOut } from "framer-motion";
 import Head from "next/head";
 import { useTranslations } from "next-intl";
 import { FrontendBadge, UiUxBadge } from "@um-p4/components/badges";
+import NextStep from "../../public/svgs/next-step.svg";
 
 const Work = () => {
 	useEffect(() => {
@@ -18,26 +19,6 @@ const Work = () => {
 			repeat: -1,
 			duration: 10,
 			ease: "linear",
-		});
-
-		const screenWidth = window.innerWidth;
-
-		gsap.to("#head-i-1", {
-			delay: 1.1,
-			marginLeft: screenWidth < 768 ? "0.2rem" : "1rem",
-			marginTop: screenWidth < 768 ? "0.2rem" : "1rem",
-		});
-
-		gsap.to("#head-i-2", {
-			delay: 1.1,
-			marginLeft: screenWidth < 768 ? "0.4rem" : "2rem",
-			marginTop: screenWidth < 768 ? "0.4rem" : "2rem",
-		});
-
-		gsap.to("#head-i-3", {
-			delay: 1.1,
-			marginLeft: screenWidth < 768 ? "0.6rem" : "3rem",
-			marginTop: screenWidth < 768 ? "0.6rem" : "3rem",
 		});
 
 		gsap.set("#marquee-parent", { xPercent: -50 });
@@ -127,7 +108,7 @@ const Work = () => {
 			</Head>
 			<Curve>
 				<GoBack />
-				<main className="font-clash w-full min-h-screen flex flex-col relative services-text-styling p-10">
+				<main className="w-full h-fit min-h-screen flex flex-col relative services-text-styling  mt-2 max-w-screen overflow-hidden">
 					<style jsx>{`
 						@media (max-width: 375px) {
 							section {
@@ -135,12 +116,23 @@ const Work = () => {
 							}
 						}
 					`}</style>
-					{/* <StaggeredHeading text={t("my_services")} />
-					<h2>Fähigkeiten gebündelt in einheitliche Produkte</h2>
+					<Image
+						src="/images/worldmap.png"
+						width={1800}
+						height={1800}
+						className="fixed top-1/2 -translate-y-1/2 -z-40 scale-[100%] left-1/2 -translate-x-1/2"
+						alt={""}
+					/>
+					<div className="h-[30px]"></div>
+					<StaggeredHeading text={t("my_services")} />
+
+					{/* <h2 className="my-1 italic"></h2> */}
+					<div className="h-[10px]"></div>
 					<Product />
-					<div className="h-[100px]"></div>
+					<Product />
+
 					<StaggeredHeading text={t("my_skills")} />
-					<h2>Fähigkeiten gebündelt in einheitliche Produkte</h2>
+					<h2>{t("Fertigkeiten")}</h2>
 					<ul className="uppercase flex flex-col justify-start flex-1 overflow-hidden">
 						{services_i_offer.map((x, i) => {
 							return (
@@ -155,6 +147,8 @@ const Work = () => {
 							);
 						})}
 					</ul>
+					<div className="h-[400px]"></div>
+					{/*
 					<div className="h-[100px]"></div>
 					<StaggeredHeading text={t("my_tools")} />
 					<h2>Auf diese Dinge bin ich ansprechbar</h2>
@@ -230,30 +224,54 @@ const Work = () => {
 };
 
 const StaggeredHeading = ({ text }: { text: string }) => {
+	useEffect(() => {
+		const screenWidth = window.innerWidth;
+		gsap.to("#head-i-1", {
+			delay: 1.1,
+			// marginLeft: screenWidth < 768 ? "0.2rem" : "1rem",
+			marginTop: screenWidth < 768 ? "0.2rem" : "1rem",
+		});
+
+		gsap.to("#head-i-2", {
+			delay: 1.1,
+			// marginLeft: screenWidth < 768 ? "0.4rem" : "2rem",
+			marginTop: screenWidth < 768 ? "0.4rem" : "2rem",
+		});
+
+		gsap.to("#head-i-3", {
+			delay: 1.1,
+			// marginLeft: screenWidth < 768 ? "0.6rem" : "3rem",
+			marginTop: screenWidth < 768 ? "0.6rem" : "3rem",
+		});
+	}, []);
+
+	var chilClasses =
+		"md:text-[6em] font-clash text-[2.5rem] text-center absolute w-full  sm:text-[4em] leading-[1em] m-0 uppercase font-bold   top-0  text-ne-400  whitespace-nowrap";
+
 	return (
-		<div className="relative z-0">
+		<div className="relative z-0 left-1/2 whitespace-nowrap -translate-x-1/2">
 			<span
 				aria-hidden="true"
 				id="head-i-1"
-				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-400 -z-10 whitespace-nowrap"
+				className={`${chilClasses} text-ne-400 -z-10`}
 			>
 				{text}
 			</span>
 			<span
 				aria-hidden="true"
 				id="head-i-2"
-				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-500 -z-20 whitespace-nowrap"
+				className={`${chilClasses} text-ne-500 -z-20`}
 			>
 				{text}
 			</span>
 			<span
 				aria-hidden="true"
 				id="head-i-3"
-				className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] m-0 uppercase font-bold absolute top-0  text-ne-600 -z-30 whitespace-nowrap"
+				className={`${chilClasses} text-ne-600 -z-30`}
 			>
 				{text}
 			</span>
-			<h1 className="md:text-[6em] text-[2.4em] text-left sm:text-[4em] leading-[1em] uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap">
+			<h1 className="md:text-[6em] font-clash text-[2.5rem] text-center sm:text-[4em] leading-[1em] uppercase font-bold z-0 shrink-0 text-ne-200 whitespace-nowrap ">
 				{text}
 			</h1>
 		</div>
@@ -331,7 +349,7 @@ function ListItem({
 	return (
 		<li
 			key={text}
-			className="list-item text-[1.1rem] text-ne-200 sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer"
+			className="font-clash list-item text-[1.1rem] text-ne-200 sm:text-[3.8em] md:text-[4em] font-bold  break-words relative cursor-pointer"
 		>
 			<div
 				ref={ref}
@@ -355,7 +373,6 @@ function ListItem({
 				/>
 				<p className={`text-left mr-4 mb-4 ${"text-ne-200"}`}>{text}</p>
 			</div>
-			<hr />
 		</li>
 	);
 }
@@ -414,55 +431,65 @@ export async function getStaticProps(context: any) {
 
 const Product = () => {
 	return (
-		<section className="h-full  max-w-[1800px] w-full flex flex-col xl:flex-row border-neutral-200 border-2 relative ">
-			<div className="relative flex flex-1 overflow-hidden  flex-col w-full border-neutral-200 border-r-2 ">
-				<div className="h-fit w-full relative border-b-2 border-neutral-100 md:hidden block">
+		<section className="h-fit max-w-[1800px] w-full flex flex-col xl:flex-row  relative">
+			<div className="relative flex flex-1 overflow-hidden flex-col w-full  ">
+				<div
+					className="h-fit w-full relative px-4 pt-4
+				 md:hidden block"
+				>
 					<Image
 						src={"/images/services/image-1.png"}
-						className="w-full h-fit"
+						className="w-full h-fit rounded-xl"
 						width={1000}
 						height={1000}
 						alt={""}
 					/>
 				</div>
-				<div className="border-b-2 flex-1 border-neutral-200 px-10 pb-12 ">
-					<h3 className="!font-extrabold uppercase !bg-clip-text !text-transparent bg-gradient-to-b from-[#d3d3d3] to-[#6f8798]">
-						static Web Development
+				<div className="flex-1 px-8">
+					<h3 className="!font-extrabold !text-[1.9rem] ">
+						Static Web Development
 					</h3>
-					<p className="subheading-text">suitable for small businesses</p>
-					<ul className="list-1">
+					<p
+						className="
+						text-ne-300
+						font-bold
+						text-[1.4rem]
+						mt-2
+					"
+					>
+						suitable for small businesses
+					</p>
+					<ul className="list-1 font-inter">
 						<li>Designing a simple Landing Page</li>
 						<li>Implementing it with CMS</li>
 						<li>verg guud</li>
 						<li>created using jsjsj</li>
 					</ul>
 				</div>
-				<div className=" border-neutral-200 z-10 h-[200px] relative">
+				<div className="z-10 h-[200px] relative">
 					<h4 className="w-full text-center top-1/2 -translate-y-1/2 absolute">
 						Skills
 					</h4>
-					<div>
-						<ul className="list-2 mb-2 -z-20">
-							<Marquee
-								gradientColor={"#333333"}
-								gradientWidth={100}
-								speed={200}
-								gradient={true}
-							>
-								<li>#nextjs</li>
-								<li>#js</li>
-								<li>#reactjs</li>
-								<li>#tailwind</li>
-								<li>#gsap</li>
-								<li>#figma</li>
-								<li>#nextjs</li>
-								<li>#nextjs</li>
-								<li>#nextjs</li>
-							</Marquee>
-						</ul>
-					</div>
+					<ul className="list-2 mb-2 -z-20">
+						<Marquee
+							gradientColor={"#22222"}
+							gradientWidth={100}
+							speed={200}
+							gradient={true}
+						>
+							<li>#nextjs</li>
+							<li>#js</li>
+							<li>#reactjs</li>
+							<li>#tailwind</li>
+							<li>#gsap</li>
+							<li>#figma</li>
+							<li>#nextjs</li>
+							<li>#nextjs</li>
+							<li>#nextjs</li>
+						</Marquee>
+					</ul>
 				</div>
-				<div className=" border-neutral-200 border-t-2">
+				<div>
 					<h4 className="hidden">Categoreis</h4>
 					<div className="flex flex-row border-neutral-200 mb-8 ">
 						<Marquee speed={200} direction="right">
@@ -475,8 +502,17 @@ const Product = () => {
 						</Marquee>
 					</div>
 				</div>
+				<div className="flex w-full justify-between px-8 font-clash">
+					<p className="text-[3rem] text-white font-semibold">300€/P</p>
+					<button className="font-medium rounded-full bg-ne-600 text-white px-8 text-[1.4rem]">
+						get started
+					</button>
+				</div>
+				<div className="h-[140px]"></div>
+				<hr className="mx-5" />
+				<div className="h-[140px]"></div>
 			</div>
-			<div className="relative w-full flex-1 overflow-hidden flex flex-col border-neutral-200 ">
+			{/* <div className="relative w-full flex-1 overflow-hidden flex flex-col border-neutral-200 ">
 				<div className="h-fit w-full relative border-b-2 border-neutral-100 hidden md:block">
 					<Image
 						src={"/images/services/image-1.png"}
@@ -504,7 +540,7 @@ const Product = () => {
 						get started
 					</button>
 				</div>
-			</div>
+			</div> */}
 		</section>
 	);
 };
