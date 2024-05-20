@@ -107,7 +107,7 @@ const ContactSection = () => {
 				<div className="h-fit w-full flex justify-center p-10">
 					<div className="max-w-[1200px] mr-8 w-full mb-[100px] contact-text-styling">
 						<h1>{t("concept")}</h1>
-						<p className="font-bold">{t("lets")}</p>
+						<p className="!font-bold -mt-2">{t("lets")}</p>
 
 						<h2>Kontaktformular</h2>
 						<form className="w-full">
@@ -115,14 +115,14 @@ const ContactSection = () => {
 								<input
 									type="text"
 									id="email"
-									className="block py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-white peer font-clash"
+									className="block py-2.5 px-0 w-full text-[2rem] font-medium text-neutral-400 focus:text-white bg-transparent border-0 border-b-[3px] border-neutral-400 appearance-none dark:focus:text-white focus:outline-none focus:ring-0 focus:border-white peer font-inter"
 									placeholder=" "
 									onChange={(e) => setEmail(e.target.value)}
 									value={email}
 								/>
 								<label
 									htmlFor="email"
-									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									className="absolute font-medium text-[2rem] text-neutral-400 duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white font-inter tracking-tight"
 								>
 									{t("your-email")}
 								</label>
@@ -131,14 +131,14 @@ const ContactSection = () => {
 								<input
 									type="text"
 									id="topic"
-									className="block  py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white   focus:outline-none focus:ring-0 focus:border-white peer font-clash"
+									className="block py-2.5 px-0 w-full text-[2rem] font-medium text-neutral-400 focus:text-white bg-transparent border-0 border-b-[3px] border-neutral-400 appearance-none dark:focus:text-white focus:outline-none focus:ring-0 focus:border-white peer font-inter"
 									placeholder=" "
 									onChange={(e) => setTopic(e.target.value)}
 									value={topic}
 								/>
 								<label
 									htmlFor="topic"
-									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									className="absolute font-medium text-[2rem] text-neutral-400 duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white font-inter tracking-tight"
 								>
 									{t("your-topic")}
 								</label>
@@ -146,15 +146,15 @@ const ContactSection = () => {
 							<div className="relative z-0 mb-10">
 								<textarea
 									rows={4}
-									id="fsd"
-									className="block py-2.5 px-0 w-full text-[2rem] text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-white peer font-clash overflow-hidden"
+									id="text-area"
+									className="block py-2.5 px-0 w-full text-[2rem] font-medium text-neutral-400 focus:text-white bg-transparent border-0 border-b-[3px] border-neutral-400 appearance-none dark:focus:text-white focus:outline-none focus:ring-0 focus:border-white peer font-inter"
 									placeholder=" "
 									onChange={(e) => setText(e.target.value)}
 									value={text}
 								/>
 								<label
-									htmlFor="fsd"
-									className="absolute text-[2rem] text-white duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto font-clash"
+									htmlFor="text-area"
+									className="absolute font-medium text-[2rem] text-neutral-400 duration-300 transform -translate-y-7 scale-50 top-0 -z-10 origin-[0] peer-focus:start-0  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-4 peer-focus:scale-50 peer-focus:-translate-y-7 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-white font-inter tracking-tight"
 								>
 									{t("your-text")}
 								</label>
@@ -164,20 +164,20 @@ const ContactSection = () => {
 									onClick={onSubmit}
 									type="button"
 									value={t("send-it")}
-									className="appearance-none border-2 font-medium rounded-full text-[1.8rem] w-fit font-clash px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer text-neutral-100"
+									className="appearance-none border-[2.4px] font-bold rounded-full text-[1.8rem] w-fit font-inter px-8 py-2 box-content hover:bg-white hover:text-[#333] hover:font-bold hover:cursor-pointer text-neutral-100"
 								/>
 								{processingState.loading && (
-									<p className="font-clash font-extrabold uppercase h-full text-white/50">
+									<p className="font-inter font-extrabold uppercase h-full text-white/50">
 										loading
 									</p>
 								)}
 								{processingState.success && (
-									<p className="font-clash font-extrabold uppercase h-full text-green-200">
+									<p className="font-inter font-extrabold uppercase h-full text-green-200">
 										sent!
 									</p>
 								)}
 								{processingState.error && (
-									<p className="font-clash font-extrabold uppercase h-full text-red-200">
+									<p className="font-inter font-extrabold uppercase h-full text-red-200">
 										error, please contact me over the email listed below
 									</p>
 								)}

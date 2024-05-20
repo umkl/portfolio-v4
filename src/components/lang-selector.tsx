@@ -25,14 +25,14 @@ const LangSelector = () => {
 		<>
 			<div
 				className={`flex flex-row  cursor-pointer select-none gap-4 relative items-center w-[300px] ${
-					optionsShown ? "bg-ne-700/40 backdrop-blur-[1px]  rounded-b-xl" : ""
+					optionsShown ? "bg-ne-700/40 backdrop-blur-[1px] rounded-b-xl" : ""
 				}`}
 				onClick={() => {
 					setOptionsShown(!optionsShown);
 				}}
 			>
 				<div
-					className={`bg-ne-700/40 backdrop-blur-[1px] w-[300px]  rounded-t-xl absolute bottom-[100%] h-fit  flex-col justify-end ${
+					className={`bg-ne-700/40 backdrop-blur-[1px] w-[300px] rounded-t-xl absolute bottom-[100%] h-fit flex-col justify-end ${
 						optionsShown ? "flex" : "hidden"
 					}`}
 				>

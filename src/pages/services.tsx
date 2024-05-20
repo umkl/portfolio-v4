@@ -120,7 +120,7 @@ const Work = () => {
 						src="/images/worldmap.png"
 						width={1800}
 						height={1800}
-						className="fixed top-1/2 -translate-y-1/2 -z-40 scale-[100%] left-1/2 -translate-x-1/2"
+						className="absolute -z-40 scale-[100%] left-1/2 -translate-x-1/2"
 						alt={""}
 					/>
 					<div className="h-[30px]"></div>
@@ -447,7 +447,7 @@ const Product = () => {
 				</div>
 				<div className="flex-1 px-8">
 					<h3 className="!font-extrabold !text-[1.9rem] ">
-						Static Web Development
+						Statische Web Entwicklung
 					</h3>
 					<p
 						className="
